@@ -1,7 +1,8 @@
 
 \documentclass{article}
 \usepackage{amsmath}
-
+\def\TEXTsymbol#1{\mbox{$#1$}}%
+\def\NEG#1{\leavevmode\hbox{\rlap{\thinspace/}{$#1$}}}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %TCIDATA{OutputFilter=LATEX.DLL}
 %TCIDATA{Version=5.00.0.2552}
@@ -46,12 +47,7 @@
 
 Statistical Inference Week Five
 
-\FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 4.4996in;height 0.9003in;depth
-0pt;original-width 11.7666in;original-height 1.4866in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'NW7WPL04.wmf';tempfile-properties "XPR";}}
+%\FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{}{}{Figure}{\special{language
 
 Problem 1.$\qquad $pdf of $Y:p^{\prime }\left( y\right) =p\left( \sqrt{y}%
 \right) \frac{1}{2\sqrt{y}}=\frac{1}{\sqrt{2\pi }\sigma }e^{-\frac{\left( 
@@ -72,12 +68,7 @@ Var\left( Y\right) =3\mu ^{4}+6\mu ^{2}\sigma ^{2}+\sigma ^{4}$ $-\left(
 $Var\left( Y\right) =2\mu ^{4}+4\mu ^{2}\sigma ^{2}.$
 
 Problem 2$\left( \text{the positive symmetric property of }A\text{ is not
-used?}\right) $.\FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{}{}{Figure}{\special%
-{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 4.4996in;height 0.9003in;depth
-0pt;original-width 11.3775in;original-height 2.5149in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'NW7WWA05.wmf';tempfile-properties "XPR";}}
+used?}\right) $.%\FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{}{}{Figure}{\special%
 
 \bigskip Let $f\left( \vec{x}\right) =A\vec{x},$which is a continuous
 function. Since $X_{n}\overset{D}{->}X\symbol{126}N\left( \mu ,\Sigma
@@ -94,11 +85,7 @@ A\right) .$
 
 By the conclusion proved in the added coursework of week 2
 
-\FRAME{dtbpF}{4.4996in}{0.3866in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
-4.4996in;height 0.3866in;depth 0pt;original-width 4.3759in;original-height
-0.6391in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NW9C230C.wmf';tempfile-properties "XPR";}}
+%\FRAME{dtbpF}{4.4996in}{0.3866in}{0pt}{}{}{Figure}{\special{language
 
 Hence $X_{n}$ is bounded within probability. For any $\delta >0$,since $%
 \left\Vert A_{n}-A\right\Vert ->0,\frac{\delta }{\left\Vert
@@ -169,12 +156,8 @@ The same can be said about $X_{n}^{T}A_{n}X_{n},$which converges in
 distribution to $X^{T}AX.$
 
 Problem 4$\left( \text{the problem should be changed to require that }N\text{
-is given arbitrary integer}\right) $  \FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{%
-}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-4.4996in;height 0.9003in;depth 0pt;original-width 11.4328in;original-height
-2.9594in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NW7ZYC06.wmf';tempfile-properties "XPR";}}
+is given arbitrary integer}\right) $  %\FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{%
+
 
 For the integral $\int_{0}^{\infty }\left[ 1-F\left( x\right) \right]
 dx=\int_{0}^{\infty }\int_{0}^{\infty }f(t)\chi _{\lbrack x,+\infty )}(t)dtdx
@@ -228,11 +211,8 @@ inequality.
 
 In conclusion, only  $k-n\leq 1$ is essential.
 
-\FRAME{dtbpF}{4.4996in}{1.2964in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
-4.4996in;height 1.2964in;depth 0pt;original-width 12.3219in;original-height
-4.0283in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NW8VXT09.wmf';tempfile-properties "XPR";}}
+%\FRAME{dtbpF}{4.4996in}{1.2964in}{0pt}{}{}{Figure}{\special{language
+
 
 $\left( 1\right) $the pdf of $X_{\left( n\right) }$ is $p_{n}\left( x\right)
 =nF^{n-1}\left( x\right) p\left( x\right) ,$for Cauchy Distribution, p$%
@@ -271,11 +251,8 @@ n-1\right) }{2\pi }\int_{\NEG{R}}\frac{\left\vert x\right\vert \left( \frac{1%
 }{\pi }\arctan x+\frac{1}{2}\right) ^{n-2}\left( \frac{1}{2}-\frac{1}{\pi }%
 \arctan x\right) }{1+x^{2}}dx$
 
-\FRAME{dtbpF}{4.4996in}{1.3171in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
-4.4996in;height 1.3171in;depth 0pt;original-width 6.4584in;original-height
-3.4895in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NW8X5I0A.wmf';tempfile-properties "XPR";}}
+%\FRAME{dtbpF}{4.4996in}{1.3171in}{0pt}{}{}{Figure}{\special{language
+
 
 From the above picture$\left( x>0\right) $ we know that $\frac{\frac{\pi }{2}%
 -\arctan x}{x}\symbol{126}\frac{1}{x^{2}}\implies $
@@ -326,11 +303,7 @@ for x\TEXTsymbol{<}0,provided n-3$\geq 2.$
 By symmetry the same can be said about $E\left( \left\vert X_{\left(
 3\right) }\right\vert ^{2}\right) .$
 
-\FRAME{dtbpF}{4.4996in}{0.4073in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
-4.4996in;height 0.4073in;depth 0pt;original-width 11.6551in;original-height
-0.8198in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NW8XXG0B.wmf';tempfile-properties "XPR";}}
+%\FRAME{dtbpF}{4.4996in}{0.4073in}{0pt}{}{}{Figure}{\special{language
 
 $\left( 4\right) $ the pdf of $X_{\left( r\right) }$ is $p_{r}\left(
 x\right) =\frac{n!}{\left( r-1\right) !\times \left( n-r\right) !}%
