@@ -1,0 +1,428 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, October 09, 2015 15:38:42}
+%TCIDATA{LastRevised=Saturday, October 10, 2015 22:19:29}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+2.5.8 5.11
+
+\bigskip $S=\sqrt{\frac{\overset{n}{\underset{i=1}{\sum }}\left( X_{i}-%
+\overline{X}\right) ^{2}}{n-1},}$by Cauchy's Inequality $E^{2}\left(
+S\right) \leq E\left( S^{2}\right) E\left( 1\right) =\sigma ^{2}.$The
+equality holds if $S\overset{a.s.}{=}Const.$
+
+$\therefore E\left( S\right) \leq \sigma .$
+
+If in addition $\sigma ^{2}>0,$then $\urcorner \left( S\overset{a.s.}{=}%
+Const\right) \implies E^{2}\left( S\right) <\sigma ^{2}\implies E\left(
+S\right) <\sigma $
+
+Problem 15 
+
+$\left( a\right) \overline{X}_{n+1}=\frac{\left( \overset{n}{\underset{i=1}{%
+\sum }}X_{i}\right) +X_{n+1}}{n+1}=\frac{X_{n+1}+n\overline{X}_{n}}{n+1},$
+
+$\left( b\right) \left( n-1\right) S_{n}^{2}=\overset{n}{\underset{i=1}{\sum 
+}}\left( X_{i}-\overline{X}_{n}\right) ^{2}=\overset{n}{\underset{i=1}{\sum }%
+}X_{i}^{2}-n\overline{X}_{n}^{2}$
+
+$\left( n-2\right) S_{n-1}^{2}=\overset{n-1}{\underset{i=1}{\sum }}\left(
+X_{i}-\overline{X}_{n-1}\right) ^{2}=\overset{n-1}{\underset{i=1}{\sum }}%
+X_{i}^{2}-\left( n-1\right) \overline{X}_{n-1}^{2}$
+
+$\left( n-1\right) S_{n}^{2}-\left( n-2\right) S_{n-1}^{2}=X_{n}^{2}-n%
+\overline{X}_{n}^{2}+\left( n-1\right) \overline{X}_{n-1}^{2}$
+
+=$X_{n}^{2}-\frac{1}{n}\left( \overset{n}{\underset{i=1}{\sum }}X_{i}\right)
+^{2}+\left( n-1\right) \overline{X}_{n-1}^{2}$
+
+=$X_{n}^{2}-\frac{1}{n}\left( \left( n-1\right) \overline{X}%
+_{n-1}+X_{n}\right) ^{2}+\left( n-1\right) \overline{X}_{n-1}^{2}$
+
+=$\left( 1-\frac{1}{n}\right) X_{n}^{2}-\frac{2}{n}\left( n-1\right) 
+\overline{X}_{n-1}X_{n}+\left( n-1\right) \left( 1-\frac{n-1}{n}\right) 
+\overline{X}_{n-1}^{2}$
+
+=$\frac{n-1}{n}\left( X_{n}^{2}-2\overline{X}_{n-1}X_{n}+\overline{X}%
+_{n-1}^{2}\right) =\frac{n-1}{n}\left( X_{n}-\overline{X}_{n-1}\right) ^{2}$
+
+\bigskip Problem 23 
+
+\bigskip the cmf of $Z$ is denoted as $F\left( z\right) =P\left( Z<z\right) $
+
+$=\overset{\infty }{\underset{n=1}{\sum }}P\left( Z<z,X=n\right) =\overset{%
+\infty }{\underset{n=1}{\sum }}\underset{\text{conditional probability}}{%
+\underbrace{P(Z|X=n<z)}}P(X=n)$
+
+Since $Z|X=n$ is the first-order statistic from a sample of size n,its cmf
+is $1-\left( 1-F_{U}\left( z\right) \right) ^{n}$
+
+$\implies P(Z|X=n<z)=1-\left( 1-z\right) ^{n}$
+
+$\implies F\left( z\right) =\overset{\infty }{\underset{n=1}{\sum }}\left[
+1-\left( 1-z\right) ^{n}\right] P(X=n)=1-\overset{\infty }{\underset{n=1}{%
+\sum }}\left( 1-z\right) ^{n}\frac{c}{n!}=1-c\left[ \overset{\infty }{%
+\underset{n=0}{\sum }}\frac{\left( 1-z\right) ^{n}}{n!}-1\right] $
+
+$=1-c\left[ e^{1-z}-1\right] ,$where $c=\frac{1}{e-1}$ and $z\in \left(
+0,1\right) .$
+
+The pmf of $Z$ can be found by differentiating $F\left( z\right) .$
+
+Problem 25
+
+\bigskip From the joint pdf of $\left( X_{\left( 1\right) },X_{\left(
+2\right) },...,X_{\left( n\right) }\right) ,$ $p\left(
+x_{1},x_{2},...,x_{n}\right) =n!\underset{i=1}{\overset{n}{\Pi }}f\left(
+x_{i}\right) =n!\underset{i=1}{\overset{n}{\Pi }}\frac{a}{\theta ^{a}}%
+x_{i}^{a-1},$
+
+for $0<x_{i}<\theta ,i=1,2,...n.$
+
+Changing of variable $U_{i}=X_{\left( i\right) }/X_{\left( i+1\right)
+},i=1,2,...n-1$ and $U_{n}=X_{n}.$
+
+Then the joint pdf of $\left( U_{1},U_{2},...U_{n}\right) $ is $p\left(
+u_{1},u_{2},...u_{n}\right) =n!\left[ \underset{i=1}{\overset{n-1}{\Pi }}%
+f\left( x_{i}\left( u_{1},..u_{n}\right) \right) \right] f\left(
+u_{n}\right) \left\vert \frac{\partial \left( x_{1},..x_{n}\right) }{%
+\partial \left( u_{1},..u_{n}\right) }\right\vert $
+
+$n!\left[ \underset{i=1}{\overset{n-1}{\Pi }}f\left( \underset{j=i}{\overset{%
+n}{\Pi }}u_{j}\right) \right] f\left( u_{n}\right) \left( \underset{i=1}{%
+\overset{n-1}{\Pi }}\underset{j=i+1}{\overset{n}{\Pi }}u_{j}\right) $
+
+$=n!\left[ \underset{i=1}{\overset{n-1}{\Pi }}\frac{a}{\theta ^{a}}\left( 
+\underset{j=i}{\overset{n}{\Pi }}u_{j}\right) ^{a-1}\right] \frac{a}{\theta
+^{a}}u_{n}^{a-1}\left( \underset{i=1}{\overset{n-1}{\Pi }}\underset{j=i+1}{%
+\overset{n}{\Pi }}u_{j}\right) $
+
+$=n!\left( \frac{a}{\theta ^{a}}\right) ^{n}u_{n}^{a-1}\left( \underset{i=1}{%
+\overset{n-1}{\Pi }}\underset{j=i}{\overset{n}{\Pi }}u_{j}^{a-1}\underset{i=1%
+}{\overset{n-1}{\Pi }}\underset{j=i+1}{\overset{n}{\Pi }}u_{j}\right) $
+
+=$n!\left( \frac{a}{\theta ^{a}}\right) ^{n}u_{n}^{a-1}\underset{i=1}{%
+\overset{n-1}{\Pi }}\left( \underset{j=i}{\overset{n}{\Pi }}u_{j}^{a-1}%
+\underset{j=i+1}{\overset{n}{\Pi }}u_{j}\right) $
+
+=$n!\left( \frac{a}{\theta ^{a}}\right) ^{n}u_{n}^{a-1}\underset{i=1}{%
+\overset{n-1}{\Pi }}\left( u_{i}^{a-1}\underset{j=i+1}{\overset{n}{\Pi }}%
+u_{j}^{a-1}\underset{j=i+1}{\overset{n}{\Pi }}u_{j}\right) $
+
+=$n!\left( \frac{a}{\theta ^{a}}\right) ^{n}u_{n}^{a-1}\underset{i=1}{%
+\overset{n-1}{\Pi }}\left( u_{i}^{a-1}\underset{j=i+1}{\overset{n}{\Pi }}%
+u_{j}^{a}\right) $
+
+=$n!\left( \frac{a}{\theta ^{a}}\right) ^{n}\underset{i=1}{\overset{n}{\Pi }}%
+u_{i}^{a-1}\underset{i=1}{\overset{n-1}{\Pi }}\underset{j=i+1}{\overset{n}{%
+\Pi }}u_{j}^{a}\left( \text{the continued product is unchangable!}\right) $
+
+=$n!\left( \frac{a}{\theta ^{a}}\right) ^{n}\underset{i=1}{\overset{n}{\Pi }}%
+u_{i}^{a-1}\underset{i=2}{\overset{n}{\Pi }}u_{i}^{a\left( i-1\right) }$
+
+=$n!\left( \frac{a}{\theta ^{a}}\right) ^{n}u_{1}^{a-1}\underset{j=2}{%
+\overset{n}{\Pi }}u_{j}^{a-1}u_{j}^{a\left( j-1\right) }$
+
+=$n!\left( \frac{a}{\theta ^{a}}\right) ^{n}u_{1}^{a-1}\underset{j=2}{%
+\overset{n}{\Pi }}u_{j}^{aj-1}$
+
+Since $p\left( u_{1},u_{2},...u_{n}\right) $ can be written as the product
+of $u_{j},j=1,..n,$it is obvious that 
+
+$\left( U_{1},U_{2},...U_{n}\right) $ are independent.
+
+\bigskip For $u_{1},0<u_{n}<1$ and $\int_{0}^{1}u_{1}^{a-1}du_{n}=\frac{1}{a}%
+\implies p\left( u_{1}\right) =au_{1}^{a-1};$
+
+For $u_{n},0<u_{n}<\theta $ and $\int_{0}^{\theta }u_{n}^{an-1}du_{n}=\frac{1%
+}{an}\theta ^{an}\implies p\left( u_{n}\right) =\frac{an}{\theta ^{an}}%
+u_{n}^{an-1};$
+
+For $u_{i},i=2,..n-1;0<u_{i}<1$ and $\int_{0}^{1}u_{i}^{ai-1}du_{i}=\frac{1}{%
+ai}\implies p\left( u_{i}\right) =ai$ $u_{i}^{ai-1};$
+
+It can be verified that $\underset{j=1}{\overset{n}{\Pi }}p\left(
+u_{j}\right) =n!\left( \frac{a}{\theta ^{a}}\right) ^{n}u_{1}^{a-1}\underset{%
+j=2}{\overset{n}{\Pi }}u_{j}^{aj-1}=$ $p\left( u_{1},u_{2},...u_{n}\right) .$
+
+Problem 26$\left( a\right) P\left( U=u,V=v,n-U-V=w\right) =\binom{n}{u}%
+F_{X}\left( u\right) ^{u}\binom{n-u}{v}\left( F_{X}\left( v\right)
+-F_{X}\left( u\right) \right) ^{v}\left( 1-F_{X}\left( v\right) \right) ^{w}$
+
+$=\frac{n!}{u!v!w!}F_{X}\left( u\right) ^{u}\left( F_{X}\left( v\right)
+-F_{X}\left( u\right) \right) ^{v}\left( 1-F_{X}\left( v\right) \right) ^{w},
+$where $u+v+w=n.$
+
+$\therefore $the pmf of $\left( U,V,n-U-V\right) $ is that of a multinomial
+distribution with 3 trial,
+
+and the cell probabilities are $\left( F_{X}\left( u\right) ,F_{X}\left(
+v\right) -F_{X}\left( u\right) ,1-F_{X}\left( v\right) \right) $.
+
+$\left( b\right) $
+
+\bigskip Notice that $F_{X\left( i\right) ,X\left( j\right) }\left(
+u,v\right) =P\left( X_{\left( i\right) }\leq u,X_{\left( j\right) }\leq
+v\right) $ and $U+V$ represents the number of $X_{i}$ which is smaller than $%
+v.\therefore $the first equality holds. 
+
+As for the second equality, notice that $P\left( U\geq i,U+V\geq j\right) $
+
+=$P\left( U\geq i,U+V\geq j,U<j\right) +P\left( U\geq i,U+V\geq j,U\geq
+j\right) $
+
+$=\overset{j-1}{\underset{k=i}{\sum }}P\left( U=k,V\geq j-k\right) +P\left(
+U\geq j\right) ,$since $U+V\leq n$
+
+\bigskip =$\overset{j-1}{\underset{k=i}{\sum }}\overset{n-k}{\underset{m=j-k}%
+{\sum }}P\left( U=k,V=m\right) +P\left( U\geq j\right) ,$from the
+distribution solved in $\left( a\right) $
+
+=$\frac{n!}{k!m!\left( n-k-m\right) !}F_{X}\left( u\right) ^{k}\left(
+F_{X}\left( v\right) -F_{X}\left( u\right) \right) ^{m}\left( 1-F_{X}\left(
+v\right) \right) ^{n-k-m}+P\left( U\geq j\right) \boxtimes $
+
+$\left( c\right) $ $\frac{\partial ^{2}F}{\partial u\partial v}$
+
+$=\frac{\partial }{\partial u}\underset{k=i}{\overset{j-1}{\sum }}\underset{%
+m=j-k}{\overset{n-k}{\sum }}\frac{n!}{k!m!\left( n-k-m\right) !}F\left(
+u\right) ^{k}\{mf\left( v\right) \left[ F\left( v\right) -F\left( u\right) %
+\right] ^{m-1}\left( 1-F\left( v\right) \right) ^{n-k-m}-\left( n-k-m\right)
+f\left( v\right) \left[ F\left( v\right) -F\left( u\right) \right]
+^{m}\left( 1-F\left( v\right) \right) ^{n-k-m-1}\}$
+
+$=\frac{\partial }{\partial u}\underset{k=i}{\overset{j-1}{\sum }}\frac{n!}{%
+k!}F\left( u\right) ^{k}f\left( v\right) \{\underset{m=j-k}{\overset{n-k}{%
+\sum }}\frac{1}{\left( m-1\right) !\left( n-k-m\right) !}\left[ F\left(
+v\right) -F\left( u\right) \right] ^{m-1}\left( 1-F\left( v\right) \right)
+^{n-k-m}-\underset{m=j-k}{\overset{n-k-1}{\sum }}\frac{1}{m!\left(
+n-k-m-1\right) !}\left[ F\left( v\right) -F\left( u\right) \right]
+^{m}\left( 1-F\left( v\right) \right) ^{n-k-m-1}\}$
+
+$\underset{m=j-k}{\overset{n-k}{\sum }}\frac{1}{\left( m-1\right) !\left(
+n-k-m\right) !}\left[ F\left( v\right) -F\left( u\right) \right]
+^{m-1}\left( 1-F\left( v\right) \right) ^{n-k-m}-\underset{m=j-k}{\overset{%
+n-k-1}{\sum }}\frac{1}{m!\left( n-k-m-1\right) !}\left[ F\left( v\right)
+-F\left( u\right) \right] ^{m}\left( 1-F\left( v\right) \right) ^{n-k-m-1}$
+
+=$\underset{m=j-k}{\overset{n-k}{\sum }}\frac{1}{\left( m-1\right) !\left(
+n-k-m\right) !}\left[ F\left( v\right) -F\left( u\right) \right]
+^{m-1}\left( 1-F\left( v\right) \right) ^{n-k-m}-\underset{m=j-k+1}{\overset{%
+n-k}{\sum }}\frac{1}{\left( m-1\right) !\left( n-k-m\right) !}\left[ F\left(
+v\right) -F\left( u\right) \right] ^{m-1}\left( 1-F\left( v\right) \right)
+^{n-k-m}$
+
+=$\frac{1}{\left( j-k-1\right) !\left( n-j\right) !}\left[ F\left( v\right)
+-F\left( u\right) \right] ^{j-k-1}\left( 1-F\left( v\right) \right) ^{n-j}$
+
+$\implies \frac{\partial ^{2}F}{\partial u\partial v}=\frac{\partial }{%
+\partial u}\underset{k=i}{\overset{j-1}{\sum }}\frac{n!}{k!}F\left( u\right)
+^{k}f\left( v\right) \frac{1}{\left( j-k-1\right) !\left( n-j\right) !}\left[
+F\left( v\right) -F\left( u\right) \right] ^{j-k-1}\left( 1-F\left( v\right)
+\right) ^{n-j}$
+
+=$\frac{n!}{\left( j-1\right) !\left( n-j\right) !}f\left( v\right) \left(
+1-F\left( v\right) \right) ^{n-j}\frac{\partial }{\partial u}\underset{k=i}{%
+\overset{j-1}{\sum }}\binom{j-1}{k}F\left( u\right) ^{k}\left[ F\left(
+v\right) -F\left( u\right) \right] ^{j-k-1}$
+
+Similar to the derivation of pdf of $X_{\left( i\right) },$ we can show that
+
+$\frac{\partial }{\partial u}\underset{k=i}{\overset{j-1}{\sum }}\binom{j-1}{%
+k}F\left( u\right) ^{k}\left[ F\left( v\right) -F\left( u\right) \right]
+^{j-k-1}=\frac{\left( j-1\right) !}{\left( i-1\right) \left( j-i-1\right) !}%
+f\left( u\right) F\left( u\right) ^{i-1}\left[ F\left( v\right) -F\left(
+u\right) \right] ^{j-i-1}$
+
+$\implies \frac{\partial ^{2}F}{\partial u\partial v}=\frac{n!}{\left(
+j-1\right) !\left( n-j\right) !}f\left( v\right) \left( 1-F\left( v\right)
+\right) ^{n-j}\frac{\left( j-1\right) !}{\left( i-1\right) \left(
+j-i-1\right) !}f\left( u\right) F\left( u\right) ^{i-1}\left[ F\left(
+v\right) -F\left( u\right) \right] ^{j-i-1}$
+
+=$\frac{n!}{\left( i-1\right) !\left( j-i-1\right) !\left( n-j\right) !}%
+f\left( u\right) f\left( v\right) F\left( u\right) ^{i-1}\left[ F\left(
+v\right) -F\left( u\right) \right] ^{j-i-1}\left( 1-F\left( v\right) \right)
+^{n-j}\boxtimes $
+
+\bigskip Problem 28
+
+$\left( a\right) $ We can use the heuristic method to find the pdf of $%
+X_{\left( i_{1}\right) },...,X_{\left( i_{l}\right) \ }.$
+
+$p\left( x_{1},...,x_{l}\right) dx_{1}..x_{l}$ means the probability that
+the $r$-th order statistics $X_{\left( i_{r}\right) \ }$falls within $x_{r}%
+\symbol{126}x_{r}+dx_{r},$
+
+Thus the $l$ order statistics has fixed position (see figure below)$:$
+
+\FRAME{dtbpF}{3.5976in}{1.3033in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+3.5976in;height 1.3033in;depth 0pt;original-width 4.3232in;original-height
+2.1145in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NVZSSG0C.wmf';tempfile-properties "XPR";}}
+
+Notice that we divide the number axis by $l$ points into $l$+1 intervals, at 
+$l$+1 intervals and $l$ points there is probability that one point $x_{i}$
+falls into. By applying the multiplication principle we can calculate the
+probabilitys that "there are $i_{1}$-1 points in $\left( -\infty
+,x_{1}\right) ,$one point at $\left( x_{1},x_{1}+dx_{1}\right) ,i_{2}-i_{1}-1
+$ points in $\left( x_{1},x_{2}\right) ..."P=F\left( x_{1}\right)
+^{i_{1}-1}f\left( x_{1}\right) dx_{1}\left[ F\left( x_{2}\right) -F\left(
+x_{1}\right) \right] ^{i_{2}-i_{1}-1}...$
+
+$=\overset{l}{\underset{j=1}{\Pi }}f\left( x_{j}\right) \left\{ \overset{l-1}%
+{\underset{j=1}{\Pi }}\left[ F\left( x_{j+1}\right) -F\left( x_{j}\right) %
+\right] ^{i_{j+1}-i_{j}-1}\right\} F\left( x_{1}\right) ^{i_{1}-1}\left(
+1-F\left( x_{l}\right) \right) ^{n-i_{l}}dx_{1}..x_{l}$
+
+But we also need taking the sequence into consideration, for 2$l+1$ pieces
+it requires multiplying $P$ by
+
+$\frac{n!}{\left( i_{1}-1\right) !1!\left( i_{2}-i_{1}-1\right) !1!...\left(
+n-i_{l}\right) !}$
+
+$\implies p\left( x_{1},...,x_{l}\right) dx_{1}..x_{l}=\frac{n!}{\left(
+i_{1}-1\right) !1!\left( i_{2}-i_{1}-1\right) !1!...\left( n-i_{l}\right) !}P
+$
+
+$\implies p\left( x_{1},...,x_{l}\right) =\frac{n!}{\left( i_{1}-1\right)
+!\left( i_{2}-i_{1}-1\right) !...\left( n-i_{l}\right) !}\overset{l}{%
+\underset{j=1}{\Pi }}f\left( x_{j}\right) \left\{ \overset{l-1}{\underset{j=1%
+}{\Pi }}\left[ F\left( x_{j+1}\right) -F\left( x_{j}\right) \right]
+^{i_{j+1}-i_{j}-1}\right\} F\left( x_{1}\right) ^{i_{1}-1}\left( 1-F\left(
+x_{l}\right) \right) ^{n-i_{l}}$
+
+We can use the methods in Problem 26 to calculate the cdf of $X_{\left(
+i_{1}\right) },...,X_{\left( i_{l}\right) \ }.$
+
+Let $U_{j}$ be the number of points which is less than $x_{j}.$Then $\left(
+U_{1},U_{2}-U_{1},...U_{l}-U_{l-1},n-U_{l}\right) $
+
+is a multinomial random vector with n trials and cell probability $\left(
+F\left( x_{1}\right) ,F\left( x_{2}\right) -F\left( x_{1}\right) ,..F\left(
+x_{l}\right) -F\left( x_{l-1}\right) ,1-F\left( x_{l}\right) \right) .$
+
+$F\left( x_{1},...x_{l}\right) =P\left( X_{\left( i_{1}\right) }\leq
+x_{1},...,X_{\left( i_{l}\right) }\leq x_{l}\right) $
+
+$=P\left( U_{1}\geq i_{1},...U_{l}\geq i_{l}\right) =\overset{l-1}{\underset{%
+k_{1}=1}{\sum }}P\left( i_{k_{1}}\leq U_{1}<i_{k_{1}+1},U_{k_{1}+1}\geq
+i_{k_{1}+1}...U_{l}\geq i_{l}\right) +P\left( U_{1}\geq i_{l}\right) $
+
+\QTP{Body Math}
+$=\overset{l-1}{\underset{k_{1}=1}{\sum }}\overset{i_{k_{1}+1}-1}{\underset{%
+r_{1}=i_{k_{1}}}{\sum }}P\left( U_{1}=r_{1},U_{k_{1}+1}\geq
+i_{k_{1}+1}...U_{l}\geq i_{l}\right) +\overset{n}{\underset{k_{1}=i_{l}}{%
+\sum }}P\left( U_{1}=k_{1}\right) $
+
+\QTP{Body Math}
+$=\overset{l-1}{\underset{k_{1}=1}{\sum }}\overset{i_{k_{1}+1}-1}{\underset{%
+r_{1}=i_{k_{1}}}{\sum }}P\left( U_{k_{1}+1}-U_{1}\geq
+i_{k_{1}+1}-r_{1}...U_{l}-U_{1}\geq i_{l}-r_{1}\right) +\overset{n}{\underset%
+{k_{1}=i_{l}}{\sum }}\binom{n}{k_{1}}F\left( x_{1}\right) ^{k1}\left(
+1-F\left( x_{1}\right) \right) ^{n-k_{1}}$
+
+\bigskip 
+
+For the first term, notice that we reduce the term $U_{1}\geq
+i_{1},...U_{l}\geq i_{l}$ by at least one(when $k_{1}=1)$
+
+and by induction, if we know $P\left( U_{1}\geq i_{1},...U_{l-1}\geq
+i_{l-1}\right) $ in advance, then notice that 
+
+$\left( U_{k_{1}+1}-U_{1},U_{k_{1}+2}-U_{k_{1}+1},U_{l}-U_{l-1},n-\left(
+U_{l}-U_{1}\right) \right) $ is a multinomial random vector with n trials
+and cell probability $\left( F\left( x_{k_{1}+1}\right) -F\left(
+x_{1}\right) ,F\left( x_{k_{1}+2}\right) -F\left( x_{k_{1}+1}\right)
+,..F\left( x_{l}\right) -F\left( x_{l-1}\right) ,1-\left( F\left(
+x_{l}\right) -F\left( x_{1}\right) \right) \right) .$Then
+
+we can use the induction assumption to calculate $P\left(
+U_{k_{1}+1}-U_{1}\geq i_{k_{1}+1}-r_{1}...U_{l}-U_{1}\geq i_{l}-r_{1}\right)
+.$
+
+The explicit form of cmf of $X_{\left( i_{1}\right) },...,X_{\left(
+i_{l}\right) \ }$is very hard to get.
+
+$\left( b\right) $We can calculate the conditional pdf of $X_{\left(
+i_{1}\right) },...,X_{\left( i_{l}\right) \ }$by formula
+
+$p\left( x_{1},...,x_{l}|x_{1}^{\prime },...,x_{m}^{\prime }\right) =\frac{%
+p\left( x_{1},...,x_{l},x_{1}^{\prime },...,x_{m}^{\prime }\right) }{p\left(
+x_{1}^{\prime },...,x_{m}^{\prime }\right) },$where $p\left( x_{1}^{\prime
+},...,x_{l}^{\prime }\right) $ is the pdf of $X_{\left( j_{1}\right)
+},...,X_{\left( j_{m}\right) \ }$and
+
+$p\left( x_{1},...,x_{l},x_{1}^{\prime },...,x_{m}^{\prime }\right) $ is the
+joint pdf of $X_{\left( i_{1}\right) },...,X_{\left( i_{l}\right) \
+},X_{\left( j_{1}\right) },...,X_{\left( j_{m}\right) \ }.$
+
+For the conditional cmf we must presume that $X_{\left( j_{1}\right)
+},...,X_{\left( j_{m}\right) \ }$each lies within a small interval and not
+at a single point. $F\left( x_{1},...,x_{l}|x_{1}^{\prime }\leq X_{\left(
+j_{1}\right) }\leq x_{1}^{\prime }+\Delta x_{1}^{\prime },...,x_{m}^{\prime
+}\leq X_{\left( j_{m}\right) }\leq x_{m}^{\prime }+\Delta x_{m}^{\prime
+}\right) $
+
+$P\left( X_{\left( i_{1}\right) }<x_{1},...,X_{\left( i_{l}\right) \
+}<x_{l}|x_{1}^{\prime }\leq X_{\left( j_{1}\right) }\leq x_{1}^{\prime
+}+\Delta x_{1}^{\prime },...,x_{m}^{\prime }\leq X_{\left( j_{m}\right)
+}\leq x_{m}^{\prime }+\Delta x_{m}^{\prime }\right) $
+
+$=\frac{P\left( X_{\left( i_{1}\right) }<x_{1},...,X_{\left( i_{l}\right) \
+}<x_{l},x_{1}^{\prime }\leq X_{\left( j_{1}\right) }\leq x_{1}^{\prime
+}+\Delta x_{1}^{\prime },...,x_{m}^{\prime }\leq X_{\left( j_{m}\right)
+}\leq x_{m}^{\prime }+\Delta x_{m}^{\prime }\right) }{P\left( x_{1}^{\prime
+}\leq X_{\left( j_{1}\right) }\leq x_{1}^{\prime }+\Delta x_{1}^{\prime
+},...,x_{m}^{\prime }\leq X_{\left( j_{m}\right) }\leq x_{m}^{\prime
+}+\Delta x_{m}^{\prime }\right) },$then we can use the known cdf to
+calculate the probability.
+
+However, such work is daunting in practice and the exact formula for
+conditional cmf is also hard to get.
+
+\bigskip 
+
+\end{document}

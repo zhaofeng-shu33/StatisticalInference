@@ -1,0 +1,236 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, December 13, 2015 19:42:24}
+%TCIDATA{LastRevised=Monday, December 14, 2015 23:53:48}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+8.41 Notice that in this problem $\sigma $ is unknown.
+
+$LRT:$ $\lambda \left( x,y\right) =\frac{\underset{\Theta _{0}}{\sup }%
+L\left( \mu _{x},\mu _{y},\sigma |x_{i},..y_{i}\right) }{\underset{\Theta }{%
+\sup }L\left( \mu _{x},\mu _{y},\sigma |x_{i},..y_{i}\right) }.$
+
+$\underset{\Theta }{\sup }L\left( \mu _{x},\mu _{y},\sigma
+|x_{i},..y_{i}\right) =\underset{\Theta }{\sup }L\left( \mu _{x},\sigma
+|x_{i}\right) \underset{\Theta }{\sup }L\left( \mu _{y},\sigma |y_{i}\right)
+,$since the two samples are indepedent. By MLE method,also taking $\sigma
+_{x}=\sigma _{y}$ into consideration, we know as $\mu _{x}=\bar{x},\sigma
+^{2}=\frac{\Sigma \left( x_{i}-\bar{x}\right) ^{2}+\Sigma \left( y_{i}-\bar{y%
+}\right) ^{2}}{n+m},$ the maximum is reached$\implies \underset{\Theta }{%
+\sup }L\left( \mu _{x},\mu _{y},\sigma |x_{i},..y_{i}\right) =\frac{1}{\sqrt{%
+2\pi \sigma ^{2}}^{n+m}}e^{-\left( \Sigma \left( x_{i}-\bar{x}\right)
+^{2}+\Sigma \left( y_{i}-\bar{y}\right) ^{2}\right) /2\sigma ^{2}}.$
+
+For the numerator: another restriction is imposed:$\mu _{x}=\mu _{y}=\mu .$
+Then we can deduce that $\mu =\frac{n\bar{x}+m\bar{y}}{n+m},$while $\sigma
+^{\prime 2}=\frac{\Sigma \left( x_{i}-u\right) ^{2}+\Sigma \left(
+y_{i}-u\right) ^{2}}{n+m}.$
+
+$\implies \underset{\Theta _{0}}{\sup }L\left( \mu _{x},\mu _{y},\sigma
+|x_{i},..y_{i}\right) =\frac{1}{\sqrt{2\pi \sigma ^{2}}^{n+m}}e^{-\left(
+\Sigma \left( x_{i}-u\right) ^{2}+\Sigma \left( y_{i}-u\right) ^{2}\right)
+/2\sigma ^{2}}.$
+
+By direct calculation $\Sigma \left( x_{i}-u\right) ^{2}+\Sigma \left(
+y_{i}-u\right) ^{2}=$
+
+$\Sigma \left( x_{i}-\bar{x}\right) ^{2}+\Sigma \left( y_{i}-\bar{y}\right)
+^{2}+n\Sigma \left( \bar{x}-u\right) ^{2}+m\Sigma \left( \bar{y}-u\right)
+^{2}=$
+
+$\Sigma \left( x_{i}-\bar{x}\right) ^{2}+\Sigma \left( y_{i}-\bar{y}\right)
+^{2}+\frac{mn}{m+n}\left( \bar{x}-\bar{y}\right) ^{2}$
+
+$\implies \lambda \left( x,y\right) =\frac{\frac{1}{\sqrt{2\pi \sigma ^{2}}%
+^{n+m}}}{\frac{1}{\sqrt{2\pi \sigma ^{^{\prime }2}}^{n+m}}}=\left( \frac{%
+\sigma ^{\prime 2}}{\sigma ^{2}}\right) ^{\frac{m+n}{2}}=\left( 1+\frac{mn}{%
+m+n}\frac{\left( \bar{x}-\bar{y}\right) ^{2}}{\Sigma \left( x_{i}-\bar{x}%
+\right) ^{2}+\Sigma \left( y_{i}-\bar{y}\right) ^{2}}\right) ^{\frac{m+n}{2}%
+}.$
+
+$\bigskip $Since $T=\frac{\overline{X}-\overline{Y}}{\sqrt{S_{p}^{2}\left( 
+\frac{1}{n}+\frac{1}{m}\right) }}\implies T^{2}=\left( m+n-2\right) \frac{%
+mn\left( \overline{X}-\overline{Y}\right) ^{2}}{\left( m+n\right) \left(
+\Sigma \left( x_{i}-\bar{x}\right) ^{2}+\Sigma \left( y_{i}-\bar{y}\right)
+^{2}\right) }$
+
+$\implies \lambda \left( X,Y\right) =\left( 1+\frac{T^{2}}{m+n-2}\right) ^{%
+\frac{m+n}{2}}\implies \lambda \left( X,Y\right) $ can be based on statistic 
+$T.$
+
+$\left( 2\right) \mu _{x}=\mu _{y}\implies \overline{X}-\overline{Y}\symbol{%
+126}N\left( 0,\frac{\sigma ^{2}}{n}+\frac{\sigma ^{2}}{m}\right) $
+
+$\implies \frac{\overline{X}-\overline{Y}}{\sqrt{S_{p}^{2}\left( \frac{1}{n}+%
+\frac{1}{m}\right) }}=\frac{\frac{\overline{X}-\overline{Y}}{\sigma \sqrt{%
+\left( \frac{1}{n}+\frac{1}{m}\right) }}}{\sqrt{S_{p}^{2}/\sigma ^{2}}}.$ We
+then know that $\frac{\overline{X}-\overline{Y}}{\sigma \sqrt{\left( \frac{1%
+}{n}+\frac{1}{m}\right) }}\symbol{126}N\left( 0,1\right) $
+
+$S_{p}^{2}/\sigma ^{2}=\frac{1}{n+m-2}(\Sigma \left( \frac{x_{i}-\bar{x}}{%
+\sigma }\right) ^{2}+\Sigma \left( \frac{y_{i}-\bar{y}}{\sigma }\right)
+^{2}).$
+
+From previous conclusion, we know that $\Sigma \left( \frac{x_{i}-\bar{x}}{%
+\sigma }\right) ^{2}\symbol{126}\chi _{n-1}^{2},\Sigma \left( \frac{y_{i}-%
+\bar{y}}{\sigma }\right) ^{2}\symbol{126}\chi _{m-1}^{2}$
+
+And the two r.v. are indepedent. $\implies $Their sum\symbol{126}$\chi
+_{m+n-2}^{2}$
+
+By the definition of $t$ distribution$\implies T\symbol{126}t_{m+n-2}.$
+
+$\left( 3\right) $ Choosing $\alpha =0.05.$Direct computation of observed
+value of $T$ gives
+
+$t=-1.29.$Then the $p$ value for two-tailed testing is: $2\left(
+1-F_{t}\left( 1.29\right) \right) =0.21>\alpha .$ Therefore we accept $%
+H_{0}:\mu _{x}=\mu _{y}.$
+
+8.13 $\left( a\right) $ 
+
+$\frac{\frac{S_{X}^{2}}{n}+\frac{S_{Y}^{2}}{m}}{\frac{\sigma _{X}^{2}}{n}+%
+\frac{\sigma _{Y}^{2}}{m}}=\frac{\frac{\sigma _{X}^{2}}{n}}{\frac{\sigma
+_{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m}}\frac{S_{X}^{2}}{\sigma _{X}^{2}}+%
+\frac{\frac{\sigma _{Y}^{2}}{m}}{\frac{\sigma _{X}^{2}}{n}+\frac{\sigma
+_{Y}^{2}}{m}}\frac{S_{Y}^{2}}{\sigma _{Y}^{2}},$ where $\frac{\frac{\sigma
+_{X}^{2}}{n}}{\frac{\sigma _{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m}}+\frac{%
+\frac{\sigma _{Y}^{2}}{m}}{\frac{\sigma _{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m%
+}}=1$
+
+and $\frac{S_{X}^{2}}{\sigma _{X}^{2}}\symbol{126}\chi _{n-1}^{2},\frac{%
+S_{Y}^{2}}{\sigma _{Y}^{2}}\symbol{126}\chi _{m-1}^{2}$
+
+By Satterthwaite approximation: We can choose 
+
+$v=\frac{\left( \frac{\frac{S_{X}^{2}}{n}+\frac{S_{Y}^{2}}{m}}{\frac{\sigma
+_{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m}}\right) ^{2}}{\left( \frac{\frac{%
+\sigma _{X}^{2}}{n}}{\frac{\sigma _{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m}}%
+\frac{S_{X}^{2}}{\sigma _{X}^{2}}\right) ^{2}\frac{1}{n-1}+\left( \frac{%
+\frac{\sigma _{Y}^{2}}{m}}{\frac{\sigma _{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m%
+}}\frac{S_{Y}^{2}}{\sigma _{Y}^{2}}\right) ^{2}\frac{1}{m-1}}=\frac{\left( 
+\frac{S_{X}^{2}}{n}+\frac{S_{Y}^{2}}{m}\right) ^{2}}{\left( \frac{1}{n}%
+S_{X}^{2}\right) ^{2}\frac{1}{n-1}+\left( \frac{1}{m}S_{Y}^{2}\right) ^{2}%
+\frac{1}{m-1}}$
+
+$=\frac{\left( \frac{S_{X}^{2}}{n}+\frac{S_{Y}^{2}}{m}\right) ^{2}}{\frac{%
+S_{X}^{4}}{n^{2}\left( n-1\right) }+\frac{S_{Y}^{4}}{m^{2}\left( m-1\right) }%
+},s.t.\frac{\frac{S_{X}^{2}}{n}+\frac{S_{Y}^{2}}{m}}{\frac{\sigma _{X}^{2}}{n%
+}+\frac{\sigma _{Y}^{2}}{m}}\symbol{126}\frac{\chi _{v}^{2}}{v}.$
+
+$\left( 2\right) T^{\prime }=\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{%
+S_{X}^{2}}{n}+\frac{S_{Y}^{2}}{m}}},\overline{X}-\overline{Y}\symbol{126}%
+N\left( 0,\frac{\sigma _{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m}\right) .$
+
+$\implies \frac{\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{\sigma _{X}^{2}%
+}{n}+\frac{\sigma _{Y}^{2}}{m}}}}{\sqrt{\frac{\frac{S_{X}^{2}}{n}+\frac{%
+S_{Y}^{2}}{m}}{\frac{\sigma _{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m}}}},$where 
+$\frac{\overline{X}-\overline{Y}}{\sqrt{\frac{\sigma _{X}^{2}}{n}+\frac{%
+\sigma _{Y}^{2}}{m}}}\symbol{126}N\left( 0,1\right) ;\frac{\frac{S_{X}^{2}}{n%
+}+\frac{S_{Y}^{2}}{m}}{\frac{\sigma _{X}^{2}}{n}+\frac{\sigma _{Y}^{2}}{m}}%
+\symbol{126}\frac{\chi _{v}^{2}}{v}$
+
+$\implies T^{\prime }\symbol{126}t_{v},$ that is $\hat{v}=v.$
+
+$\left( 3\right) $Given the data, we can compute the observed value of $%
+T^{\prime }:-1.46$ and 
+
+$\hat{v}:20.6\approx 21,$ which is the same as $m+n-2.$ It illustrates that
+equal
+
+variance assumption is reasonable in this case.$\implies p=0.159>\alpha =0.05
+$
+
+$\implies $we accpet $H_{0}:\mu _{x}=\mu _{y}.$
+
+$\left( 4\right) H_{0}:\sigma _{X}^{2}=\sigma _{Y}^{2}\leftrightarrow
+H_{1}:\sigma _{X}^{2}\neq \sigma _{Y}^{2}.$
+
+Intuitively: we can choose $S_{X}^{2}/S_{Y}^{2}$ as a testing statistic and
+reject $H_{0}$ if $S_{X}^{2}/S_{Y}^{2}$
+
+is near $1.$
+
+From Example 5.3.5 we know that $\frac{S_{X}^{2}/S_{Y}^{2}}{\sigma
+_{X}^{2}/\sigma _{Y}^{2}}=\frac{S_{X}^{2}/\sigma _{X}^{2}}{S_{Y}^{2}/\sigma
+_{Y}^{2}}\symbol{126}F\left( n-1,m-1\right) $
+
+And under the assuption of $H_{0}:S_{X}^{2}/S_{Y}^{2}=\frac{%
+S_{X}^{2}/S_{Y}^{2}}{\sigma _{X}^{2}/\sigma _{Y}^{2}}$
+
+The observed value of $S_{X}^{2}/S_{Y}^{2}$ is 3.36 $\implies \left( \text{%
+two-sides test}\right) p=0.092>\alpha =0.05\implies $
+
+We accept $H_{0}$.
+
+8.50 $\left( 1\right) $the posterior distribution of $\theta $ is $\pi
+^{\prime }\left( \theta \right) =\frac{e^{-\frac{\left( \bar{x}-\theta
+\right) ^{2}}{2\sigma ^{2}}}e^{-\frac{\left\vert \theta \right\vert }{a}}}{%
+\int_{R}e^{-\frac{\left( \bar{x}-\theta \right) ^{2}}{2\sigma ^{2}}}e^{-%
+\frac{\left\vert \theta \right\vert }{a}}d\theta }$
+
+$;$
+
+$P\left( \theta >K|x_{1},..x_{n},a\right) =\frac{\int_{K}^{\infty }e^{-\frac{%
+\left( \bar{x}-\theta \right) ^{2}}{2\sigma ^{2}}}e^{-\frac{\left\vert
+\theta \right\vert }{a}}d\theta }{\int_{R}e^{-\frac{\left( \bar{x}-\theta
+\right) ^{2}}{2\sigma ^{2}}}e^{-\frac{\left\vert \theta \right\vert }{a}%
+}d\theta }$
+
+$\left( 2\right) \underset{a\rightarrow \infty }{\lim }P\left( \theta
+>K|x_{1},..x_{n},a\right) =\frac{\int_{K}^{\infty }e^{-\frac{\left( \bar{x}%
+-\theta \right) ^{2}}{2\sigma ^{2}}}d\theta }{\int_{R}e^{-\frac{\left( \bar{x%
+}-\theta \right) ^{2}}{2\sigma ^{2}}}d\theta }=\frac{1}{\sqrt{2\pi }\sigma
+^{2}/n}\int_{K}^{\infty }e^{-\frac{\left( \bar{x}-\theta \right) ^{2}}{%
+2\sigma ^{2}}}d\theta $
+
+$\left( 3\right) $The posterior distribution of $\theta $ under the limit $%
+\theta \symbol{126}N\left( \bar{x},\frac{\sigma ^{2}}{n}\right) $.
+
+$\bigskip p$ value in such case $1-\Phi \left( \frac{\sqrt{n}\bar{x}}{\sigma 
+}\right) .$
+
+which gives the same result as the classical hypothesis test,since $\sigma $
+is known.
+
+\end{document}

@@ -1,0 +1,89 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, October 03, 2015 15:22:22}
+%TCIDATA{LastRevised=Saturday, October 03, 2015 20:08:49}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$S^{2}=\frac{1}{n-1}\overset{n}{\underset{i=1}{\sum }}\left( X_{i}-\overline{%
+X}\right) ^{2}.$
+
+$\bigskip \mu _{4}=E\left( X_{1}-\mu \right) ^{4};\left( \text{4th central
+moment of }X_{1}\right) $
+
+$E\left( S^{4}\right) =\frac{1}{\left( n-1\right) ^{2}}E\left[ \overset{n}{%
+\underset{i=1}{\sum }}\left( \left( X_{i}-\mu \right) -\left( \overline{X}%
+-\mu \right) \right) ^{2}\right] ^{2}$
+
+$E\left[ \overset{n}{\underset{i=1}{\sum }}\left( \left( X_{i}-\mu \right)
+-\left( \overline{X}-\mu \right) \right) ^{2}\right] ^{2}=E\left[ \overset{n}%
+{\underset{i=1}{\sum }}\left( X_{i}-\mu \right) ^{2}+n\left( \overline{X}%
+-\mu \right) ^{2}-2\left( \overset{n}{\underset{i=1}{\sum }}\left( X_{i}-\mu
+\right) \right) \left( \overline{X}-\mu \right) \right] ^{2}$
+
+=$E\left[ \overset{n}{\underset{i=1}{\sum }}\left( X_{i}-\mu \right)
+^{2}-n\left( \overline{X}-\mu \right) ^{2}\right] ^{2}$
+
+=$E\left[ \overset{n}{\underset{i=1}{\sum }}\left( X_{i}-\mu \right) ^{2}%
+\right] ^{2}+n^{2}E\left( \overline{X}-\mu \right) ^{4}-2n\overset{n}{%
+\underset{i=1}{\sum }}E\left[ \left( X_{i}-\mu \right) ^{2}\left( \overline{X%
+}-\mu \right) ^{2}\right] $
+
+$=n\mu _{4}+\left( n^{2}-n\right) \sigma ^{4}+\frac{E\left[ \overset{n}{%
+\underset{i=1}{\sum }}\left( X_{i}-\mu \right) \right] ^{4}}{n^{2}}-2n^{2}E%
+\left[ \left( X_{1}-\mu \right) ^{2}\left( \overline{X}-\mu \right) ^{2}%
+\right] $
+
+=$n\mu _{4}+\left( n^{2}-n\right) \sigma ^{4}+\frac{n\mu _{4}+3n\left(
+n-1\right) \sigma ^{4}}{n^{2}}-2E\left[ \left( X_{1}-\mu \right) ^{2}\overset%
+{n}{\underset{i=1}{\sum }}\left( X_{i}-\mu \right) \right] $
+
+=$n\mu _{4}+\left( n^{2}-n\right) \sigma ^{4}+\frac{n\mu _{4}+3n\left(
+n-1\right) \sigma ^{4}}{n^{2}}-2\left[ \mu _{4}+\left( n-1\right) \sigma ^{4}%
+\right] $
+
+Then $D(S^{2})=E\left( S^{4}\right) -E^{2}\left( S^{2}\right) $
+
+=$\frac{1}{\left( n-1\right) ^{2}}\left[ n\mu _{4}+\left( n^{2}-n\right)
+\sigma ^{4}+\frac{n\mu _{4}+3n\left( n-1\right) \sigma ^{4}}{n^{2}}-2\left(
+\mu _{4}+\left( n-1\right) \sigma ^{4}\right) \right] -\sigma ^{4}$
+
+=\frac{\mu _{4}-\sigma ^{4}}{n}+\frac{2\sigma ^{4}}{n\left( n-1\right) }$.$
+
+$\bigskip $
+
+\end{document}

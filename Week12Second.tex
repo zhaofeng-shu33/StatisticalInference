@@ -1,0 +1,113 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, December 06, 2015 22:40:32}
+%TCIDATA{LastRevised=Sunday, December 06, 2015 23:17:02}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+8.14 Take $R=\left\{ \bar{x}|\bar{x}>0.5\right\} .$
+
+As n is very large $\frac{\Sigma X_{i}-np}{\sqrt{np\left( 1-p\right) }}%
+\symbol{126}N\left( 0,1\right) $ approximately.
+
+$\implies \frac{\overline{X}-p}{\sqrt{p\left( 1-p\right) /n}}\symbol{126}%
+N\left( 0,1\right) .$ The probability of making the first kind of error:
+
+$P_{p=0.49}\left( \overline{X}\in R\right) =P_{p=0.49}\left( \overline{X}%
+>0.5\right) =P\left( Z>0.01\sqrt{\frac{n}{0.49\times 0.51}}\right) ,$where $Z%
+\symbol{126}N\left( 0,1\right) .$
+
+Also the probability of making the second kind of error:
+
+$P_{p=0.51}\left( \overline{X}\notin R\right) =P_{p=0.51}\left( \overline{X}%
+\leq 0.5\right) =P\left( Z\leq -0.01\sqrt{\frac{n}{0.49\times 0.51}}\right) .
+$
+
+By the symmetry of cdf of $Z\implies 0.01\sqrt{\frac{n}{0.49\times 0.51}}=$%
+quantile$\left( 0.99\right) $
+
+Numerical approximation gives:$n\approx 13524.$
+
+8.16 $\left( 1\right) $ In this case the rejection region is the whole space.
+
+$\alpha =\underset{\theta \in \Theta }{\sup }\beta \left( \theta \right) =%
+\underset{\theta \in \Theta }{\sup }P_{\theta }\left( X\in R\right) =1.$ $%
+\beta \left( \theta \right) \equiv 1.$ Though the probability of making the
+second kind of error is zero, the probability of making the first kind of
+error is uncontrolled.
+
+$\left( 2\right) $ $\alpha =0,\beta \left( \theta \right) \equiv 0.$ Though
+the probability of making the first kind of error is zero, the probability
+of making the second kind of error is uncontrolled.
+
+8.18 $\left( 1\right) \beta \left( \theta \right) =P_{\theta }\left( \frac{%
+\overline{X}-\theta _{0}}{\sigma /\sqrt{n}}>c\right) =P_{\theta }\left( 
+\frac{\overline{X}-\theta _{0}}{\sigma /\sqrt{n}}>c\right) +P_{\theta
+}\left( \frac{\overline{X}-\theta _{0}}{\sigma /\sqrt{n}}<-c\right) $
+
+$=P\left( \frac{\overline{X}-\theta }{\sigma /\sqrt{n}}>c+\frac{\theta
+_{0}-\theta }{\sigma /\sqrt{n}}\right) +P\left( \frac{\overline{X}-\theta }{%
+\sigma /\sqrt{n}}<-c+\frac{\theta _{0}-\theta }{\sigma /\sqrt{n}}\right) $
+
+$=P\left( Z>c+\frac{\theta _{0}-\theta }{\sigma /\sqrt{n}}\right) +P\left(
+Z<-c+\frac{\theta _{0}-\theta }{\sigma /\sqrt{n}}\right) ,$where $Z\symbol{%
+126}N\left( 0,1\right) $
+
+$=1-\Phi \left( c+\frac{\theta _{0}-\theta }{\sigma /\sqrt{n}}\right) +\Phi
+\left( -c+\frac{\theta _{0}-\theta }{\sigma /\sqrt{n}}\right) ,$where $\Phi $
+is the cdf of standard normal distribution.
+
+$\left( 2\right) \beta \left( \theta _{0}\right) =0.05,1-\beta \left( \theta
+_{0}+\sigma \right) \leq 0.25.$
+
+$1-\Phi \left( c\right) +\Phi \left( -c\right) =0.05\implies 2\Phi \left(
+-c\right) =0.05\implies c=1.96.$
+
+$1-\beta \left( \theta _{0}+\sigma \right) =\Phi \left( c+\frac{-\sigma }{%
+\sigma /\sqrt{n}}\right) -\Phi \left( -c-\frac{\sigma }{\sigma /\sqrt{n}}%
+\right) $
+
+$=\Phi \left( c-\sqrt{n}\right) -\Phi \left( -c-\sqrt{n}\right) \leq 0.25$
+
+Numerical solution gives: $n\geq 8.$
+
+\end{document}

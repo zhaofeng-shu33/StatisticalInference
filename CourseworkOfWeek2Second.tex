@@ -1,0 +1,268 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, September 25, 2015 17:18:40}
+%TCIDATA{LastRevised=Saturday, October 10, 2015 22:22:28}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+%TCIDATA{ComputeDefs=
+%$X$
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Problem5.2\qquad $\left( 1\right) $Let r.v.$Y$ represent the number of years
+passed until the first year's rainfall is exceeded.
+
+Then $P\left( Y=1\right) =0;P\left( Y=2\right) =P\left( X_{2}>X_{1}\right) ;$%
+since $X_{2}$ and $X_{1}$ have the same pdf. By symmetry, \ $\qquad \
+P\left( X_{2}>X_{1}\right) =P\left( X_{2}\leq X_{1}\right) =\frac{1}{2}%
+.P\left( Y=3\right) =P\left( X_{2}\leq X_{1}\cap X_{3}>X_{1}\right) $
+
+$=P\left( X_{2}\leq X_{1}\leq X_{3}\right) \qquad $
+
+By symmetry of $X_{1},X_{2},X_{3},$which has 6 kinds of possibility of
+permutation.
+
+$\rightarrow P\left( X_{2}\leq X_{1}\cup X_{3}>X_{1}\right) =\frac{1}{6}%
+\qquad $that is $P\left( Y=3\right) =\frac{1}{6}.$
+
+\bigskip $P\left( Y=4\right) =P\left( \left( X_{2}\leq X_{1}\right) \cap
+\left( X_{3}\leq X_{1}\right) \cap \left( X_{4}>X_{1}\right) \right) ,$to
+calculate this value, we can permutate
+
+$X_{1},X_{2},X_{3}$,$X_{4}$ in such a way that in one ordered sequence, the
+last two elements are orderless,eg.
+
+$X_{1},X_{2},X_{3}$,$X_{4}$ and $X_{1},X_{2},X_{4}$,$X_{3}$ are one kind of
+permutation. Then we have $\frac{4!}{2}=12$ kinds in total.
+
+And it follows $P\left( Y=4\right) =\frac{1}{12}.$
+
+By induction, $P\left( Y=n\right) =\frac{1}{\frac{n!}{\left( n-2\right) !}}=%
+\frac{1}{n\left( n-1\right) }$for $n\geq 2.$The pmf of $Y$ is obtained$.$
+
+Remark: For $Y=n,$ we calculate the probability that $X_{\max \left\{
+1,2...n-1\right\} }\leq X_{1}$ \TEXTsymbol{<}$X_{n}$and 
+
+$\left( 2\right) $ $E\left( Y\right) =\underset{n=2}{\overset{\infty }{\sum }%
+}n\frac{1}{n\left( n-1\right) }=\infty .$
+
+Problem5.3
+
+$Y_{i}\symbol{126}Bernoulli\left( 1-F_{X}\left( \mu \right) \right)
+\rightarrow \underset{i=1}{\overset{n}{\sum }}Y_{i}\symbol{126}B\left(
+n,1-F_{X}\left( \mu \right) \right) .$
+
+\bigskip Problem5.4
+
+$\left( a\right) P\left( X_{1}=x_{1},...,X_{k}=x_{k}\right) =P\left(
+X_{1}=x_{1},...,X_{k}=x_{k},0<P<1\right) $
+
+$=\int_{0}^{1}P\left( \left( X_{1}=x_{1},...,X_{k}=x_{k}\right) |P=x\right)
+dx=\int_{0}^{1}P\left( \left( X_{1}=x_{1}|P=x,...,X_{k}=x_{k}|P=x\right)
+\right) dx$
+
+=$\int_{0}^{1}P\left( \left( X_{1}=x_{1}|P=x,...,X_{k}=x_{k}|P=x\right)
+\right) dx=\int_{0}^{1}P\left( X_{1}=x_{1}|P=x)...P(X_{k}=x_{k}|P=x\right)
+dx $
+
+$=\int_{0}^{1}\underset{i=1}{\overset{k}{\Pi }}x^{x_{i}}\left( 1-x\right)
+^{1-x_{i}}dx=\int_{0}^{1}x^{t}\left( 1-x\right) ^{k-t}dx,$where $t=\underset{%
+i=1}{\overset{k}{\sum }}x_{i}.$
+
+$\left( b\right) P\left( X_{i}=x_{i}\right)
+=\int_{0}^{1}P(X_{i}=x_{i}|P=x)dx=\int_{0}^{1}x^{x_{i}}\left( 1-x\right)
+^{1-x_{i}}dx.$
+
+$\int_{0}^{1}x^{t}\left( 1-x\right) ^{k-t}dx\neq \underset{i=1}{\overset{k}{%
+\Pi }}\int_{0}^{1}x^{x_{i}}\left( 1-x\right) ^{1-x_{i}}dx$ can be seen if $%
+x_{i}=1,i=1,2...k.$
+
+that is $\frac{1}{k+1}\neq \frac{1}{2^{k}}.$
+
+\bigskip
+
+Added Coursework:
+
+Problem 1:
+
+\bigskip Let $X_{n}=O_{p}\left( 1\right) ,Y_{n}=o_{p}\left( 1\right) .$
+
+$\left( a\right) $From $Y_{n}=O_{p}\left( 1\right) $ follows $\forall \delta
+>0,\exists N_{\delta },M_{\delta }$ $s.t.P\left( \left\vert Y_{n}\right\vert
+>M_{\delta }\right) <\frac{\delta }{2},$for $n\geq N_{\delta }$
+
+$\forall \epsilon >0\qquad P\left( \left\vert X_{n}Y_{n}\right\vert
+>\epsilon \right) =P\left( \left\vert X_{n}Y_{n}\right\vert >\epsilon
+,\left\vert Y_{n}\right\vert >M_{\delta }\right) +P\left( \left\vert
+X_{n}Y_{n}\right\vert >\epsilon ,\left\vert Y_{n}\right\vert \leq M_{\delta
+}\right) $
+
+$\leq \frac{\delta }{2}+P\left( \left\vert X_{n}\right\vert >\frac{\epsilon 
+}{M_{\delta }}\right) $
+
+\bigskip Since $X_{n}\overset{p}{\rightarrow }0,\exists N_{\epsilon ,\delta
+}>N_{\delta }$ $s.t.P\left( \left\vert X_{n}\right\vert >\frac{\epsilon }{%
+M_{\delta }}\right) <\frac{\delta }{2},$for $n\geq N_{\epsilon ,\delta }.$
+
+Then$\forall \epsilon >0(\forall \delta >0$,$\exists N_{\epsilon
+}\rightarrow \forall n\geq N_{\epsilon ,\delta }(P\left( \left\vert
+X_{n}Y_{n}\right\vert >\epsilon \right) <\frac{\delta }{2}+\frac{\delta }{2}%
+=\allowbreak \delta )).$
+
+\bigskip $X_{n}Y_{n}\overset{p}{\rightarrow }0$ follows, which is equivalent
+to $O_{p}\left( 1\right) o_{p}\left( 1\right) =o_{p}\left( 1\right) .$
+
+$\left( b\right) \forall \epsilon >0,$from $Y_{n}=O_{p}\left( 1\right) $
+follows$:\exists N_{\epsilon },M_{\epsilon }$ $s.t.P\left( \left\vert
+Y_{n}\right\vert >M_{\epsilon }\right) <\frac{\epsilon }{2},$for $n\geq
+N_{\epsilon };$
+
+\qquad From $X_{n}=o_{p}\left( 1\right) $ follows $\exists N_{\epsilon
+}^{\prime }>N_{\epsilon }$ $s.t.P\left( \left\vert X_{n}\right\vert
+>1\right) <\frac{\epsilon }{2},$for $n\geq N_{\epsilon }^{\prime };$
+
+$P\left( \left\vert X_{n}+Y_{n}\right\vert >M_{\epsilon }+1\right) =P\left(
+\left\vert X_{n}+Y_{n}\right\vert >M_{\epsilon }+1,\left\vert
+X_{n}\right\vert >1\right) +P\left( \left\vert X_{n}+Y_{n}\right\vert
+>M_{\epsilon }+1,\left\vert X_{n}\right\vert \leq 1\right) $
+
+$\leq \frac{\epsilon }{2}+P\left( \left\vert Y_{n}\right\vert >M_{\epsilon
+}\right) <\epsilon ,$for $n>N_{\epsilon }^{\prime }.$
+
+$\rightarrow O_{p}\left( 1\right) +o_{p}\left( 1\right) =O_{p}\left(
+1\right) .$
+
+$\left( c\right) $
+
+\bigskip Let the distribution function sequence of $\left\{ X_{n}\right\} $
+be $\left\{ F_{n}\right\} .$
+
+$X_{n}\overset{D}{\rightarrow }X\iff F_{n}\overset{w}{\rightarrow }F,$where $%
+F$ is the distribution function of $X.$
+
+$\iff \forall x\in C\left( F\right) ,F_{n}\left( x\right) \rightarrow
+F\left( x\right) .$
+
+$\forall \epsilon >0,\exists M_{\epsilon }\in C\left( F\right) $ and $%
+-M_{\epsilon }\in C\left( F\right) $ $,s.t.F\left( M_{\epsilon }\right)
+-F\left( -M_{\epsilon }\right) >1-\epsilon .$
+
+By continuity of limit process $\exists N_{\epsilon },s.t.F_{n}\left(
+M_{\epsilon }\right) -F_{n}\left( -M_{\epsilon }\right) >1-\epsilon ,\forall
+n>N_{\epsilon }.$
+
+$X_{n}=O_{p}\left( 1\right) $ follows.
+
+$\left( d\right) $
+
+\bigskip $\overline{X}_{n}:=\frac{1}{n}\underset{i=1}{\overset{n}{\sum }}%
+X_{i}.$By Large Number Law, $\overline{X}_{n}\overset{p}{\rightarrow }\mu
+\iff \overline{X}_{n}=\mu +o_{p}\left( 1\right) .$
+
+$P\left( \left\vert \frac{1}{n}\underset{i=1}{\overset{n}{\sum }}X_{i}-\mu
+\right\vert >C\right) =P\left( \left\vert \underset{i=1}{\overset{n}{\sum }}%
+\left( X_{i}-\mu \right) \right\vert >nC\right) \leq \frac{D\left( \underset{%
+i=1}{\overset{n}{\sum }}X_{i}\right) }{n^{2}C^{2}}=\frac{EX_{1}^{2}+E^{2}%
+\left\vert X_{1}\right\vert }{nC^{2}}$
+
+Substituting $n^{-1/2}C$ for C:
+
+$P\left( \sqrt{n}\left\vert \frac{1}{n}\underset{i=1}{\overset{n}{\sum }}%
+X_{i}-\mu \right\vert >C\right) \leq \frac{EX_{1}^{2}+E^{2}\left\vert
+X_{1}\right\vert }{C^{2}}.$
+
+$\forall \epsilon >0,$let $C=\sqrt{\frac{EX_{1}^{2}+E^{2}\left\vert
+X_{1}\right\vert }{\epsilon }},$then $P\left( \sqrt{n}\left\vert \frac{1}{n}%
+\underset{i=1}{\overset{n}{\sum }}X_{i}-\mu \right\vert >C\right) \leq
+\epsilon .$
+
+$\frac{1}{n}\underset{i=1}{\overset{n}{\sum }}X_{i}=\mu +O_{p}\left(
+n^{-1/2}\right) $ follows.
+
+\bigskip Problem 2
+
+$\left( a\right) \overline{X}_{n}:=\frac{1}{n}\underset{i=1}{\overset{n}{%
+\sum }}X_{i}.$
+
+Using the equivalent condition for a.s. convergence: $\qquad \qquad \forall
+\epsilon >0,\underset{k->\infty }{\lim }P\left( \underset{n=k}{\overset{%
+\infty }{\cup }}\left[ \left\vert \overline{X_{n}}-p\right\vert >\epsilon %
+\right] \right) =0.$
+
+By Hoeffding's inequality, $P\left[ \left\vert \overline{X_{n}}-p\right\vert
+>\epsilon \right] =P\left[ \left\vert \underset{i=1}{\overset{n}{\sum }}%
+\left( X_{i}-p\right) \right\vert >n\epsilon \right] \leq 2e^{\frac{%
+-2n^{2}\epsilon ^{2}}{n}}.$
+
+By Weistrass' Test,$\underset{n=1}{\overset{\infty }{\sum }}P\left[
+\left\vert \overline{X_{n}}-p\right\vert >\epsilon \right] <\infty
+\rightarrow $
+
+$\underset{k->\infty }{\lim }P\left( \underset{n=k}{\overset{\infty }{\cup }}%
+\left[ \left\vert \overline{X_{n}}-p\right\vert >\epsilon \right] \right)
+\leq \underset{k->\infty }{\lim }\underset{n=k}{\overset{\infty }{\sum }}%
+P\left( \left[ \left\vert \overline{X_{n}}-p\right\vert >\epsilon \right]
+\right) =0.$
+
+The result follows.
+
+\bigskip $\left( b\right) $ By defintion: $\overline{X_{n}}-p=o_{a.s.}\left( 
+\sqrt{\frac{\ln n}{n}}\right) \iff \sqrt{\frac{n}{\ln n}}\left( \overline{%
+X_{n}}-p\right) \overset{P}{\rightarrow }0$
+
+From $\left( a\right) $ we have $P\left[ \left\vert \overline{X_{n}}%
+-p\right\vert >\epsilon \right] \leq 2e^{-2n\epsilon ^{2}}.$
+
+Substituting $\sqrt{\frac{\ln n}{n}}\epsilon $ for $\epsilon $ gives
+
+$P\left[ \sqrt{\frac{n}{\ln n}}\left\vert \overline{X_{n}}-p\right\vert
+>\epsilon \right] \leq \frac{2}{n^{2\epsilon ^{2}}}\rightarrow 0,$as $%
+n\rightarrow \infty .$
+
+As a result,
+
+$\sqrt{\frac{n}{\ln n}}\left( \overline{X_{n}}-p\right) \overset{P}{%
+\rightarrow }0.$
+
+\bigskip
+
+$\bigskip $
+
+$\bigskip $
+
+\end{document}

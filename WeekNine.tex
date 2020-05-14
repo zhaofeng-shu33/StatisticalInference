@@ -1,0 +1,198 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, November 11, 2015 22:44:05}
+%TCIDATA{LastRevised=Wednesday, November 18, 2015 01:13:20}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$\bigskip $Statistical Inference WeekNine first Coursework
+
+$7.45\left( a\right) MSE\left( aS^{2}\right) =E\left[ aS^{2}-\sigma ^{2}%
+\right] ^{2}=Var\left( aS^{2}\right) +E^{2}\left( aS^{2}-\sigma ^{2}\right) $
+
+$=a^{2}Var\left( S^{2}\right) +\left( a-1\right) ^{2}\sigma ^{4}.$
+
+$\left( b\right) S^{2}=\frac{1}{n-1}\underset{j=0}{\overset{n}{\sum }}\left(
+X_{j}-\bar{X}\right) ^{2}$
+
+$\bigskip \kappa =\mu _{4}=E\left( X_{1}-\mu \right) ^{4};\left( \text{4th
+central moment of }X_{1}\right) $
+
+$E\left( S^{4}\right) =\frac{1}{\left( n-1\right) ^{2}}E\left[ \overset{n}{%
+\underset{i=1}{\sum }}\left( \left( X_{i}-\mu \right) -\left( \overline{X}%
+-\mu \right) \right) ^{2}\right] ^{2}$
+
+$E\left[ \overset{n}{\underset{i=1}{\sum }}\left( \left( X_{i}-\mu \right)
+-\left( \overline{X}-\mu \right) \right) ^{2}\right] ^{2}$
+
+$=E\left[ \overset{n}{\underset{i=1}{\sum }}\left( X_{i}-\mu \right)
+^{2}+n\left( \overline{X}-\mu \right) ^{2}-2\left( \overset{n}{\underset{i=1}%
+{\sum }}\left( X_{i}-\mu \right) \right) \left( \overline{X}-\mu \right) %
+\right] ^{2}$
+
+=$E\left[ \overset{n}{\underset{i=1}{\sum }}\left( X_{i}-\mu \right)
+^{2}-n\left( \overline{X}-\mu \right) ^{2}\right] ^{2}$
+
+=$E\left[ \overset{n}{\underset{i=1}{\sum }}\left( X_{i}-\mu \right) ^{2}%
+\right] ^{2}+n^{2}E\left( \overline{X}-\mu \right) ^{4}-2n\overset{n}{%
+\underset{i=1}{\sum }}E\left[ \left( X_{i}-\mu \right) ^{2}\left( \overline{X%
+}-\mu \right) ^{2}\right] $
+
+$=n\mu _{4}+\left( n^{2}-n\right) \sigma ^{4}+\frac{E\left[ \overset{n}{%
+\underset{i=1}{\sum }}\left( X_{i}-\mu \right) \right] ^{4}}{n^{2}}-2n^{2}E%
+\left[ \left( X_{1}-\mu \right) ^{2}\left( \overline{X}-\mu \right) ^{2}%
+\right] $
+
+=$n\mu _{4}+\left( n^{2}-n\right) \sigma ^{4}+\frac{n\mu _{4}+3n\left(
+n-1\right) \sigma ^{4}}{n^{2}}-2E\left[ \left( X_{1}-\mu \right) ^{2}\overset%
+{n}{\underset{i=1}{\sum }}\left( X_{i}-\mu \right) \right] $
+
+=$n\mu _{4}+\left( n^{2}-n\right) \sigma ^{4}+\frac{n\mu _{4}+3n\left(
+n-1\right) \sigma ^{4}}{n^{2}}-2\left[ \mu _{4}+\left( n-1\right) \sigma ^{4}%
+\right] $
+
+Then $Var(S^{2})=E\left( S^{4}\right) -E^{2}\left( S^{2}\right) $
+
+=$\frac{1}{\left( n-1\right) ^{2}}\left[ n\mu _{4}+\left( n^{2}-n\right)
+\sigma ^{4}+\frac{n\mu _{4}+3n\left( n-1\right) \sigma ^{4}}{n^{2}}-2\left(
+\mu _{4}+\left( n-1\right) \sigma ^{4}\right) \right] -\sigma ^{4}$
+
+$=\frac{\mu _{4}-\sigma ^{4}}{n}+\frac{2\sigma ^{4}}{n\left( n-1\right) }$
+
+=$\frac{1}{n}\left( \kappa -\frac{n-3}{n-1}\sigma ^{4}\right) $
+
+$\left( c\right) \kappa =E\left[ X-\mu \right] ^{4}=\sigma ^{4}E\left[ \frac{%
+X-\mu }{\sigma }\right] ^{4}=3\sigma ^{4},$since$\frac{X-\mu }{\sigma }%
+\symbol{126}N\left( 0,1\right) $
+
+replacing $\kappa $ into $\left( b\right) $ gives $Var\left( S^{2}\right) =%
+\frac{2\sigma ^{4}}{\left( n-1\right) }.$
+
+Therefore,$MSE\left( aS^{2}\right) =a^{2}\frac{2\sigma ^{4}}{n-1}+\left(
+a-1\right) ^{2}\sigma ^{4}.$Minimizing this parabolic function about a gives 
+$a=\frac{n-1}{n+1}\implies $the estimator of the form $aS^{2}$ with the
+
+minimum MES is $\frac{n-1}{n+1}S^{2}.$
+
+$\left( d\right) MSE\left( aS^{2}\right) =a^{2}Var\left( S^{2}\right)
++\left( a-1\right) ^{2}\sigma ^{4}.$Minimizing this parabolic function about
+a gives $a=\frac{\sigma ^{4}}{Var\left( S^{2}\right) +\sigma ^{4}}=\frac{%
+\sigma ^{4}}{\frac{1}{n}\left( \kappa -\frac{n-3}{n-1}\sigma ^{4}\right)
++\sigma ^{4}}=\frac{n-1}{n+1+\frac{n-1}{n}\left( \frac{\kappa }{\sigma ^{4}}%
+-3\right) }.$
+
+This problem focuses on the minimizing MSE by introducing a coefficient,
+when the estimator of $\sigma ^{2}$ is considered. See the discussion, for
+example,"A Note on an Estimator for the Variance that Utilizes the
+Kurtosis", from Journal "American Statistician". From this litearture we can
+also see that there are errors in the problem, which has not been listed in
+the Errata.
+
+7.50$\left( a\right) $ $E\left( \bar{X}\right) =E\left( X_{1}\right) =\theta
+,$and we know $\left( n-1\right) \frac{S^{2}}{\theta ^{2}}=:Y\symbol{126}%
+\chi _{n-1}^{2}$
+
+$S=\frac{\theta }{\sqrt{n-1}}\sqrt{Y},E\left( S\right) =\frac{\theta }{\sqrt{%
+n-1}}E\left( \sqrt{Y}\right) $
+
+$E\left( \sqrt{Y}\right) =\int_{0}^{\infty }\sqrt{x}\frac{1}{\Gamma \left( 
+\frac{n-1}{2}\right) 2^{\frac{n-1}{2}}}x^{\frac{n-1}{2}-1}e^{-\frac{x}{2}}dx=%
+\frac{1}{\Gamma \left( \frac{n-1}{2}\right) 2^{\frac{n-1}{2}}}%
+\int_{0}^{\infty }x^{\frac{n}{2}-1}e^{-\frac{x}{2}}dx$
+
+$=\frac{\sqrt{2}\Gamma \left( \frac{n}{2}\right) }{\Gamma \left( \frac{n-1}{2%
+}\right) }.\implies E\left( cS\right) =\frac{c\theta }{\sqrt{n-1}}\frac{%
+\sqrt{2}\Gamma \left( \frac{n}{2}\right) }{\Gamma \left( \frac{n-1}{2}%
+\right) }.$
+
+Let $E\left( cS\right) =\theta \implies c=\frac{\sqrt{n-1}\Gamma \left( 
+\frac{n-1}{2}\right) }{\sqrt{2}\Gamma \left( \frac{n}{2}\right) }.$
+
+$E\left( a\bar{X}+\left( 1-a\right) cS\right) =aE\left( \bar{X}\right)
++\left( 1-a\right) E\left( cS\right) =\theta .$
+
+$\left( b\right) MSE\left( a\bar{X}+\left( 1-a\right) cS\right) =Var\left( a%
+\bar{X}+\left( 1-a\right) cS\right) ,$since $a\bar{X}+\left( 1-a\right) cS$
+is unbiased. Since $\bar{X}$ and $S^{2}$ are indepedent, $a\bar{X}$ and $%
+\left( 1-a\right) cS$ are also indepdent$\implies $ $Var\left( a\bar{X}%
++\left( 1-a\right) cS\right) =Var\left( a\bar{X}\right) +Var\left( \left(
+1-a\right) cS\right) =a^{2}\frac{\theta }{n}+\left( 1-a\right)
+^{2}c^{2}Var\left( S\right) $
+
+$Var\left( S\right) =E\left( S^{2}\right) -E\left( S\right) ^{2}=\theta
+^{2}-\left( \frac{\theta }{\sqrt{n-1}}\frac{\sqrt{2}\Gamma \left( \frac{n}{2}%
+\right) }{\Gamma \left( \frac{n-1}{2}\right) }\right) ^{2}=\theta ^{2}\left(
+1-\frac{2\Gamma \left( \frac{n}{2}\right) ^{2}}{\left( n-1\right) \Gamma
+\left( \frac{n-1}{2}\right) ^{2}}\right) $
+
+\bigskip $c=\frac{\sqrt{n-1}\Gamma \left( \frac{n-1}{2}\right) }{\sqrt{2}%
+\Gamma \left( \frac{n}{2}\right) },c^{2}Var\left( S\right) =\left( \frac{%
+\left( n-1\right) \Gamma \left( \frac{n-1}{2}\right) ^{2}}{2\Gamma \left( 
+\frac{n}{2}\right) ^{2}}-1\right) \theta ^{2}$
+
+Minimizing $Var\left( a\bar{X}+\left( 1-a\right) cS\right) $ gives $a=\frac{%
+c^{2}Var\left( S\right) }{c^{2}Var\left( S\right) +\frac{\theta }{n}}=\frac{%
+\left( \frac{\left( n-1\right) \Gamma \left( \frac{n-1}{2}\right) ^{2}}{%
+2\Gamma \left( \frac{n}{2}\right) ^{2}}-1\right) \theta }{\left( \frac{%
+\left( n-1\right) \Gamma \left( \frac{n-1}{2}\right) ^{2}}{2\Gamma \left( 
+\frac{n}{2}\right) ^{2}}-1\right) \theta +\frac{1}{n}}.$
+
+$\left( c\right) $We know that $T=\left( \overline{X},S^{2}\right) $ is a
+sufficient statistic for N$\left( \theta ,\sigma ^{2}\right) $ and N$\left(
+\theta ,a\theta ^{2}\right) $ is a sub-family of N$\left( \theta ,\sigma
+^{2}\right) .$
+
+By definition of sufficient statistic, known the value of $T=\left( \bar{X}%
+,S^{2}\right) $, the distribution of normal distribution familly is
+irrelevant of the parameter, as a result, it also holds for its sub-family$%
+\implies T$ is a sufficient statistic for $\theta .$
+
+\bigskip the jointed distribution of $T=\left( \bar{X},S^{2}\right) $ is
+
+the expectation of $g\left( \bar{X},S^{2}\right) =\bar{X}-c\sqrt{S^{2}}$ is
+zero for all $\theta $ but
+
+$P\left( \bar{X}-S^{2}\neq 0\right) =1.\implies \left( \bar{X},S^{2}\right) $
+is not a complete statistic.\qquad
+
+\end{document}

@@ -1,0 +1,158 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, September 26, 2015 11:03:02}
+%TCIDATA{LastRevised=Saturday, September 26, 2015 12:34:11}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$\left( a\right) $If $Y|\Lambda \symbol{126}Pois\left( \Lambda \right)
+,\Lambda \symbol{126}\Gamma \left( \alpha ,\beta \right) ,$Show that $Y%
+\symbol{126}NB\left( \alpha ,\frac{1}{1+\beta }\right) .$
+
+$P\left( Y=y\right) =P\left( Y=y,0<\Lambda <\infty \right) =\int_{0}^{\infty
+}f\left( y,x\right) dx--$joined pmf.
+
+=$\int_{0}^{\infty }f^{\ast }\left( y|x\right) f\left( x\right)
+dx=\int_{0}^{\infty }\frac{x^{y}}{y!}e^{-x}\frac{x^{\alpha -1}}{\beta
+^{\alpha }\Gamma \left( \alpha \right) }e^{-x/\beta }dx=\int_{0}^{\infty }%
+\frac{x^{y+\alpha -1e^{-x\left( 1+\frac{1}{\beta }\right) }}}{y!\beta
+^{\alpha }\Gamma \left( \alpha \right) }dx=\frac{\Gamma \left( y+\alpha
+\right) }{\Gamma \left( \alpha \right) y!\beta ^{\alpha }\left( 1+\frac{1}{%
+\beta }\right) ^{y+\alpha }}$
+
+$=\binom{y+\alpha -1}{y}\left( \frac{1}{1+\beta }\right) ^{\alpha }\left( 
+\frac{\beta }{1+\beta }\right) ^{y}.$
+
+\bigskip $\left( b\right) $If $X\symbol{126}NB\left( r,p\right) ,$then the
+truncated distribution of $X:P(X=x)=\frac{P(X=x)}{P(X>0)}=\frac{\binom{r+x-1%
+}{x}p^{r}\left( 1-p\right) ^{x}}{1-p^{r}}$
+
+=$\frac{\Gamma \left( r+x\right) }{x!\Gamma \left( r\right) }\frac{%
+p^{r}\left( 1-p\right) ^{x}}{1-p^{r}}.$Show that $\underset{r->0}{\lim }%
+P\left( X=x\right) =\frac{-\left( 1-p\right) ^{x}}{x\log p}.$
+
+$\underset{r->0}{\lim }P\left( X=x\right) =\frac{-\left( 1-p\right) ^{x}}{x!}%
+\frac{\Gamma \left( x\right) }{\underset{r->0}{\lim }\frac{p^{r}-1}{r}}\frac{%
+1}{\underset{r->0}{\lim }r\Gamma \left( r\right) }=\frac{-\left( 1-p\right)
+^{x}}{x!}\frac{\left( x-1\right) !}{\frac{d}{dr}p_{\backslash r=0}^{r}}\frac{%
+1}{\underset{r->0}{\lim }\Gamma \left( r+1\right) }=\frac{-\left( 1-p\right)
+^{x}}{x}\frac{1}{\log p}\frac{1}{1}$
+
+=$\frac{-\left( 1-p\right) ^{x}}{x\log p}=:P_{0}\left( X_{0}=x\right) ,$%
+where $x=1,2...$ and $0<p<1.$ From the expansion of $\log \left( 1-x\right) $
+at $x=0,$
+
+We can show that $-\log \left( 1-x\right) =\underset{n=1}{\overset{\infty }{%
+\sum }}\frac{x^{n}}{n};$let $x=1-p\rightarrow \underset{n=1}{\overset{\infty 
+}{\sum }}P_{0}\left( X_{0}=n\right) =1.$
+
+Therefore $X_{0}$ is reasonable discrete r.v. and is called logarithmic
+series distribution.
+
+$E\left( X_{0}\right) =\overset{\infty }{\underset{n=1}{\sum }}n\times
+P_{0}\left( X_{0}=n\right) =\overset{\infty }{\underset{n=1}{\sum }}\frac{%
+-\left( 1-p\right) ^{n}}{\log p}=\frac{p-1}{p\log p}.$
+
+$D\left( X_{0}\right) =E\left( X_{0}^{2}\right) -E^{2}\left( X_{0}\right) =%
+\overset{\infty }{\underset{n=1}{\sum }}\frac{-\left( 1-p\right) ^{n}n}{\log
+p}-\frac{1}{p^{2}\log ^{2}p}=\frac{p-1}{p^{2}\log p}-\frac{\left( p-1\right)
+^{2}}{p^{2}\log ^{2}p}=\frac{\left( p-1\right) \left( \log \left( p\right)
+-p+1\right) }{p^{2}\log ^{2}p}.$
+
+the mgf of $X_{0}$ is $f\left( t\right) =E\left( e^{X_{0}t}\right) =\overset{%
+\infty }{\underset{n=1}{\sum }}e^{nt}\frac{-\left( 1-p\right) ^{n}}{n\log p}=%
+\overset{\infty }{\underset{n=1}{\sum }}\frac{-\left[ e^{t}\left( 1-p\right) %
+\right] ^{n}}{n\log p}=\frac{\log \left[ 1-e^{t}\left( 1-p\right) \right] }{%
+\log p}.$
+
+If $X_{i}$ $i=1,2...N$ are i.i.d. r.v. and have the above distribution .
+
+Then $\overset{N}{\underset{n=1}{\sum }}X_{i}$ has the mgf $\left( \frac{%
+\log \left[ 1-e^{t}\left( 1-p\right) \right] }{\log p}\right) ^{N}.$
+
+$\left( c\right) $If $H|N=$ $\overset{N}{\underset{i=1}{\sum }}X_{i},$ and $N%
+\symbol{126}Pois\left( \lambda \right) .$Show that the marginal distribution
+of $H\symbol{126}NB(r,p),$where $r=\frac{-\lambda }{\log p}.$
+
+the mgf of $H=E\left( e^{tH}\right) =E\left( E\left( e^{tH}|N\right) \right)
+=$ $\overset{\infty }{\underset{n=0}{\sum }}\frac{\lambda ^{n}}{n!}%
+e^{-\lambda }E\left( e^{tH}|N=n\right) ,$
+
+Since $H|\left( N=n\right) =$ $\overset{n}{\underset{i=1}{\sum }}X_{i}$, $%
+E\left( e^{tH}|N=n\right) $ is exactly the mgf of $H|\left( N=n\right) .$
+
+Also notice that as n=0, $H\equiv 0,$then $E\left( e^{tH}|N=n\right) \equiv
+1\rightarrow $the above conclusion holds for n=0.
+
+$\rightarrow E\left( e^{tH}\right) =$ $\overset{\infty }{\underset{n=0}{\sum 
+}}\frac{\lambda ^{n}}{n!}e^{-\lambda }$ $\left( \frac{\log \left[
+1-e^{t}\left( 1-p\right) \right] }{\log p}\right) ^{n},$Substituting $%
+\lambda =-r\log p$
+
+$\rightarrow $ $E\left( e^{tH}\right) =$ $\overset{\infty }{\underset{n=0}{%
+\sum }}\frac{1}{n!}p^{r}$ $\left( -r\log \left[ 1-e^{t}\left( 1-p\right) %
+\right] \right) ^{n}=p^{r}\overset{\infty }{\underset{n=0}{\sum }}\frac{1}{n!%
+}\left( -r\log \left[ 1-e^{t}\left( 1-p\right) \right] \right) ^{n}$
+
+$=p^{r}e^{-r\log \left[ 1-e^{t}\left( 1-p\right) \right] }=\left[ \frac{p}{%
+1-e^{t}\left( 1-p\right) }\right] ^{r}.$
+
+On the other hand, the negative binomial distribution has mgf $\overset{%
+\infty }{\underset{n=0}{\sum }}$ $e^{nt}\binom{r+n-1}{n}p^{r}\left(
+1-p\right) ^{n}$
+
+$=p^{r}$ $\overset{\infty }{\underset{n=0}{\sum }}$ $\binom{r+n-1}{r-1}\left[
+\left( 1-p\right) e^{t}\right] ^{n}=\frac{p^{r}}{\left( r-1\right) !}$ $%
+\overset{\infty }{\underset{n=0}{\sum }}$ $\frac{d^{r-1}}{dx}%
+x^{n+r-1}|_{x=\left( 1-p\right) e^{t}}=\frac{p^{r}}{\left( r-1\right) !}%
+\left( \frac{d^{r-1}}{dx}\overset{\infty }{\underset{n=0}{\sum }}%
+x^{n+r-1}\right) |_{x=\left( 1-p\right) e^{t}}$
+
+= $\frac{p^{r}}{\left( r-1\right) !}\frac{d^{r-1}}{dx}\frac{1}{1-x}%
+|_{x=\left( 1-p\right) e^{t}}=\frac{p^{r}}{\left( r-1\right) !}\frac{\left(
+r-1\right) !}{\left( 1-x\right) ^{r}}|_{x=\left( 1-p\right) e^{t}}=\frac{%
+p^{r}}{\left( 1-\left( 1-p\right) e^{t}\right) ^{r}},$ which is the same
+with above result.
+
+As a result, $H\symbol{126}NB(r,p).$
+
+\end{document}

@@ -1,0 +1,110 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, December 16, 2015 18:54:11}
+%TCIDATA{LastRevised=Wednesday, December 16, 2015 19:45:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+9.1 $P_{\theta }\left( L\left( X\right) \leq \theta \leq U\left( X\right)
+\right) =P_{\theta }\left( \left\{ X|L\left( X\right) \leq \theta \right\}
+\cap \left\{ X|\theta \leq U\left( X\right) \right\} \right) $
+
+$=P_{\theta }\left( \left\{ X|L\left( X\right) \leq \theta \right\} \right)
++P_{\theta }\left( \left\{ X|\theta \leq U\left( X\right) \right\} \right)
+-P_{\theta }\left( \left\{ X|L\left( X\right) \leq \theta \right\} \cup
+\left\{ X|\theta \leq U\left( X\right) \right\} \right) $
+
+$=1-\alpha _{1}+1-\alpha _{2}-1+P_{\theta }\left( \left\{ X|L\left( X\right)
+>\theta \right\} \cap \left\{ X|\theta >U\left( X\right) \right\} \right)
+=1-\alpha _{1}-\alpha _{2}.$
+
+9.2 $X_{n+1}\symbol{126}N\left( \theta ,1\right) .p=P_{\theta }(X_{n+1}\in
+\lbrack \bar{x}-\frac{1.96}{\sqrt{n}},\bar{x}+\frac{1.96}{\sqrt{n}}])$
+
+$=P_{\theta }(\left( X_{n+1}-\theta \right) \in \lbrack \bar{x}-\theta -%
+\frac{1.96}{\sqrt{n}},\bar{x}-\theta +\frac{1.96}{\sqrt{n}}])$
+
+$=P(Z\in \lbrack \bar{x}-\theta -\frac{1.96}{\sqrt{n}},\bar{x}-\theta +\frac{%
+1.96}{\sqrt{n}}]),Z\in N\left( 0,1\right) $
+
+$=\Phi \left( \bar{x}-\theta +\frac{1.96}{\sqrt{n}}\right) -\Phi \left( \bar{%
+x}-\theta +\frac{1.96}{\sqrt{n}}\right) ,\sqrt{n}\left( \bar{x}-\theta
+\right) \symbol{126}N\left( 0,1\right) $
+
+$=\Phi \left( \frac{Z^{\prime }+1.96}{\sqrt{n}}\right) -\Phi \left( \frac{%
+Z^{\prime }-1.96}{\sqrt{n}}\right) \leq \Phi \left( Z^{\prime }+1.96\right)
+-\Phi \left( Z^{\prime }-1.96\right) $
+
+$\leq \Phi \left( 1.96\right) -\Phi \left( -1.96\right) =0.95$
+
+9.3 $\left( 1\right) $
+
+the MLE for $\beta $ is $\hat{\beta}\left( \vec{x}\right) =\underset{1\leq
+k\leq n}{\max }\{x_{k}\}:=\tilde{X},\frac{\tilde{X}}{\beta }=\underset{1\leq
+k\leq n}{\max }\{\frac{x_{k}}{\beta }\}.$
+
+$\frac{x_{k}}{\beta }$ has pdf $\alpha _{0}x_{k}^{\alpha _{0}-1}I_{[0,1]},$
+which does not depend on unknown parameter.
+
+Thus we can construct the confidence interval as $\left( -\infty ,b\tilde{X}%
+\right) ,s.t.$
+
+the confidence coefficent $0.95=\underset{\beta }{\inf }P_{\beta }\left(
+\beta \in (-\infty ,b\tilde{X}]\right) $ 
+
+$=\underset{\beta }{\inf }P_{\beta }\left( \frac{\tilde{X}}{\beta }\geq 
+\frac{1}{b}\right) =$ $P\left( \frac{\tilde{X}}{\beta }\geq \frac{1}{b}%
+\right) =1-P\left( \frac{\tilde{X}}{\beta }\leq \frac{1}{b}\right) $
+
+$=1-\underset{i=1}{\overset{n}{\Pi }}P\left( \frac{X_{k}}{\beta }\leq \frac{1%
+}{b}\right) =1-\left( \int_{0}^{\frac{1}{b}}\alpha _{0}x_{k}^{\alpha
+_{0}-1}dx\right) ^{n}$
+
+$\implies b=20^{1/(\alpha _{0}n)}.$ Therefore the confidence upperbound is $%
+20^{1/(\alpha _{0}n)}\underset{1\leq k\leq n}{\max }\{x_{k}\}.$
+
+$\left( 2\right) $The MLE for $\alpha $ is $\hat{\alpha}\left( \vec{x}%
+\right) =\frac{n}{n\ln \hat{\beta}\left( \vec{x}\right) -\underset{i=1}{%
+\overset{n}{\Sigma }}\ln x_{i}},\hat{\beta}\left( \vec{x}\right) =\underset{%
+1\leq k\leq n}{\max }\{x_{k}\}=25.$
+
+$\implies \hat{\alpha}\left( \vec{x}\right) =\frac{14}{14\times \ln 25-43.91}%
+=\allowbreak 12.\,\allowbreak 129.$ Therefore the confidence interval for
+estimating $\beta $ is $\left( 0,1.018\right) ,$ with confidence coefficient 
+$95\%.$
+
+\end{document}

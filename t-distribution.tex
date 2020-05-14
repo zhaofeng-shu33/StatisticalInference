@@ -1,0 +1,179 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, October 02, 2015 13:50:43}
+%TCIDATA{LastRevised=Saturday, October 03, 2015 00:15:05}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+8.0436in;original-height 1.9311in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVLIT502.wmf';tempfile-properties "XPR";}}
+
+Proof of Conclusion in P220 Textbook
+
+$\left( n-1\right) S_{n}^{2}=\overset{n}{\underset{i=1}{\sum }}\left( X_{i}-%
+\overline{X}_{n}\right) ^{2}=\overset{n}{\underset{i=1}{\sum }}X_{i}^{2}-n%
+\overline{X}_{n}^{2}$
+
+$\left( n-2\right) S_{n-1}^{2}=\overset{n-1}{\underset{i=1}{\sum }}\left(
+X_{i}-\overline{X}_{n-1}\right) ^{2}=\overset{n-1}{\underset{i=1}{\sum }}%
+X_{i}^{2}-\left( n-1\right) \overline{X}_{n-1}^{2}$
+
+$\left( n-1\right) S_{n}^{2}-\left( n-2\right) S_{n-1}^{2}=X_{n}^{2}-n%
+\overline{X}_{n}^{2}+\left( n-1\right) \overline{X}_{n-1}^{2}$
+
+=$X_{n}^{2}-\frac{1}{n}\left( \overset{n}{\underset{i=1}{\sum }}X_{i}\right)
+^{2}+\left( n-1\right) \overline{X}_{n-1}^{2}$
+
+=$X_{n}^{2}-\frac{1}{n}\left( \left( n-1\right) \overline{X}%
+_{n-1}+X_{n}\right) ^{2}+\left( n-1\right) \overline{X}_{n-1}^{2}$
+
+=$\left( 1-\frac{1}{n}\right) X_{n}^{2}-\frac{2}{n}\left( n-1\right) 
+\overline{X}_{n-1}X_{n}+\left( n-1\right) \left( 1-\frac{n-1}{n}\right) 
+\overline{X}_{n-1}^{2}$
+
+=$\frac{n-1}{n}\left( X_{n}^{2}-2\overline{X}_{n-1}X_{n}+\overline{X}%
+_{n-1}^{2}\right) =\frac{n-1}{n}\left( X_{n}-\overline{X}_{n-1}\right) ^{2}$
+
+\FRAME{ftbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+10.1001in;original-height 1.9873in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NVLIT503.wmf';tempfile-properties "XPR";}}
+
+Calculate the pdf of t-distribution: $\left( \text{let }p=n-1\right) $
+
+the joint pdf of $U,V$ goes like $p\left( x,y\right) =\frac{1}{\sqrt{2\pi }}%
+e^{-\frac{x^{2}}{2}}\frac{1}{2^{p}\Gamma \left( \frac{p}{2}\right) }y^{\frac{%
+p}{2}-1}e^{-\frac{y}{2}}.$
+
+Making transformation $u=x/\sqrt{y/p},v=y$ gives the joint pdf of $u,v$
+
+$p\left( u,v\right) =\frac{1}{\sqrt{2\pi }}e^{-\frac{u^{2}v}{2p}}\frac{1}{%
+2^{p}\Gamma \left( \frac{p}{2}\right) }v^{\frac{p}{2}-1}e^{-\frac{v}{2}}%
+\sqrt{\frac{v}{p}}.$
+
+The maginal pdf $p\left( u\right) =\int_{0}^{\infty }\frac{1}{\sqrt{2\pi }}%
+e^{-\frac{u^{2}v}{2p}}\frac{1}{2^{p/2}\Gamma \left( \frac{p}{2}\right) }v^{%
+\frac{p}{2}-1}e^{-\frac{v}{2}}\sqrt{\frac{v}{p}}dv$
+
+=$\frac{1}{2^{p/2}\Gamma \left( \frac{p}{2}\right) \sqrt{2\pi p}}%
+\int_{0}^{\infty }v^{\frac{p-1}{2}}e^{-\frac{v}{2}\left( 1+\frac{u^{2}}{p}%
+\right) }dv=\frac{1}{2^{p/2}\Gamma \left( \frac{p}{2}\right) \sqrt{2\pi p}}%
+\frac{\int_{0}^{\infty }v^{\frac{p-1}{2}}e^{-y}dv}{\left( \frac{1}{2}\left(
+1+\frac{u^{2}}{p}\right) \right) ^{\frac{p+1}{2}}}=\frac{1}{2^{p/2}\Gamma
+\left( \frac{p}{2}\right) \sqrt{2\pi p}}\frac{2^{\frac{p+1}{2}}\Gamma \left( 
+\frac{p+1}{2}\right) }{\left( 1+\frac{u^{2}}{p}\right) ^{\frac{p+1}{2}}}$
+
+=$\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma \left( \frac{p}{2}%
+\right) \sqrt{\pi p}}\left( 1+\frac{u^{2}}{p}\right) ^{-\frac{p+1}{2}}.$
+
+If $p=1;$
+
+$p\left( u\right) =\frac{1}{\pi \left( 1+u^{2}\right) }\symbol{126}%
+Cauchy(1,0).$
+
+$T_{p}\symbol{126}t_{p},$if $p>1$
+
+$E\left( T_{p}\right) =\int_{-\infty }^{\infty }\frac{\Gamma \left( \frac{p+1%
+}{2}\right) u}{\Gamma \left( \frac{p}{2}\right) \sqrt{\pi p}}\left( 1+\frac{%
+u^{2}}{p}\right) ^{-\frac{p+1}{2}}du=0.$
+
+If $p>2,$
+
+$D\left( T_{p}\right) =E\left( T_{p}^{2}\right) =\int_{-\infty }^{\infty }%
+\frac{\Gamma \left( \frac{p+1}{2}\right) u^{2}}{\Gamma \left( \frac{p}{2}%
+\right) \sqrt{\pi p}}\left( 1+\frac{u^{2}}{p}\right) ^{-\frac{p+1}{2}}du$
+
+=$\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma \left( \frac{p}{2}%
+\right) \sqrt{\pi p}}\int_{-\infty }^{\infty }\frac{pu}{2}\frac{1}{1-\frac{%
+p+1}{2}}\frac{d}{du}\left( 1+\frac{u^{2}}{p}\right) ^{-\frac{p+1}{2}+1}du$
+
+=$\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma \left( \frac{p}{2}%
+\right) \sqrt{\pi p}}\int_{-\infty }^{\infty }\frac{p}{2}\frac{2}{p-1}\left(
+1+\frac{u^{2}}{p}\right) ^{-\frac{p-1}{2}}du$
+
+=$\frac{2p}{p-1}\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma \left( 
+\frac{p}{2}\right) \sqrt{\pi p}}\int_{0}^{\infty }\left( 1+\frac{u^{2}}{p}%
+\right) ^{-\frac{p-1}{2}}du$
+
+=$\frac{2p}{p-1}\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma \left( 
+\frac{p}{2}\right) \sqrt{\pi }}\int_{0}^{\infty }\left( 1+u^{2}\right) ^{-%
+\frac{p-1}{2}}du$
+
+=$\frac{2p}{p-1}\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma \left( 
+\frac{p}{2}\right) \sqrt{\pi }}\int_{0}^{\frac{\pi }{2}}\left( \cos u\right)
+^{p-3}du$
+
+=$\frac{2p}{p-1}\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma \left( 
+\frac{p}{2}\right) \sqrt{\pi }}\int_{0}^{\frac{\pi }{2}}\left( \cos u\right)
+^{p-3}du$
+
+Recall that $B\left( a,b\right) =\int_{0}^{1}x^{a-1}\left( 1-x\right)
+^{b-1}dx,$ Let $x=\cos ^{2}\left( u\right) ,$
+
+$B\left( a,b\right) =2\int_{0}^{\frac{\pi }{2}}\cos ^{2a-1}\left( u\right)
+\sin ^{2b-1}\left( u\right) dx,$Let $2a-1=p-3,2b-1=0$
+
+$\left( p-3\geq 0,\text{making }a\text{ within domain}\right) $
+
+$B\left( \frac{p}{2}-1,\frac{1}{2}\right) =2\int_{0}^{\frac{\pi }{2}}\cos
+^{p-3}\left( u\right) dx$
+
+Hence the above equality $\frac{2p}{p-1}\frac{\Gamma \left( \frac{p+1}{2}%
+\right) }{\Gamma \left( \frac{p}{2}\right) \sqrt{\pi }}\int_{0}^{\frac{\pi }{%
+2}}\left( \cos u\right) ^{p-3}du$
+
+$=\frac{2p}{p-1}\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma \left( 
+\frac{p}{2}\right) \sqrt{\pi }}\frac{B\left( \frac{p}{2}-1,\frac{1}{2}%
+\right) }{2}=\frac{p}{p-1}\frac{\Gamma \left( \frac{p+1}{2}\right) }{\Gamma
+\left( \frac{p}{2}\right) \sqrt{\pi }}\frac{\Gamma \left( \frac{p}{2}%
+-1\right) \sqrt{\pi }}{\Gamma \left( \frac{p-1}{2}\right) }=\frac{p}{p-1}%
+\frac{\frac{p-1}{2}}{\frac{p}{2}-1}=\frac{p}{p-2}.$
+
+The relation between sample Mean and Variance for non-normal samples:
+
+$D\left( S^{2}\right) =$
+
+\end{document}

@@ -1,0 +1,255 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, November 15, 2015 22:24:49}
+%TCIDATA{LastRevised=Wednesday, November 18, 2015 01:04:40}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$\bigskip 7.54\left( a\right) $the information contained in T is E$\left( 
+\frac{\partial }{\partial \theta }\log p\left( x|\theta \right) \right) ^{2}.
+$
+
+$\left\vert \frac{\partial }{\partial \theta }\log p\left( x|\theta \right)
+\right\vert =2n\frac{\theta ^{2}-x^{2}}{\theta \left( \theta
+^{2}+x^{2}\right) }.$E$\left( \frac{\partial }{\partial \theta }\log p\left(
+x|\theta \right) \right) ^{2}$
+
+$=4n^{2}\frac{\Gamma \left( 2n\right) }{\Gamma \left( n\right) ^{2}}%
+\int_{0}^{\infty }\left( \frac{\theta ^{2}-x^{2}}{\theta \left( \theta
+^{2}+x^{2}\right) }\right) ^{2}\frac{2x^{2n-1}}{(\theta +\frac{x^{2}}{\theta 
+})^{2n}}dx=\frac{4n^{2}}{2n+1}\frac{1}{\theta ^{2}}($use Mathematica to
+compute)
+
+=$\frac{2n}{2n+1}I\left( \theta \right) .$
+
+For $\left( X_{i},Y_{i}\right) ,i.i.d$ from the population, the log
+likelihood function is
+
+$\log L=-\Sigma \left( \theta x_{i}+\frac{y_{i}}{\theta }\right) ,$ $\frac{%
+\partial \log L}{\partial \theta }=0\implies \hat{\theta}=\sqrt{\frac{\Sigma
+y_{i}}{\Sigma x_{i}}}$
+
+From 6.37 T is defined as $T=\sqrt{\frac{\Sigma Y_{i}}{\Sigma X_{i}}}%
+\implies T$ is the MLE.
+
+$\Sigma X_{i}\symbol{126}\Gamma \left( \theta ,n\right) ,\Sigma Y_{i}\symbol{%
+126}\Gamma \left( \frac{1}{\theta },n\right) .$Making transformation $u=%
+\sqrt{xy},v=y$ gives
+
+the joint pdf of $\left( U,V\right) :p\left( u,v\right) =\frac{2u}{v}\frac{%
+u^{2\left( n-1\right) }}{\Gamma \left( n\right) ^{2}}e^{-\left( \theta \frac{%
+u^{2}}{v}+\frac{v}{\theta }\right) }.$Integrating about v gives the pdf of
+U: $p\left( u\right) =\frac{2u^{2n-1}}{\Gamma \left( n\right) ^{2}}%
+\int_{0}^{\infty }\frac{1}{v}e^{-\left( \theta \frac{u^{2}}{v}+\frac{v}{%
+\theta }\right) }dv=\frac{2u^{2n-1}}{\Gamma \left( n\right) ^{2}}%
+\int_{0}^{\infty }\frac{1}{v}e^{-\left( \frac{u^{2}}{v}+v\right) }dv$
+
+which is irrelevant with $\theta \implies U$ is an ancillary statistic.
+
+\bigskip Similarly, we can calculate the pdf of T: p(x)=$\frac{\Gamma \left(
+2n\right) }{\Gamma \left( n\right) ^{2}}\frac{2x^{2n-1}}{(\theta +\frac{x^{2}%
+}{\theta })^{2n}},$
+
+$\bigskip $Using Mathematica to compute gives
+
+$E\left( T\right) =\frac{\Gamma \left( 2n\right) }{\Gamma \left( n\right)
+^{2}}\int_{0}^{\infty }\frac{2x^{2n}}{(\theta +\frac{x^{2}}{\theta })^{2n}}%
+dx=\frac{\Gamma \left( 2n\right) }{\Gamma \left( n\right) ^{2}}\theta
+\int_{0}^{\infty }\frac{2x^{2n}}{(1+x^{2})^{2n}}dx=\frac{2^{1-2n}\sqrt{\pi }%
+\Gamma \left( 2n\right) \Gamma \left( n-\frac{1}{2}\right) }{\Gamma \left(
+n\right) ^{3}}$
+
+=$\frac{\left( 2n-1\right) !}{\left( n-1\right) !2^{2n-1}}\Gamma \left( 
+\frac{1}{2}\right) \frac{\Gamma \left( n-\frac{1}{2}\right) }{\Gamma \left(
+n\right) ^{2}}.$Since $\left( 2n-1\right) !=\left( 2n-1\right) !!\left(
+2n-2\right) !!$
+
+=$\left( 2n-1\right) !!\left( n-1\right) !2^{n-1}\implies E\left( T\right) =%
+\frac{\left( 2n-1\right) !!}{2^{n}}\Gamma \left( \frac{1}{2}\right) \frac{%
+\Gamma \left( n-\frac{1}{2}\right) }{\Gamma \left( n\right) ^{2}}$
+
+$=\left( n-\frac{1}{2}\right) ..\left( \frac{1}{2}\right) \Gamma \left( 
+\frac{1}{2}\right) \frac{\Gamma \left( n-\frac{1}{2}\right) }{\Gamma \left(
+n\right) ^{2}}=\frac{\Gamma \left( n+\frac{1}{2}\right) \Gamma \left( n-%
+\frac{1}{2}\right) }{\Gamma \left( n\right) ^{2}}.$
+
+$E\left( T^{2}\right) =\frac{\Gamma \left( 2n\right) }{\Gamma \left(
+n\right) ^{2}}\theta ^{2}\int_{0}^{\infty }\frac{2x^{2n+1}}{(1+x^{2})^{2n}}%
+dx=\theta ^{2}\frac{\Gamma \left( n+1\right) \Gamma \left( n-1\right) }{%
+\Gamma \left( n\right) ^{2}}.$
+
+$\Sigma X_{i}\symbol{126}\Gamma \left( \theta ,n\right)
+,EZ_{1}=\int_{0}^{\infty }\frac{n-1}{x}\frac{\theta ^{n}}{\Gamma \left(
+n\right) }x^{n-1}e^{-\theta x}dx=\theta .$
+
+$Y_{i}\symbol{126}Exp\left( \frac{1}{\theta }\right) \implies
+EZ_{2}=EY_{1}=\theta .$
+
+Therefore both $Z_{1}$ and $Z_{2}$ are unbiased estimator of $\theta .$
+
+$VarZ_{1}=EZ_{1}^{2}-E^{2}Z_{1}=\int_{0}^{\infty }\frac{\left( n-1\right)
+^{2}}{x^{2}}\frac{\theta ^{n}}{\Gamma \left( n\right) }x^{n-1}e^{-\theta
+x}dx-\theta ^{2}=\frac{1}{n-2}\theta ^{2}.$
+
+$VarZ_{2}=\frac{VarY_{1}}{n}=\frac{\theta ^{2}}{n}.$
+
+$\left( c\right) $ Since $X_{i}$ is indepedent with $Y_{i}$
+
+$\implies Var\left( aZ_{1}+\left( 1-a\right) Z_{2}\right)
+=a^{2}VarZ_{1}+\left( 1-a\right) ^{2}VarZ_{2}$
+
+Minimizing $a^{2}VarZ_{1}+\left( 1-a\right) ^{2}VarZ_{2}$ gives $a=\frac{%
+VarZ_{2}}{VarZ_{1}+VarZ_{2}}=\frac{n-2}{2n-2}.$
+
+Therefore the best unbiased estimator of the form $aZ_{1}+\left( 1-a\right)
+Z_{2}$
+
+is $\frac{n-2}{2n-2}Z_{1}+\frac{n}{2n-2}Z_{2}$ and its variance is $\frac{1}{%
+2n-2}\theta .$
+
+The bias-corrected MLE is $\frac{\Gamma \left( n\right) ^{2}}{\Gamma \left(
+n+\frac{1}{2}\right) \Gamma \left( n-\frac{1}{2}\right) }T,$and its variance
+follows from $\left( a\right) $
+
+is $\left( \frac{\Gamma \left( n\right) ^{2}}{\Gamma \left( n+\frac{1}{2}%
+\right) \Gamma \left( n-\frac{1}{2}\right) }\right) ^{2}\left( \frac{\Gamma
+\left( n+1\right) \Gamma \left( n-1\right) }{\Gamma \left( n\right) ^{2}}%
+-\left( \frac{\Gamma \left( n+\frac{1}{2}\right) \Gamma \left( n-\frac{1}{2}%
+\right) }{\Gamma \left( n\right) ^{2}}\right) ^{2}\right) \theta ^{2}$
+
+$=\left( \frac{\Gamma \left( n\right) ^{2}\Gamma \left( n+1\right) \Gamma
+\left( n-1\right) }{\Gamma ^{2}\left( n+\frac{1}{2}\right) \Gamma ^{2}\left(
+n-\frac{1}{2}\right) }-1\right) \theta ^{2}=\left( \frac{\left( n-1\right)
+!^{2}n!\left( n-2\right) !}{\left( \frac{\left( 2n-1\right) !!}{2^{n}}\frac{%
+\left( 2n-3\right) !!}{2^{n-1}}\right) ^{2}\pi }-1\right) \theta ^{2}$
+
+$\frac{\left( 2n!!\right) }{\sqrt{n}\left( 2n-1\right) !!}\frac{\left(
+2n-2\right) !!^{2}}{n\left( 2n-3\right) !!^{2}}\frac{\left( 2n-4\right) !!}{%
+\sqrt{n}\left( 2n-5\right) !!}\frac{2^{2}n^{2}}{\left( 2n-1\right) \left(
+2n-3\right) \pi }.$
+
+By Wallis Formular, $\frac{\left( 2n!!\right) }{\sqrt{n}\left( 2n-1\right) !!%
+}\rightarrow \sqrt{\pi }\implies \frac{\left( n-1\right) !^{2}n!\left(
+n-2\right) !}{\left( \frac{\left( 2n-1\right) !!}{2^{n}}\frac{\left(
+2n-3\right) !!}{2^{n-1}}\right) ^{2}\pi }\rightarrow \frac{4\pi n^{2}}{%
+\left( 2n-1\right) \left( 2n-3\right) }$
+
+As n is relatively large, the calculated variance is $\left( \frac{4\pi n^{2}%
+}{\left( 2n-1\right) \left( 2n-3\right) }-1\right) \theta \approx \left( \pi
+-1\right) \theta ,$which is much large than $\frac{1}{2n-2}\theta .$
+
+7-57 $\left( a\right) $ $\underset{i=1}{\overset{n}{\Sigma }}X_{i}\symbol{126%
+}B\left( n,p\right) ,$and since $\underset{i=1}{\overset{n}{\Sigma }}X_{i}$
+is indepedent with $X_{n+1}\implies $ $h\left( p\right) =P\left( \underset{%
+i=1}{\overset{n}{\Sigma }}X_{i}>X_{n+1}|p\right) $
+
+$=\left( 1-p\right) \left( 1-\left( 1-p\right) ^{n}\right) +p\left( 1-\left(
+1-p\right) ^{n}-n\left( 1-p\right) ^{n-1}p\right) $
+
+$=\allowbreak 1-\left( 1-p\right) ^{n}-np^{2}\left( 1-p\right) ^{n-1}.$
+
+$E\left( T\right) =P\left( \underset{i=1}{\overset{n}{\Sigma }}%
+X_{i}>X_{n+1}|p\right) =h\left( p\right) .$ From the former chaper we know
+
+$\underset{i=1}{\overset{n+1}{\Sigma }}X_{i}$ is a complete (about p)
+sufficient statistic of the sample.
+
+\bigskip By Rao-Blackwell Thm, $E\left( T|\underset{i=1}{\overset{n+1}{%
+\Sigma }}X_{i}\right) $ is the unique best unbiased estimator of $h\left(
+p\right) .$
+
+\bigskip $E\left( T|\underset{i=1}{\overset{n+1}{\Sigma }}X_{i}=t\right)
+=P\left( \underset{i=1}{\overset{n}{\Sigma }}X_{i}>X_{n+1}|\underset{i=1}{%
+\overset{n+1}{\Sigma }}X_{i}=t\right) $
+
+$=\frac{P\left( \underset{i=1}{\overset{n}{\Sigma }}X_{i}>X_{n+1},\underset{%
+i=1}{\overset{n+1}{\Sigma }}X_{i}=t\right) }{P\left( \underset{i=1}{\overset{%
+n+1}{\Sigma }}X_{i}=t\right) }=\frac{P\left( \underset{i=1}{\overset{n}{%
+\Sigma }}X_{i}>1,X_{n+1}=1,\underset{i=1}{\overset{n}{\Sigma }}%
+X_{i}=t-1\right) +P\left( \underset{i=1}{\overset{n}{\Sigma }}%
+X_{i}>0,X_{n+1}=0,\underset{i=1}{\overset{n}{\Sigma }}X_{i}=t\right) }{%
+P\left( \underset{i=1}{\overset{n+1}{\Sigma }}X_{i}=t\right) }$
+
+if $t\geq 3,$the above equality=$\frac{1}{\binom{n+1}{t}p^{t}\left(
+1-p\right) ^{n+1-t}};$
+
+if $t=2$ or 1$,$the above equality=$\frac{\left( 1-p\right) }{\binom{n+1}{t}%
+p^{t}\left( 1-p\right) ^{n+1-t}};$
+
+if $t=0,$the above equality=0.
+
+$\implies E\left( T|\underset{i=1}{\overset{n+1}{\Sigma }}X_{i}\right)
+=\QATOPD\{ . {\frac{1}{\binom{n+1}{\Sigma X_{i}}p^{\Sigma X_{i}}\left(
+1-p\right) ^{n+1-\Sigma X_{i}}},\Sigma X_{i}\geq 3}{\underset{0,\text{ \ \ \
+\ }\Sigma X_{i}=0}{\frac{1-p}{\binom{n+1}{\Sigma X_{i}}p^{\Sigma
+X_{i}}\left( 1-p\right) ^{n+1-\Sigma X_{i}}},\Sigma X_{i}=2\text{ or 1}}}.$
+
+7-58. $\left( a\right) $ The log likelyhood function $\log f=\left\vert
+x\right\vert \log \frac{\theta }{2}+\left( 1-\left\vert x\right\vert \right)
+\log \left( 1-\theta \right) $
+
+$\bigskip \frac{\partial \log f}{\partial \theta }=0\implies \frac{%
+\left\vert x\right\vert }{\theta }-\frac{1-\left\vert x\right\vert }{%
+1-\theta }=0\implies MLE:\hat{\theta}=\left\vert x\right\vert .$
+
+Further verification:If $x=0,$the max of f is reached at $\theta =0,$
+
+if $\left\vert x\right\vert =1,$the max of f is reached at $\theta =1,$
+
+$\left( b\right) $ $E\left( T\right) =2\frac{\theta }{2}=\theta $
+
+$\implies T$ is an unbiased estimator of $\theta .$
+
+$\left( c\right) Var\left( T\right) =E\left( T^{2}\right) -E^{2}T=2\theta
+-\theta ^{2},$
+
+Let $S\left( X\right) =\QATOPD\{ . {1,if\text{ }x=1}{1,if\text{ }%
+x=-1}.E\left( S\right) =\theta ,\implies S\left( X\right) $ is an unbiased
+estimator of $\theta .$
+
+$Var\left( S\right) =E\left( S^{2}\right) -E^{2}T=\theta -\theta
+^{2}<Var\left( T\right) \implies $
+
+$S\left( X\right) $ is a better unbiased estimator of $\theta .$
+
+\end{document}

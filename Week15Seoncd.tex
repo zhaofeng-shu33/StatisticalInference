@@ -1,0 +1,120 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, December 26, 2015 20:52:30}
+%TCIDATA{LastRevised=Sunday, December 27, 2015 00:00:29}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip 10.5$\left( 1\right) $ Let $\sigma ^{\prime }=\sigma /\sqrt{n}$
+
+$Var\frac{\sqrt{n}}{\overline{X_{n}}}=nVar\frac{1}{\overline{X_{n}}}=n\left(
+\int_{\left\vert x\right\vert >\epsilon }\frac{1}{\sqrt{2\pi }\sigma
+^{\prime }}\frac{1}{x^{2}}e^{-\frac{\left( x-\mu \right) ^{2}}{2\sigma
+^{\prime 2}}}dx-\left( \int_{\left\vert x\right\vert >\epsilon }\frac{1}{%
+\sqrt{2\pi }\sigma ^{\prime }}\frac{1}{x}e^{-\frac{\left( x-\mu \right) ^{2}%
+}{2\sigma ^{\prime 2}}}dx\right) ^{2}\right) $
+
+To show under the limit $\epsilon \rightarrow \infty ,Var\frac{1}{\overline{%
+X_{n}}}\rightarrow \infty .$
+
+Notice that $\int_{\left\vert x\right\vert >\epsilon }\frac{1}{\sqrt{2\pi }%
+\sigma ^{\prime }}\frac{1}{x^{2}}e^{-\frac{\left( x-\mu \right) ^{2}}{%
+2\sigma ^{\prime 2}}}dx=o\left( \frac{1}{\epsilon }\right) $
+
+$\left( \int_{\left\vert x\right\vert >\epsilon }\frac{1}{\sqrt{2\pi }\sigma
+^{\prime }}\frac{1}{x}e^{-\frac{\left( x-\mu \right) ^{2}}{2\sigma ^{\prime
+2}}}dx\right) ^{2}=o\left( \log \epsilon \right) .$
+
+$\frac{1}{\epsilon }-\log \epsilon =\frac{1-\epsilon \log \epsilon }{%
+\epsilon },$By L'Hostipal Rule, $\frac{1-\epsilon \log \epsilon }{\epsilon }%
+\rightarrow \infty .$
+
+$\left( 2\right) $ from $\left( 1\right) $ we know that $Var\left(
+T_{n}\right) <\infty $ if we delete the interval $\left( -\delta ,\delta
+\right) $ 
+
+\bigskip from the sample space. 
+
+$\left( 3\right) $ If $\mu \neq 0,$ $P\left( \left\vert T_{n}\right\vert
+<\delta \right) =P\left( \left\vert \overline{X_{n}}\right\vert >\frac{\sqrt{%
+n}}{\delta }\right) =P\left( \left\vert \frac{\sigma Z}{\sqrt{n}}+\mu
+\right\vert >\frac{\sqrt{n}}{\delta }\right) $
+
+$=P\left( \left\vert \sigma Z+\sqrt{n}\mu \right\vert >\frac{n}{\delta }%
+\right) <P\left( \left\vert \sigma Z\right\vert >\frac{n}{\delta }-\sqrt{n}%
+\mu \right) \rightarrow 0.$
+
+10.6 $\left( 1\right) $Since we observe $Y_{n}\symbol{126}N\left( 0,1\right) 
+$ with probability $p_{n},Y_{n}\symbol{126}N\left( 0,\sigma _{n}^{2}\right) $
+with probability$\qquad 1-p_{n}.$
+
+$E\left( Y_{n}\right) =p_{n}E\left( Z\right) +\left( 1-p_{n}\right) E\left(
+\sigma _{n}Z\right) ,$where $Z\symbol{126}N\left( 0,1\right) \implies
+E\left( Y_{n}\right) =0$
+
+$Var\left( Y_{n}\right) =E\left( Y_{n}^{2}\right) =p_{n}E\left( Z^{2}\right)
++\left( 1-p_{n}\right) E\left( \sigma _{n}Z\right) ^{2}=p_{n}+\left(
+1-p_{n}\right) \sigma _{n}^{2}$
+
+$\left( 2\right) P\left( Y_{n}<a\right) =p_{n}P\left( Z<a\right) +\left(
+1-p_{n}\right) P\left( \sigma _{n}Z<a\right) ,$as $p_{n}\rightarrow 1,$
+
+$\sigma _{n}\rightarrow \infty ,P\left( \sigma _{n}Z<a\right) =P\left( Z<%
+\frac{a}{\sigma _{n}}\right) \rightarrow \frac{1}{2}\implies $
+
+$P\left( Y_{n}<a\right) =P\left( Z<a\right) .Hence,$ $Y_{n}\rightarrow
+N\left( 0,1\right) .$
+
+10.7 $\sqrt{n}\left( \hat{\theta}-\theta \right) \overset{d}{\rightarrow }%
+N\left( 0,\frac{1}{I\left( \theta \right) }\right) $
+
+By Delta's Method, $\sqrt{n}\left( \tau \left( \hat{\theta}\right) -\tau
+\left( \theta \right) \right) \overset{d}{\rightarrow }N\left( 0,\frac{\tau
+^{\prime 2}\left( \theta \right) }{I\left( \theta \right) }\right) .$
+
+$\tau \left( \hat{\theta}\right) -\tau \left( \theta \right) =\frac{\tau
+\left( \hat{\theta}\right) -\tau \left( \theta \right) }{\frac{\tau ^{\prime
+}\left( \theta \right) }{\sqrt{I\left( \theta \right) }}/\sqrt{n}}\frac{\tau
+^{\prime }\left( \theta \right) }{\sqrt{I\left( \theta \right) n}},\frac{%
+\tau ^{\prime }\left( \theta \right) }{\sqrt{I\left( \theta \right) n}}%
+\overset{P}{\rightarrow }0$ by definition. 
+
+By Slusky's Thm, $\tau \left( \hat{\theta}\right) \overset{P}{\rightarrow }%
+\tau \left( \theta \right) $
+
+\end{document}

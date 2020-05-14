@@ -1,0 +1,385 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, November 29, 2015 17:26:26}
+%TCIDATA{LastRevised=Monday, November 30, 2015 17:07:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+8.1 $X_{1},..X_{1000}\symbol{126}Bernoulli\left( p\right) ,0<p<1,$\U{96f6}%
+\U{5047}\U{8bbe}$H_{0}:p=\frac{1}{2},$\U{5bf9}$H_{1}:p\neq \frac{1}{2}$
+
+$\Sigma X_{i}\symbol{126}\left( 1000,p\right) $:\U{7531}LME \U{77e5}$p=%
+\overline{X}$\U{53ef}\U{4ee5}\U{6781}\U{5927}\U{5316}\U{8be5}\U{6837}\U{672c}%
+\U{7684}likelihood function,\U{5373}LRT statistic
+
+$\lambda \left( \Sigma x_{i}\right) =$ $\frac{\binom{1000}{\Sigma x_{i}}%
+\left( \frac{1}{2}\right) ^{1000}}{\binom{1000}{\Sigma x_{i}}\bar{x}^{\Sigma
+x_{i}}\left( 1-\bar{x}\right) ^{1000-\Sigma x_{i}}}=$ $\frac{\left( \frac{1}{%
+2}\right) ^{1000}}{\bar{x}^{\Sigma x_{i}}\left( 1-\bar{x}\right)
+^{1000-\Sigma x_{i}}},$\U{8bbe}\U{7f6e}Rejection region by LRT method of
+sufficient statistic:$R=\left\{ \Sigma x_{i}|\lambda \left( \Sigma
+x_{i}\right) \leq c\right\} ,0\leq c\leq 1.$
+
+\U{4e3a}\U{786e}\U{5b9a}\U{5408}\U{7406}\U{7684}$c,$\U{8003}\U{8651}\U{5173}%
+\U{8054}$R$\U{7684}power function $\beta \left( p\right) =P_{p}\left( \vec{X}%
+\in R\right) ,$\U{82e5}\U{8bbe}\U{5b9a}\U{68c0}\U{9a8c}\U{771f}\U{5b9e}%
+\U{6c34}\U{5e73}\U{4e3a}$\alpha ,$\U{5219}$c$\U{5e94}\U{6ee1}\U{8db3}
+
+$\underset{0<p<1}{\sup }\beta \left( p\right) =\alpha \implies P\left(
+\lambda \left( \Sigma X_{i}\right) \leq c\right) =\alpha \implies $
+
+$P\left( 2^{1000}\overline{X}^{\Sigma X_{i}}\left( 1-\overline{X}\right)
+^{1000-\Sigma X_{i}}\geq \frac{1}{c}\right) =\alpha ,$\U{53d6}$\alpha =0.05,$%
+\U{53ef}\U{7528}\U{968f}\U{673a}\U{6a21}\U{62df}\U{7684}\U{529e}\U{6cd5}%
+\U{6c42}\U{51fa}$2^{1000}\overline{X}^{\Sigma X_{i}}\left( 1-\overline{X}%
+\right) ^{1000-\Sigma X_{i}}$\U{6c42}\U{51fa}0.95\U{6240}\U{5bf9}\U{5e94}%
+\U{7684}\U{5206}\U{4f4d}\U{6570}\U{5373}\U{4e3a}\U{5bf9}$\frac{1}{c}$\U{7684}%
+\U{4f30}\U{8ba1},\U{7528}R-software \U{53ef}\U{6c42}\U{51fa}
+
+$\frac{1}{c}=6.84,$\U{8868}\U{660e}\U{5728}$c$\U{53d6}$\frac{1}{6.84}$%
+\U{65f6}\U{72af}\U{7b2c}\U{4e00}\U{7c7b}\U{9519}\U{8bef}\U{7684}\U{6982}%
+\U{7387}\U{4e0d}\U{8d85}\U{8fc7}0.05,\U{4ee3}\U{5165}\U{9898}\U{4e2d}\U{5b9e}%
+\U{9a8c}\U{7ed3}\U{679c}
+
+$\Sigma x_{i}=560,\lambda \left( 560\right) =0.00073<\frac{1}{6.84},$\U{5373}%
+$560\in R,$\U{56e0}\U{6b64}\U{5224}\U{5b9a}$H_{0}$\U{4e0d}\U{5408}\U{7406}$,$%
+\U{5224}\U{65ad}\U{9519}\U{8bef}\U{7684}\U{6982}\U{7387}\U{4e0d}\U{8d85}%
+\U{8fc7}$5\%.$
+
+8.2 $H_{0}:$\U{4eca}\U{5e74}Poisson distribution\U{53c2}\U{6570}$\lambda
+\geq 15,H_{1}:\lambda <15,$
+
+\U{7531}\U{4e8e}$\lambda $\U{4ee3}\U{8868}\U{5747}\U{503c},$H_{1}$\U{6210}%
+\U{7acb}\U{76f8}\U{5f53}\U{4e8e}\U{4e8b}\U{6545}\U{7387}\U{4e0b}\U{964d}. 
+\U{53ef}\U{6c42}\U{51fa}$LRT$\U{7684}\U{7edf}\U{8ba1}\U{91cf}$\mu \left(
+k\right) =\frac{\underset{\lambda \geq 15}{\sup }\frac{\lambda ^{k}}{k!}%
+e^{-\lambda }}{\underset{\lambda >0}{\sup }\frac{\lambda ^{k}}{k!}%
+e^{-\lambda }}=\QATOPD\{ . {1,k\geq 15}{\left( \frac{15}{k}\right)
+^{k}e^{k-15},k<15}$\U{8bbe}\U{7f6e}Rejection region by LRT method of
+sufficient statistic:
+
+$R=\left\{ k|k\leq 15\right\} =\{k<15|\left( \frac{15}{k}\right)
+^{k}e^{k-15}\leq c\},0\leq c<1.$
+
+\U{4e3a}\U{786e}\U{5b9a}\U{5408}\U{7406}\U{7684}$c,$\U{8003}\U{8651}\U{5173}%
+\U{8054}$R$\U{7684}power function $\beta \left( \lambda \right) =P_{\lambda
+}\left( X\in R\right) ,$\U{82e5}\U{8bbe}\U{5b9a}\U{68c0}\U{9a8c}\U{771f}%
+\U{5b9e}\U{6c34}\U{5e73}\U{4e3a}$\alpha ,$\U{5219}$c$\U{5e94}\U{6ee1}\U{8db3}%
+$\underset{15\leq \lambda }{\sup }\beta \left( \lambda \right) =\alpha
+\implies \underset{15\leq \lambda }{\sup }P_{\lambda }\left( \mu \left(
+X\right) \leq c\right) =\alpha ,$\U{5176}\U{4e2d}$X\symbol{126}Pois\left(
+\lambda \right) $
+
+\U{6ce8}\U{610f}\U{5230}$\lambda $\U{8d8a}\U{5927},$\mu \left( X\right) =1$%
+\U{7684}\U{6982}\U{7387}\U{8d8a}\U{5927},\U{56e0}\U{6b64}$\underset{15\leq
+\lambda }{\sup }P_{\lambda }\left( \mu \left( X\right) \leq c\right)
+=P_{15}\left( \mu \left( X\right) \leq c\right) $
+
+\U{7c7b}\U{4f3c}\U{4e0a}\U{9898}\U{53d6}$\alpha =0.05,$\U{91c7}\U{7528}%
+\U{6570}\U{503c}\U{8ba1}\U{7b97}\U{7684}\U{65b9}\U{6cd5}\U{53ef}\U{6c42}%
+\U{51fa}\U{5bf9}$\lambda =15,$
+
+$P_{15}\left( \mu \left( X\right) \leq c\right) =0.05,P_{15}\left( \left( 
+\frac{15}{X}\right) ^{X}e^{X-15}\leq c,X<15\right) =0.05,$\U{6ce8}\U{610f}%
+\U{5230}
+
+$x<15$\U{65f6}$f\left( x\right) =\left( \frac{15}{x}\right) ^{x}e^{x-15}$%
+\U{662f}\U{5355}\U{8c03}\U{589e}\U{51fd}\U{6570}$\implies P\left(
+X<f^{-1}\left( c\right) \right) =0.05;$\U{4e8b}\U{5b9e}\U{4e0a}\U{7531}%
+\U{4e8e}$X$
+
+\U{662f}\U{79bb}\U{6563}\U{578b}\U{5206}\U{5e03},\U{4e0d}\U{4f1a}\U{4e25}%
+\U{683c}\U{53d6}\U{5230}0.05,\U{56e0}\U{6b64}\U{4e0d}\U{59a8}\U{53d6}$%
+f^{-1}\left( c\right) =11,$\U{8fd9}\U{6837}\U{4f7f}\U{5f97}\U{8981}\U{68c0}%
+\U{9a8c}\U{7684}\U{89c2}\U{6d4b}\U{503c}\U{843d}\U{5165}rejection region,%
+\U{53ef}\U{4ee5}\U{6c42}\U{51fa}\U{5bf9}\U{5e94}\U{7684}$\alpha =0.118.$
+
+\bigskip \U{5373}\U{5728}\U{72af}\U{9519}\U{8bef}\U{6982}\U{7387}\U{4e0d}%
+\U{8d85}$0.118$\U{7684}\U{524d}\U{63d0}\U{4e0b},\U{62d2}\U{7edd}$H_{0}$%
+\U{662f}\U{5408}\U{7406}\U{7684}.
+
+8.3 $\Sigma Y_{i}\symbol{126}\left( m,\theta \right) $:\U{7531}LME \U{77e5}$%
+\theta =\overline{Y}$\U{53ef}\U{4ee5}\U{6781}\U{5927}\U{5316}\U{8be5}\U{6837}%
+\U{672c}\U{7684}likelihood function,\U{5373}LRT statistic
+
+$\lambda \left( \Sigma y_{i}\right) =$ $\frac{\underset{\theta \leq \theta
+_{0}}{\sup }\binom{m}{\Sigma y_{i}}\theta ^{\Sigma y_{i}}\left( 1-\theta
+\right) ^{m-\Sigma y_{i}}}{\binom{m}{\Sigma y_{i}}\bar{y}^{\Sigma
+y_{i}}\left( 1-\bar{y}\right) ^{m-\Sigma y_{i}}}=$ $\frac{\underset{\theta
+\leq \theta _{0}}{\sup }\theta ^{\Sigma y_{i}}\left( 1-\theta \right)
+^{m-\Sigma y_{i}}}{\bar{y}^{\Sigma y_{i}}\left( 1-\bar{y}\right) ^{m-\Sigma
+y_{i}}}\QATOPD\{ . {1,\bar{y}\leq \theta _{0}}{\left( \frac{\theta _{0}}{%
+\bar{y}}\right) ^{\Sigma y_{i}}\left( \frac{1-\theta _{0}}{1-\bar{y}}\right)
+^{m-\Sigma y_{i}},\bar{y}>\theta _{0}},$\U{8bbe}\U{7f6e}Rejection region by
+LRT method of sufficient statistic:$R=\left\{ \Sigma y_{i}|\lambda \left(
+\Sigma y_{i}\right) \leq c\right\} 0\leq c<1$
+
+$\implies R=\left\{ \Sigma y_{i}|\left( \frac{\theta _{0}}{\bar{y}}\right)
+^{\Sigma y_{i}}\left( \frac{1-\theta _{0}}{1-\bar{y}}\right) ^{m-\Sigma
+y_{i}}\leq c,\Sigma y_{i}>m\theta _{0}\right\} ,$\U{8bbe}$x=\Sigma y_{i},$
+
+\U{82e5}\U{80fd}\U{5224}\U{65ad}\U{51fa}$\left( \frac{\theta _{0}}{\bar{y}}%
+\right) ^{\Sigma y_{i}}\left( \frac{1-\theta _{0}}{1-\bar{y}}\right)
+^{m-\Sigma y_{i}}=\left( \frac{m\theta _{0}}{x}\right) ^{x}\left( \frac{%
+m\left( 1-\theta _{0}\right) }{m-x}\right) ^{m-x}$\U{662f}\U{5173}\U{4e8e}$x$%
+\U{7684}\U{5355}\U{8c03}\U{51cf}\U{51fd}\U{6570},\U{90a3}\U{4e48}\U{7acb}%
+\U{5373}\U{53ef}\U{5f97}\U{539f}\U{7ed3}\U{8bba}\U{6210}\U{7acb}.\U{4e3a}%
+\U{8bc1}\U{6b64},\U{91c7}\U{7528}\U{53d6}\U{5bf9}\U{6570}\U{6c42}\U{5bfc}%
+\U{7684}\U{529e}\U{6cd5},\U{8bbe}$f\left( x\right) =x\ln \frac{m\theta _{0}}{%
+x}+\left( m-x\right) \ln \frac{m\left( 1-\theta _{0}\right) }{m-x},f^{\prime
+}\left( x\right) =\ln \frac{\theta _{0}}{1-\theta _{0}}+\ln \frac{m-x}{x}$
+
+\U{56e0}$x<m\theta _{0}$\U{800c}$\ln \frac{m-x}{x}$\U{5173}\U{4e8e}$x$%
+\U{5355}\U{51cf}$\implies f^{\prime }\left( x\right) <\ln \frac{\theta _{0}}{%
+1-\theta _{0}}+\ln \frac{m-m\theta _{0}}{\theta _{0}}=0$
+
+\U{5373}\U{539f}$\left( \frac{m\theta _{0}}{x}\right) ^{x}\left( \frac{%
+m\left( 1-\theta _{0}\right) }{m-x}\right) ^{m-x}$\U{662f}\U{5173}\U{4e8e}$x$%
+\U{7684}\U{5355}\U{8c03}\U{51cf}\U{51fd}\U{6570}$\boxtimes $
+
+8.4\U{7531}$L\left( \theta |x\right) $\U{7684}\U{5b9a}\U{4e49}\U{5f62}%
+\U{5f0f}\U{4e0a}\U{5176}\U{4e3a}\U{6837}\U{672c}\U{7684}\U{8054}\U{5408}pdf,%
+\U{4e8e}\U{662f}\U{77e5}\U{5176}\U{8868}\U{793a}\U{6837}\U{672c}\U{89c2}%
+\U{6d4b}\U{503c}\U{7ed9}\U{5b9a}\U{60c5}\U{51b5}\U{4e0b}$\theta $\U{7684}%
+\U{4e0d}\U{540c}\U{53d6}\U{503c}\U{5bf9}\U{5e94}\U{7684}\U{8be5}\U{6837}%
+\U{672c}\U{89c2}\U{6d4b}\U{503c}\U{51fa}\U{73b0}\U{7684}\U{6982}\U{7387},%
+\U{6545}LRT\U{7edf}\U{8ba1}\U{91cf}\U{7684}\U{5206}\U{5b50}\U{662f}\U{89c2}%
+\U{6d4b}\U{6837}\U{672c}\U{51fa}\U{73b0}\U{7684}\U{6700}\U{5927}\U{6982}%
+\U{7387}$\forall \theta \in \Theta _{0}$\U{800c}\U{5206}\U{6bcd}\U{662f}%
+\U{89c2}\U{6d4b}\U{6837}\U{672c}\U{51fa}\U{73b0}\U{7684}\U{6700}\U{5927}%
+\U{6982}\U{7387}$\forall \theta \in \Theta .$
+
+8.5 $\left( 1\right) L\left( \theta ,v|x_{1},..x_{n}\right) =\frac{\theta
+^{n}v^{n\theta }}{\left( \pi x_{i}\right) ^{\theta +1}}I_{[v,\infty )}\left(
+x_{\left( 1\right) }\right) ,$
+
+MLE $\hat{v}\left( \vec{x}\right) =x_{\left( 1\right) },$then maximazing $%
+\theta $ is equivalent to maximaze $\theta ^{n}\left( \frac{v^{n}}{\pi x_{i}}%
+\right) ^{\theta },$\U{6c42}\U{5bfc}\U{5f97}\U{6781}\U{503c}$\hat{\theta}%
+\left( \vec{x}\right) =\frac{n}{\ln \frac{\pi x_{i}}{x_{\left( 1\right) }^{n}%
+}}.$
+
+$\left( 2\right) $\U{7531}$\left( 1\right) $\U{7684}\U{7ed3}\U{679c},\U{53ef}%
+\U{4ee5}\U{5f88}\U{5feb}\U{6c42}\U{51fa}\U{5173}\U{4e8e}\U{7ed9}\U{5b9a}%
+\U{4e92}\U{8865}\U{7684}\U{5047}\U{8bbe}\U{7684}LRT\U{4e3a}$\lambda \left( 
+\vec{x}\right) =\frac{\frac{\hat{v}^{n}}{\left( \pi x_{i}\right) ^{2}}}{%
+\frac{\hat{\theta}^{n}\hat{v}^{n\hat{\theta}}}{\left( \pi x_{i}\right) ^{%
+\hat{\theta}+1}}}=\frac{\left( \pi x_{i}\right) ^{\hat{\theta}-1}}{\hat{%
+\theta}^{n}\hat{v}^{n\left( \hat{\theta}-1\right) }}=\frac{\left( \frac{\pi
+x_{i}}{x_{\left( 1\right) }^{n}}\right) ^{\hat{\theta}-1}}{\hat{\theta}^{n}}%
+, $rejection region:
+
+$R\left( \vec{x}\right) =\left\{ \vec{x}|\lambda \left( \vec{x}\right) \leq
+c\right\} ,\lambda \left( \vec{x}\right) \leq c,$\U{8bbe}$T\left( \vec{x}%
+\right) =\ln \frac{\pi x_{i}}{x_{\left( 1\right) }^{n}},T\left( \vec{x}%
+\right) \geq 0$\U{4e24}\U{8fb9}\U{53d6}\U{5bf9}\U{6570}\U{6709}\qquad
+
+$\left( 1-\frac{T\left( \vec{x}\right) }{n}\right) +\ln \frac{T\left( \vec{x}%
+\right) }{n}\leq \frac{\ln c}{n},$\U{7531}$\left( 1-x\right) +\ln x$\U{56fe}%
+\U{8c61}\U{5728}$x=1$\U{53d6}\U{6700}\U{5927}\U{503c}0\U{7684}\U{6027}%
+\U{8d28}\U{53ca}
+
+$\frac{\ln c}{n}<0$\U{53ef}\U{77e5}\U{4e0a}\U{8ff0}\U{4e0d}\U{7b49}\U{5f0f}%
+\U{53ef}\U{5316}\U{4e3a}$T\left( \vec{x}\right) \leq c_{1}$\U{6216}$T\left( 
+\vec{x}\right) \geq c_{2},$
+
+\U{4e3a}\U{7b80}\U{4fbf}\U{4e14}\U{4e0d}\U{5931}\U{4e00}\U{822c}\U{6027},%
+\U{8003}\U{8651}$\left( 1-x\right) +\ln x<-\mu ,\mu >0\implies x\leq b_{1}<1$
+or
+
+$x\geq b_{2}>1.b_{1},b_{2}$ satisfies the equation $\left( 1-x\right) +\ln
+x=-\,\mu .$
+
+$\implies \left( 1-b_{1}\right) +\ln b_{1}=\left( 1-b_{2}\right) +\ln
+b_{2},\implies b_{2}-b_{1}=\ln \frac{b_{2}}{b_{1}}>0.$
+
+Similarly we can get $0<c_{1}<c_{2}.$
+
+$\left( c\right) F\left( y\right) =\int_{v}^{y}f\left( y|\theta =1,v\right)
+=1-\frac{v}{y},$
+
+\U{8003}\U{8651}\U{5bf9}\U{4e8e}$n-1$\U{4e2a}$X_{\left( k\right) }\left(
+X_{\left( k\right) }\text{\U{662f}\U{975e}\U{5e73}\U{51e1}\U{9879}}\right) $
+
+$\left( X_{k},X_{\left( 1\right) }\right) $\U{7684}\U{8054}\U{5408}\U{5206}%
+\U{5e03}pdf $f\left( x,y\right) dxdy=\frac{v}{x^{2}}dx\frac{v}{y^{2}}%
+dy\left( n-1\right) \left( 1-\frac{v}{y}\right) ^{n-2},x>y$,
+
+\U{505a}\U{53d8}\U{91cf}\U{66ff}\U{6362}$u=\frac{x}{y},w=y\implies \left( 
+\frac{X_{k}}{X_{\left( 1\right) }},X_{\left( 1\right) }\right) $\U{7684}%
+\U{8054}\U{5408}\U{5206}\U{5e03}pdf \U{4e3a}$f\left( u,w\right) =\frac{%
+\left( n-1\right) v^{2}}{u^{2}}\frac{1}{w^{3}}\left( 1-\frac{v}{w}\right)
+^{n-2},$\U{53ef}\U{89c1}$\left( \frac{X_{k}}{X_{\left( 1\right) }},X_{\left(
+1\right) }\right) $ are mutually indepedent.
+
+$\implies \frac{X_{k}}{X_{\left( 1\right) }}$\U{7684}margial distribution
+pdf: $g\left( u\right) =\int_{v}^{\infty }f\left( u,w\right) dw,u>1,$\U{79ef}%
+\U{5206}(\U{5148}\U{505a}$t=\frac{1}{w^{2}}$\U{7684}\U{53d8}\U{91cf}\U{66ff}%
+\U{6362}\U{518d}\U{5229}\U{7528}Beta function\U{7684}\U{6027}\U{8d28})%
+\U{53ef}\U{5f97}
+
+$g\left( u\right) =\frac{1}{u^{2}},u>1.$\U{7531}\U{4e8e}$T\left( \vec{x}%
+\right) =\ln \frac{\pi x_{i}}{x_{\left( 1\right) }^{n}}$\U{4e2d}\U{4e58}%
+\U{79ef}\U{7684}\U{6548}\U{5e94},\U{4f7f}\U{5f97}\U{5bf9}\U{4e8e}\U{4efb}%
+\U{610f}\U{7ed9}\U{5b9a}\U{7684}
+
+$X_{\left( 1\right) }=x,$\U{603b}\U{6709}$n-1$\U{4e2a}\U{975e}\U{5e73}%
+\U{51e1}\U{9879}\U{53d6}\U{503c}\U{4e0e}$x$\U{65e0}\U{5173},\U{5373}$\frac{%
+\pi x_{i}}{x_{\left( 1\right) }^{n}}$\U{53ef}\U{770b}\U{6210}$n-1$\U{4e2a}%
+\U{72ec}\U{7acb}\U{968f}\U{673a}\U{53d8}\U{91cf}
+
+$\frac{X_{k}}{X_{\left( 1\right) }}$\U{7684}\U{4e58}\U{79ef}$\implies 2T=%
+\underset{n-1\U{9879} }{\sum }2\ln \frac{X_{k}}{X_{\left( 1\right) }},$%
+\U{901a}\U{8fc7}\U{53d8}\U{6362}\U{4e0d}\U{96be}\U{6c42}\U{51fa}$2\ln \frac{%
+X_{k}}{X_{\left( 1\right) }}\symbol{126}\chi _{2}^{2},$\U{53c8}\U{548c}%
+\U{5f0f}$n-1$
+
+\U{9879}\U{76f8}\U{4e92}\U{72ec}\U{7acb}$\implies 2T\symbol{126}\chi
+_{2\left( n-1\right) }^{2}$
+
+8.6 $\left( 1\right) L\left( \theta ,\mu \right) :=L\left( \theta ,\mu
+|x_{1},..x_{m},y_{1},..y_{n}\right) =\theta ^{n}\mu ^{m}e^{-\theta \Sigma
+x_{i}-\mu \Sigma y_{i}},$
+
+\bigskip LRT $\lambda \left( x_{1},..x_{m},y_{1},..y_{n}\right) =\frac{%
+\underset{\theta \neq \mu }{\sup }L\left( \theta ,\mu \right) }{\sup L\left(
+\theta ,\mu \right) }$
+
+\U{5bf9}\U{5206}\U{5b50}\U{5206}\U{6bcd}\U{6c42}\U{6781}\U{503c}\U{5373}%
+\U{5f97}$\lambda \left( x_{1},..x_{m},y_{1},..y_{n}\right) =\frac{\left( 
+\frac{n+m}{\Sigma x_{i}+\Sigma y_{i}}\right) ^{n+m}}{\left( \frac{n}{\Sigma
+x_{i}}\right) ^{n}\left( \frac{m}{\Sigma y_{i}}\right) ^{m}}.$
+
+$\left( 2\right) $ First we can calculate $X=\Sigma X_{i}\symbol{126}\Gamma
+\left( \theta ,n\right) ,Y=\Sigma Y_{i}\symbol{126}\Gamma \left( \mu
+,m\right) $
+
+$\left( X,Y\right) $ joined pdf: $\frac{\theta ^{n}\mu ^{m}}{\Gamma \left(
+n\right) \Gamma \left( m\right) }x^{n-1}y^{m-1}e^{-\theta x-\mu y}dxdy$
+
+\U{6c42}$T=\frac{X}{X+Y}$\U{7684}\U{5206}\U{5e03}\U{53ea}\U{9700}\U{505a}%
+\U{4e00}\U{4e2a}transformation $w=x,v=\frac{x}{x+y},$\U{518d}\U{5bf9}$w$%
+\U{4ece}0\U{5230}$\infty $\U{79ef}\U{5206},
+
+\U{6c42}\U{5f97}$T$\U{7684}pdf $f\left( v\right) =\frac{\Gamma \left(
+n+m\right) }{\Gamma \left( n\right) \Gamma \left( m\right) }\theta ^{n}\mu
+^{m}\frac{1}{\left( \theta +\mu \left( \frac{1}{v}-1\right) \right) ^{n+m}}%
+\left( \frac{1}{v}-1\right) ^{m-1}\frac{1}{v^{2}},$\U{7531}$T$\U{4ea7}%
+\U{751f}\U{7684}LRT
+
+$\lambda ^{\ast }\left( \vec{x},\vec{y}\right) =\frac{v^{n+m}}{\sup \theta
+^{n}\mu ^{m}\frac{1}{\left( \theta +\mu \left( \frac{1}{v}-1\right) \right)
+^{n+m}}},$\U{5bf9}\U{5206}\U{6bcd}\U{6c42}\U{6700}\U{503c}\U{6709}
+
+$=\frac{v^{n+m}}{\frac{m^{m}n^{n}}{\left( \frac{1}{v}-1\right) ^{m}\left(
+m+n\right) ^{m+n}}}$\U{5316}\U{7b80}\U{5f97}$=\frac{\left( \frac{n+m}{\Sigma
+x_{i}+\Sigma y_{i}}\right) ^{n+m}}{\left( \frac{n}{\Sigma x_{i}}\right)
+^{n}\left( \frac{m}{\Sigma y_{i}}\right) ^{m}},$\U{4e0e}$\left( 1\right) $%
+\U{4e2d}\U{6240}\U{6c42}\U{76f8}\U{540c}$.$
+
+$\left( 3\right) \theta =\mu \implies f\left( v\right) =\frac{\Gamma \left(
+n+m\right) }{\Gamma \left( n\right) \Gamma \left( m\right) }v^{n-1}\left(
+1-v\right) ^{m-1}\implies T\symbol{126}Beta\left( n,m\right) $
+
+8.7 $\left( 1\right) $LRT$\qquad L\left( \theta ,\lambda
+|x_{1},..x_{n}\right) =\frac{1}{\lambda }e^{\frac{-\left( \Sigma
+x_{i}-n\theta \right) }{\lambda }}I_{[\theta ,\infty )}\left( x_{\left(
+1\right) }\right) $
+
+$\lambda \left( x_{1},..x_{n}\right) =\frac{\underset{\theta \leq 0}{\sup }%
+L\left( \theta ,\mu \right) }{\sup L\left( \theta ,\mu \right) }=\QATOPD\{ .
+{1,x_{\left( 1\right) }\leq 0}{\frac{\Sigma x_{i}-nx_{\left( 1\right) }}{%
+\Sigma x_{i}}x_{\left( 1\right) }>0}$
+
+$\left( 2\right) L\left( \gamma ,\beta |x_{1},..x_{n}\right) =\frac{\gamma
+^{n}}{\beta ^{n}}\left( \pi x_{i}\right) ^{\gamma -1}e^{-\frac{\Sigma
+x_{i}^{\gamma }}{\beta }}$
+
+$\lambda \left( x_{1},..x_{n}\right) =\frac{\underset{\gamma =1}{\sup }%
+L\left( \gamma ,\beta \right) }{\sup L\left( \gamma ,\beta \right) }=\frac{%
+\left( \frac{n}{\Sigma x_{i}}\right) ^{n}e^{-n}}{\sup L\left( \gamma ,\beta
+\right) },$
+
+Notice that if the estimation of $\gamma $ is known, then by diffierential
+method $\hat{\beta}\left( \vec{x}\right) =\frac{\Sigma x_{i}^{\gamma }}{n}.$%
+However, $\gamma $ satisfies an implicit function: $\frac{n}{\gamma }+\ln
+\left( \pi x_{i}\right) -\frac{n}{\Sigma x_{i}^{\gamma }}\Sigma \ln
+x_{i}\left( x_{i}^{\gamma }\right) =0,$which should be solved numerically.
+
+8.8 $\left( 1\right) $\U{8003}\U{8651} sufficient statistic $\overline{X}%
+\symbol{126}N\left( \theta ,\frac{a\theta }{n}\right) ,L\left( a,\theta |%
+\bar{x}\right) =\frac{1}{\sqrt{2\pi }\sqrt{\frac{a\theta }{n}}}e^{-\frac{%
+\left( \bar{x}-\theta \right) ^{2}}{2\frac{a\theta }{n}}}$
+
+$\lambda \left( x_{1},..x_{n}\right) =\lambda ^{\ast }\left( \bar{x}\right) =%
+\frac{\underset{a=1}{\sup }L\left( a,\theta |\bar{x}\right) }{\sup L\left(
+a,\theta |\bar{x}\right) },$\U{6c42}$\sup L\left( a,\theta |\bar{x}\right) $%
+\U{76f8}\U{5f53}\U{4e8e}\U{6c42}$\inf \sqrt{\theta }e^{\frac{\left( \bar{x}%
+-\theta \right) ^{2}}{2\frac{a\theta }{n}}}$
+
+\U{6c42}\U{5bfc}\U{6cd5}\U{7ed9}\U{51fa}\U{6700}\U{5c0f}\U{503c}\U{70b9}$%
+\theta =\frac{-\frac{a}{n}+\sqrt{\frac{a^{2}}{n^{2}}+4\bar{x}^{2}}}{2},$%
+\U{4ee3}\U{5165}$\lambda ^{\ast }\left( \bar{x}\right) $\U{5206}\U{6bcd},%
+\U{518d}\U{53d6}$a=1$\U{4ee3}\U{5165}$\lambda ^{\ast }\left( \bar{x}\right) $%
+\U{5206}\U{5b50},
+
+\U{5373}\U{5f97}LRT: $\left\{ \bar{x}|\lambda ^{\ast }\left( \bar{x}\right)
+<c\right\} .$
+
+$\left( 2\right) $\U{8003}\U{8651} sufficient statistic $\overline{X}\symbol{%
+126}N\left( \theta ,\frac{a\theta ^{2}}{n}\right) ,L\left( a,\theta |\bar{x}%
+\right) =\frac{1}{\sqrt{2\pi }\sqrt{\frac{a}{n}}\theta }e^{-\frac{\left( 
+\bar{x}-\theta \right) ^{2}}{2\frac{a\theta ^{2}}{n}}}$
+
+$\lambda \left( x_{1},..x_{n}\right) =\lambda ^{\ast }\left( \bar{x}\right) =%
+\frac{\underset{a=1}{\sup }L\left( a,\theta |\bar{x}\right) }{\sup L\left(
+a,\theta |\bar{x}\right) },$\U{6c42}$\sup L\left( a,\theta |\bar{x}\right) $%
+\U{76f8}\U{5f53}\U{4e8e}\U{6c42}$\inf \theta e^{\frac{\left( \bar{x}-\theta
+\right) ^{2}}{2\frac{a\theta ^{2}}{n}}}$
+
+\U{6c42}\U{5bfc}\U{6cd5}\U{7ed9}\U{51fa}\U{6700}\U{5c0f}\U{503c}\U{70b9}$%
+\theta =\frac{-\frac{n}{a}+\sqrt{\frac{n^{2}}{a^{2}}+4\frac{n}{a}}}{2}\bar{x}%
+,$\U{4ee3}\U{5165}$\lambda ^{\ast }\left( \bar{x}\right) $\U{5206}\U{6bcd},%
+\U{518d}\U{53d6}$a=1$\U{4ee3}\U{5165}$\lambda ^{\ast }\left( \bar{x}\right) $%
+\U{5206}\U{5b50},
+
+\U{5373}\U{5f97}LRT: $\left\{ \bar{x}|\lambda ^{\ast }\left( \bar{x}\right)
+<c\right\} .$
+
+\end{document}

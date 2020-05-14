@@ -1,0 +1,251 @@
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, October 16, 2015 16:04:52}
+%TCIDATA{LastRevised=Friday, October 16, 2015 21:03:48}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Coursework Of Week Five Second\bigskip 
+
+Problem 5.40
+
+$\left( a\right) \qquad P\left( X\leq t-\epsilon \right) =\qquad P\left(
+X\leq t-\epsilon ,X_{n}\leq t\right) +\qquad P\left( X\leq t-\epsilon
+,X_{n}>t\right) $
+
+$\leq P\left( X_{n}\leq t\right) +\qquad P\left( \left\vert
+X_{n}-X\right\vert \geq \epsilon \right) $
+
+We get a lower bound on $P\left( X_{n}\leq t\right) :$
+
+$\qquad P\left( X\leq t-\epsilon \right) -P\left( \left\vert
+X_{n}-X\right\vert \geq \epsilon \right) \leq P\left( X_{n}\leq t\right) $
+
+$\left( b\right) P\left( X_{n}\leq t\right) =\qquad P\left( X_{n}\leq
+t,X\leq t+\epsilon \right) +\qquad P\left( X_{n}\leq t,X>t+\epsilon \right) $
+
+$\leq P\left( X\leq t+\epsilon \right) +P\left( \left\vert
+X_{n}-X\right\vert \geq \epsilon \right) $
+
+We get an upper bound on $P\left( X_{n}\leq t\right) .$
+
+$\left( c\right) $Combing $\left( a,b\right) $ we have $\forall \epsilon >0$
+
+$P\left( X\leq t-\epsilon \right) -P\left( \left\vert X_{n}-X\right\vert
+\geq \epsilon \right) \leq P\left( X_{n}\leq t\right) \leq P\left( X\leq
+t+\epsilon \right) +P\left( \left\vert X_{n}-X\right\vert \geq \epsilon
+\right) $
+
+Since $X_{n}\overset{p}{\rightarrow }X,$taking the limit $n->\infty $ gives
+
+$P\left( X\leq t-\epsilon \right) \leq \underset{n->\infty }{\lim \inf }%
+P\left( X_{n}\leq t\right) \leq \underset{n->\infty }{\lim \sup }P\left(
+X_{n}\leq t\right) \leq P\left( X\leq t+\epsilon \right) $
+
+If $t\in C\left( F\left( X\right) \right) ,$then letting $\epsilon ->0$ givs
+
+$P\left( X\leq t\right) \leq \underset{n->\infty }{\lim \inf }P\left(
+X_{n}\leq t\right) \leq \underset{n->\infty }{\lim \sup }P\left( X_{n}\leq
+t\right) \leq P\left( X\leq t\right) $
+
+$\implies \underset{n->\infty }{\lim }P\left( X_{n}\leq t\right) =P\left(
+X\leq t\right) .$
+
+Problem 5.41
+
+\bigskip Since the cdf of constant as r.v. is discontinuous at $x=\mu ,$ we
+cannot claim the convergence of 
+
+$\underset{n->\infty }{\lim }P\left( X_{n}\leq x\right) .$
+
+$\left( a\right) P\left( \left\vert X_{n}-\mu \right\vert \leq \epsilon
+\right) \leq P\left( X_{n}\leq \mu +\epsilon \right) \overset{\epsilon
+=x-\mu >0}{=}P\left( X_{n}\leq \mu +x-\mu \right) =P\left( X_{n}\leq
+x\right) $
+
+Then $1-P\left( \left\vert X_{n}-\mu \right\vert >\epsilon \right) \leq
+P\left( X_{n}\leq x\right) ,$let $n->\infty \implies 1\leq \underset{%
+n->\infty }{\lim \inf }P\left( X_{n}\leq x\right) $
+
+$\implies \underset{n->\infty }{\lim }P\left( X_{n}\leq x\right) =1$ if $%
+x>\mu .$
+
+$P\left( \left\vert X_{n}-\mu \right\vert \geq \epsilon \right) \geq P\left(
+X_{n}\leq \mu -\epsilon \right) \overset{\epsilon =\mu -x>0}{=}P\left(
+X_{n}\leq x\right) $
+
+\bigskip $\underset{n->\infty }{\lim \sup }P\left( X_{n}\leq x\right) \leq
+0\implies \underset{n->\infty }{\lim }P\left( X_{n}\leq x\right) =0.$
+
+The $\rightarrow $ implication is deduced.
+
+$\left( b\right) P\left( \left\vert X_{n}-\mu \right\vert >\epsilon \right)
+=P\left( X_{n}<\mu -\epsilon \right) +P\left( X_{n}>\mu +\epsilon \right) =$
+
+$P\left( X_{n}<\mu -\epsilon \right) +1-P\left( X_{n}\leq \mu +\epsilon
+\right) ->0+1-1=0\boxtimes $
+
+\bigskip 
+
+Problem 5.43 Since \FRAME{dtbpF}{2.1456in}{0.3304in}{0pt}{}{}{Figure}{%
+\special{language "Scientific Word";type "GRAPHIC";display
+"USEDEF";valid_file "T";width 2.1456in;height 0.3304in;depth
+0pt;original-width 3.4869in;original-height 0.4445in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'NWB79C0R.wmf';tempfile-properties "XPR";}}
+
+$\left( a\right) P\left( \left\vert Y_{n}-\mu \right\vert >\epsilon \right)
+=P\left( \left\vert \sqrt{n}\left( Y_{n}-\mu \right) \right\vert >\sqrt{n}%
+\epsilon \right) ->0$ follows from the  uniform bounded property of $\sqrt{n}%
+\left( Y_{n}-\mu \right) .$
+
+$\left( b\right) $First we show that
+
+if $R\left( t\right) =o\left( t-\mu \right) ,t->\mu ,.$Then $\sqrt{n}R\left(
+Y_{n}\right) \overset{P}{\rightarrow }0,n->\infty .$
+
+We can show that $R\left( Y_{n}\right) =o_{p}\left( Y_{n}-\mu \right)
+,n->\infty .$Indeed, since $R\left( t\right) =o\left( t-\mu \right) ,\forall
+\epsilon >0,\exists \delta >0,s.t.\forall t\in \left( \mu -\delta ,\mu
++\delta \right) /\left\{ \mu \right\} ,\left\vert \frac{R\left( t\right) }{%
+t-\mu }\right\vert <\epsilon .$
+
+Since $Y_{n}\overset{P}{\rightarrow }\mu ,$ $\forall \epsilon _{1}\exists
+N,s.t.\forall n>N,P\left( \left\vert Y_{n}-\mu \right\vert \geq \delta
+\right) <\epsilon _{1}.$
+
+$P\left( \left\vert \frac{R\left( Y_{n}\right) }{Y_{n}-\mu }\right\vert
+>\epsilon \right) =P\left( \left\vert \frac{R\left( Y_{n}\right) }{Y_{n}-\mu 
+}\right\vert >\epsilon ,\left\vert Y_{n}-\mu \right\vert \geq \delta \right)
++P\left( \left\vert \frac{R\left( Y_{n}\right) }{Y_{n}-\mu }\right\vert
+>\epsilon ,\left\vert Y_{n}-\mu \right\vert <\delta \right) \leq $
+
+$P\left( \left\vert Y_{n}-\mu \right\vert \geq \delta \right) +P\left(
+\left\vert \frac{R\left( Y_{n}\right) }{Y_{n}-\mu }\right\vert >\epsilon
+,\left\vert Y_{n}-\mu \right\vert <\delta ,\left\vert \frac{R\left(
+Y_{n}\right) }{Y_{n}-\mu }\right\vert <\epsilon \right) =P\left( \left\vert
+Y_{n}-\mu \right\vert \geq \delta \right) <\epsilon _{1}$
+
+$\implies \underset{n->\infty }{\lim }P\left( \left\vert \frac{R\left(
+Y_{n}\right) }{Y_{n}-\mu }\right\vert >\epsilon \right) =0\implies $ $%
+R\left( Y_{n}\right) =o_{p}\left( Y_{n}-\mu \right) ,n->\infty .$
+
+And it is easy to verify that $o_{p}\left( Y_{n}-\mu \right) =\left(
+Y_{n}-\mu \right) o_{p}\left( 1\right) .$
+
+$\sqrt{n}R\left( Y_{n}\right) =\sqrt{n}o_{p}\left( Y_{n}-\mu \right) =\sqrt{n%
+}\left( Y_{n}-\mu \right) o_{p}\left( 1\right) ,$since $\sqrt{n}\left(
+Y_{n}-\mu \right) $ converges in distribution, by Slutsky's Thm, $\implies 
+\sqrt{n}R\left( Y_{n}\right) \overset{d}{\rightarrow }0,$and by Problem 5.42 
+$\implies \sqrt{n}R\left( Y_{n}\right) \overset{p}{\rightarrow }0.$
+
+Then in the proof of Delta Method,$\sqrt{n}\left( g\left( Y_{n}\right)
+-g\left( \theta \right) \right) =\left[ \sqrt{n}\left( Y_{n}-\theta \right) %
+\right] g^{\prime }\left( \theta \right) +\sqrt{n}R\left( Y_{n}\right) .$
+
+Also by Slutsky's Thm $\sqrt{n}\left( g\left( Y_{n}\right) -g\left( \theta
+\right) \right) \overset{d}{\rightarrow }N\left( 0,g^{\prime }\left( \theta
+\right) ^{2}\sigma ^{2}\right) .$
+
+Problem 5.44
+
+$\left( a\right) $ By CLT, $\frac{Y_{n}-E\left( Y_{n}\right) }{\sqrt{%
+Var\left( Y_{n}\right) }}->N\left( 0,1\right) $ in distribution. Since $%
+E\left( Y_{n}\right) =E\left( X_{1}\right) =p,Var\left( Y_{n}\right) =\frac{%
+E\left( X_{1}\right) }{n}=\frac{p\left( 1-p\right) }{n}$
+
+$\implies \frac{\sqrt{n}\left( Y_{n}-p\right) }{\sqrt{p\left( 1-p\right) }}%
+\overset{d}{\rightarrow }N\left( 0,1\right) \implies \sqrt{n}\left(
+Y_{n}-p\right) \overset{d}{\rightarrow }N\left( 0,p\left( 1-p\right) \right)
+.$
+
+$\left( b\right) $ Let $g\left( \theta \right) =\theta \left( 1-\theta
+\right) ,$which has non-zero derivative 1-2$\theta $ at $\theta =p$, since p$%
+\neq \frac{1}{2}.$
+
+Then by Delta Method, $\sqrt{n}\left( g\left( Y_{n}\right) -g\left( p\right)
+\right) \overset{d}{\rightarrow }N\left( 0,g^{\prime 2}\left( p\right)
+p\left( 1-p\right) \right) $
+
+That is $\sqrt{n}\left( Y_{n}\left( 1-Y_{n}\right) -p\left( 1-p\right)
+\right) \overset{d}{\rightarrow }N\left( 0,\left( 1-2p\right) ^{2}p\left(
+1-p\right) \right) $
+
+$\left( c\right) $ For $p=\frac{1}{2},$Second Order Delta Method can be used
+to derive 
+
+$n\left( g\left( Y_{n}\right) -g\left( p\right) \right) \overset{d}{%
+\rightarrow }\frac{1}{2}g^{\prime \prime }\left( p\right) ^{2}p\left(
+1-p\right) \chi _{1}^{2},$that is $n\left( Y_{n}\left( 1-Y_{n}\right) -\frac{%
+1}{4}\right) \overset{d}{\rightarrow }-\frac{1}{4}\chi _{1}^{2}.$
+
+4. Let Xn\symbol{126}Beta$\left( \frac{1}{n},\frac{1}{n}\right) $. Show that
+there exists r.v. X s.t. Xn--\TEXTsymbol{>}X in distribution,
+
+and give the distribution of X explicitly.
+
+Firstly we calculate the characteristic function of Beta distribution $%
+B\left( p,q\right) $:
+
+\FRAME{dtbpF}{4.4996in}{1.4762in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 1.4762in;depth 0pt;original-width 9.0312in;original-height
+3.5518in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NWBCB40S.wmf';tempfile-properties "XPR";}}
+
+For $p=q=\frac{1}{n},$the coefficient of power series reduces to $\frac{%
+\Gamma \left( \frac{2}{n}\right) \Gamma \left( \frac{1}{n}+k\right) }{\Gamma
+\left( \frac{1}{n}\right) \Gamma \left( \frac{2}{n}+k\right) }=\frac{\overset%
+{k-1}{\underset{i=0}{\Pi }}\left( \frac{1}{n}+i\right) }{\overset{k-1}{%
+\underset{i=0}{\Pi }}\left( \frac{2}{n}+i\right) }->1,$as $n->\infty .$ If
+the limit process n-\TEXTsymbol{>}$\infty $ is changable with $\sum \qquad ($%
+guaranteed by the uniform convergence of dominating series$\underset{k=0}{%
+\overset{\infty }{\sum }}\frac{1}{k!})$ , then $\underset{n->\infty }{\lim }%
+f_{X_{n}}\left( t\right) =\underset{k=0}{\overset{\infty }{\sum }}\frac{%
+\left( it\right) ^{k}}{k!}=e^{it},$which is 
+
+the characteristic function of a constant as r.v. $1.$
+
+By the Continuous Thm, $X_{n}\overset{d}{\rightarrow }1.$
+
+\end{document}

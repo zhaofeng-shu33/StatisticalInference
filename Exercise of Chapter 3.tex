@@ -1,0 +1,478 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, September 19, 2015 10:07:55}
+%TCIDATA{LastRevised=Saturday, October 03, 2015 20:08:41}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Proof of Theorem 3.4.2
+
+Proof: $\int_{R}f(x|\theta )dx=1$ holds for any $\theta \in \Theta .$
+
+Differentiate both sides of the equality, it follows that
+
+$\int_{R}\left[ \frac{\frac{\partial c(\theta )}{\partial \theta _{j}}}{%
+c(\theta )}+\overset{k}{\underset{i=1}{\sum }}\frac{\partial \omega
+_{i}(\theta )}{\partial \theta _{j}}t_{i}(x)\right] f(x|\theta )dx=0.(1)$
+
+After rearranging we get: $E(\overset{k}{\underset{i=1}{\sum }}\frac{%
+\partial \omega _{i}(\theta )}{\partial \theta _{j}}t_{i}(X))=$ $\int_{R}%
+\left[ \overset{k}{\underset{i=1}{\sum }}\frac{\partial \omega _{i}(\theta )%
+}{\partial \theta _{j}}t_{i}(x)\right] f(x|\theta )dx$
+
+$=-\frac{\frac{\partial c(\theta )}{\partial \theta _{j}}}{c(\theta )}=-%
+\frac{\partial }{\partial \theta _{j}}\log c(\theta );$
+
+(3.4.4) is proved.
+
+Differentiate both sides of (1),
+
+$\int_{R}\left[ \frac{\partial }{\partial \theta _{j}}\left( \frac{\frac{%
+\partial ^{2}c(\theta )}{\partial \theta _{j}}}{c(\theta )}\right) +\overset{%
+k}{\underset{i=1}{\sum }}\frac{\partial ^{2}\omega _{i}(\theta )}{\partial
+\theta _{j}^{2}}t_{i}(x)\right] f(x|\theta )dx+\int_{R}\left[ \frac{\frac{%
+\partial c(\theta )}{\partial \theta _{j}}}{c(\theta )}+\overset{k}{\underset%
+{i=1}{\sum }}\frac{\partial \omega _{i}(\theta )}{\partial \theta _{j}}%
+t_{i}(x)\right] ^{2}f(x|\theta )dx=0,$
+
+using (3.4.4)
+
+$\int_{R}\left[ \frac{\partial ^{2}}{\partial \theta _{j}^{2}}\log c\left(
+\theta \right) +\overset{k}{\underset{i=1}{\sum }}\frac{\partial ^{2}\omega
+_{i}(\theta )}{\partial \theta _{j}^{2}}t_{i}(x)\right] f(x|\theta
+)dx+\int_{R}\left[ \overset{k}{\underset{i=1}{\sum }}\frac{\partial \omega
+_{i}(\theta )}{\partial \theta _{j}}t_{i}(x)-E(\overset{k}{\underset{i=1}{%
+\sum }}\frac{\partial \omega _{i}(\theta )}{\partial \theta _{j}}t_{i}(X))%
+\right] ^{2}f(x|\theta )dx=0.$
+
+After rearranging, $Var\left( \overset{k}{\underset{i=1}{\sum }}\frac{%
+\partial \omega _{i}(\theta )}{\partial \theta _{j}}t_{i}(X)\right) =\int_{R}%
+\left[ \overset{k}{\underset{i=1}{\sum }}\frac{\partial \omega _{i}(\theta )%
+}{\partial \theta _{j}}t_{i}(x)-E(\overset{k}{\underset{i=1}{\sum }}\frac{%
+\partial \omega _{i}(\theta )}{\partial \theta _{j}}t_{i}(X))\right]
+^{2}f(x|\theta )dx$
+
+$=-\int_{R}\left[ \frac{\partial ^{2}}{\partial \theta _{j}^{2}}\log c\left(
+\theta \right) +\overset{k}{\underset{i=1}{\sum }}\frac{\partial ^{2}\omega
+_{i}(\theta )}{\partial \theta _{j}^{2}}t_{i}(x)\right] f(x|\theta )dx=-%
+\frac{\partial ^{2}}{\partial \theta _{j}^{2}}\log c\left( \theta \right)
+-E\left( \overset{k}{\underset{i=1}{\sum }}\frac{\partial ^{2}\omega
+_{i}(\theta )}{\partial \theta _{j}^{2}}t_{i}(x)\right) .$
+
+(3.4.5) is proved.$\boxtimes $
+
+Problem 3.13
+
+(a) $P(X=x)=\frac{P(X=x)}{P(X>0)}=\frac{\frac{\lambda ^{k}}{k!}e^{-\lambda }%
+}{1-e^{-\lambda }}=\frac{\lambda ^{k}}{k!\left( e^{\lambda }-1\right) };$
+
+Using the results of E(X')=$\lambda $ and $D(X)=\lambda $ for Poisson
+distribution:
+
+$E(X)=\overset{\infty }{\underset{x=1}{\sum }}\frac{xP(X=x)}{P(X>0)}=\frac{%
+\lambda }{1-e^{-\lambda }};$
+
+$D(X)=E(X^{2})-E(X)^{2}=\overset{\infty }{\underset{x=1}{\sum }}\frac{%
+x^{2}P(X=x)}{P(X>0)}-\left( \frac{\lambda }{1-e^{-\lambda }}\right) ^{2}$
+
+$=\frac{\lambda }{1-e^{-\lambda }}-\left( \frac{\lambda }{1-e^{-\lambda }}%
+\right) ^{2}=\frac{\lambda \left( 1-\lambda -e^{-\lambda }\right) }{\left(
+1-e^{-\lambda }\right) ^{2}}.$
+
+(b)$P(X=x)=\frac{P(X=x)}{P(X>0)}=\frac{\binom{r+x-1}{x}p^{r}\left(
+1-p\right) ^{x}}{1-p^{r}}$
+
+Using the results of E$\left( X^{\prime }\right) =\frac{r}{p}-r,D(X^{\prime
+})=\frac{r(1-p)}{p^{2}}:$
+
+$E(X)=\overset{\infty }{\underset{x=1}{\sum }}\frac{xP(X=x)}{P(X>0)}=\frac{%
+r\left( 1-p\right) }{p\left( 1-p^{r}\right) };$
+
+D$\left( X\right) =$ $E(X^{2})-E(X)^{2}=\overset{\infty }{\underset{x=1}{%
+\sum }}\frac{x^{2}P(X=x)}{P(X>0)}-\left( \frac{r\left( 1-p\right) }{p\left(
+1-p^{r}\right) }\right) ^{2}$
+
+$=\frac{r(1-p)}{p^{2}\left( 1-p^{r}\right) }-\left( \frac{r\left( 1-p\right) 
+}{p\left( 1-p^{r}\right) }\right) ^{2}=\frac{r\left( 1-p\right) \left(
+1+rp-p^{r}-r\right) }{p^{2}\left( 1-p^{r}\right) ^{2}}.$
+
+Problem3.24
+
+(a) According to the notation of textbook, $p^{\ast }\left( x\right) =\frac{%
+e^{-x/\beta }}{\beta },p(y)=p^{\ast }(x\left( y\right) )x^{\prime }(y)$
+
+$=\frac{\gamma }{\beta }y^{\gamma -1}e^{-y^{\gamma }/\beta },$it is easy to
+verify that $\int_{0}^{\infty }p(y)dy=1,$which means that $Y$ is a pdf.
+
+$E\left( Y\right) =\int_{0}^{\infty }x^{1/\gamma }p^{\ast }\left( x\right)
+dx=\int_{0}^{\infty }x^{1/\gamma }\frac{e^{-x/\beta }}{\beta }dx=\Gamma
+\left( \frac{1}{\gamma }+1\right) \beta ^{1/\gamma };$
+
+$D\left( Y\right) =E\left( Y^{2}\right) -E^{2}\left( Y\right)
+=\int_{0}^{\infty }x^{2/\gamma }\frac{e^{-x/\beta }}{\beta }dx-\left( \Gamma
+\left( \frac{1}{\gamma }+1\right) \beta ^{1/\gamma }\right) ^{2}$
+
+$=\beta ^{2/\gamma }\left( \Gamma \left( \frac{2}{\gamma }+1\right) -\Gamma
+^{2}\left( \frac{1}{\gamma }+1\right) \right) .$
+
+(b) $p(y)=p^{\ast }(x\left( y\right) )x^{\prime }(y)=ye^{-\frac{y^{2}}{2}},$ 
+$\int_{0}^{\infty }p(y)dy=1;$
+
+$E(Y)=\int_{0}^{\infty }y^{2}e^{-\frac{y^{2}}{2}}dy=\allowbreak \frac{1}{2}%
+\sqrt{2\pi };$
+
+D$\left( Y\right) =\int_{0}^{\infty }y^{3}e^{-\frac{y^{2}}{2}}dy-\left( 
+\frac{1}{2}\sqrt{2\pi }\right) ^{2}=\allowbreak 2-\frac{1}{2}\pi .$
+
+(c) $p(y)=\frac{1}{\Gamma \left( a\right) b^{a}y^{a+1}}e^{-\frac{1}{by}},$ $%
+\int_{0}^{\infty }p(y)dy=1;$
+
+$E(Y)=\int_{0}^{\infty }\frac{\frac{1}{b}^{a}}{\Gamma \left( a\right) }%
+x^{a-2}e^{-\frac{1}{b}x}dx=\frac{1}{\left( a-1\right) b};$
+
+$D\left( Y\right) =\int_{0}^{\infty }\frac{\frac{1}{b}^{a}}{\Gamma \left(
+a\right) }x^{a-3}e^{-\frac{1}{b}x}dx-\left( \frac{\frac{1}{b}}{a-1}\right)
+^{2}=\frac{1}{\left( a-2\right) \left( a-1\right) ^{2}b^{2}};$
+
+(d) $p\left( y\right) \acute{=}\frac{4y^{2}e^{-y^{2}}}{\sqrt{\pi }}%
+,\int_{0}^{\infty }p(y)dy=1;$
+
+Using Mathematica, $E\left( Y\right) =\frac{2}{\sqrt{\pi }},D\left( Y\right)
+=\frac{3}{2}-\frac{4}{\pi }.$
+
+(e) $p(y)=\frac{e\symbol{94}\left( -e^{\frac{-y+\alpha }{\gamma }}+\frac{%
+-y+\alpha }{\gamma }\right) }{\gamma },\int_{-\infty }^{\infty }p(y)dy=1;$
+
+$E\left( y\right) =\int_{-\infty }^{\infty }yp(y)dy,$after changing the
+variable $z=\frac{-y+\alpha }{\gamma },$we get:
+
+$E\left( y\right) =\int_{-\infty }^{\infty }\left( \alpha -\gamma z\right)
+e^{-e\symbol{94}z}e^{z}dz,$ by integrating by parts we can show that
+
+$\int_{-\infty }^{\infty }e^{-e\symbol{94}z}e^{z}dz=1\qquad \left( 1\right) $
+
+To calculate $\int_{-\infty }^{\infty }ze^{-e\symbol{94}z}e^{z}dz,$ we make
+variable substitution $u=e^{z},$
+
+then we get$\qquad \int_{-\infty }^{\infty }ze^{-e\symbol{94}z}e^{z}dz=$ $%
+\int_{0}^{\infty }\ln \left( u\right) e^{-u}du=\Gamma ^{\prime }\left(
+1\right) ;$
+
+Below we prove that $\frac{\Gamma ^{\prime }\left( x\right) }{\Gamma \left(
+x\right) }=-\gamma _{0}+\overset{\infty }{\underset{k=1}{\sum }}\left( \frac{%
+1}{k}-\frac{1}{k+x-1}\right) \qquad \qquad (2).$
+
+where $\gamma _{0}$ represents the Euler constant.
+
+From $\left( 2\right) $ it follows that $\Gamma ^{\prime }\left( 1\right)
+=-\gamma _{0}$ if we let $x=1,$
+
+then we get $E\left( y\right) =\alpha +\gamma _{0}\gamma .$
+
+To prove $\left( 2\right) ,$
+
+we have $\Gamma \left( x+1\right) =x\Gamma \left( x\right) $ from the
+recursive relation of Gamma function.
+
+Taking the derivative of the logarithm of $\Gamma \left( x\right) $ gives:
+
+$\frac{\Gamma ^{\prime }\left( x+1\right) }{\Gamma \left( x+1\right) }=\frac{%
+1}{x}+\frac{\Gamma ^{\prime }\left( x\right) }{\Gamma \left( x\right) },$%
+cumulating this equality from $x$ to $x+n-1$ gives:
+
+$\frac{\Gamma ^{\prime }\left( x+n-1\right) }{\Gamma \left( x+n-1\right) }=$ 
+$\frac{\Gamma ^{\prime }\left( x\right) }{\Gamma \left( x\right) }+\overset{n%
+}{\underset{k=1}{\sum }}\frac{1}{x+k-1},$ letting $x=1$ and subtracting both
+sides by $\ln \left( n\right) ,$
+
+after rearranging we get
+
+$\Gamma ^{\prime }\left( 1\right) =\frac{\Gamma ^{\prime }\left( 1\right) }{%
+\Gamma \left( 1\right) }=\left( \frac{\Gamma ^{\prime }\left( n\right) }{%
+\Gamma \left( n\right) }-\ln \left( n\right) \right) -\left( \overset{n}{%
+\underset{k=1}{\sum }}\frac{1}{x+k-1}-\ln \left( n\right) \right) .$
+
+In the following picture, $\underset{x->\infty }{\lim }\left[ \frac{d}{dx}%
+\ln \left( \Gamma \left( x\right) \right) -\ln \left( x\right) \right] =0$
+is proved,
+
+combined with the definition of $\gamma _{0},$ $\left( 2\right) $ is proved.
+
+\FRAME{dtbpF}{4.4996in}{3.2958in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 3.2958in;depth 0pt;original-width 8.521in;original-height
+6.167in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NUXKAM0D.wmf';tempfile-properties "XPR";}}
+
+In the process, we also get $\int_{-\infty }^{\infty }ze^{-e\symbol{94}%
+z}e^{z}dz=-\gamma _{0}.\qquad \left( 3\right) $
+
+$D\left( y\right) =\int_{-\infty }^{\infty }y^{2}p(y)dy-\left( \alpha
++\gamma _{0}\gamma \right) ^{2},$after changing the variable $z=\frac{%
+-y+\alpha }{\gamma },$
+
+we get:$\qquad D\left( y\right) =\int_{-\infty }^{\infty }\left( \alpha
+-\gamma z\right) ^{2}e^{-e\symbol{94}z}e^{z}dz-\left( \alpha +\gamma
+_{0}\gamma \right) ^{2};$
+
+It is necessary to calculate $\int_{-\infty }^{\infty }z^{2}e^{-e\symbol{94}%
+z}e^{z}dz,$ after changing the variable $u=e^{z},$
+
+this improper integral changes to $\int_{0}^{\infty }\ln ^{2}\left( u\right)
+e^{-u}du=$ $\Gamma ^{\prime \prime }\left( 1\right) ;$
+
+In the $\delta -$neighborhood of 1 where $\delta <1,$
+
+since $\overset{\infty }{\underset{k=1}{\sum }}\left( \frac{1}{k}-\frac{1}{%
+k+x-1}\right) $ converges at $x=1,$
+
+$\frac{d}{dx}\left( \frac{1}{k}-\frac{1}{k+x-1}\right) =\frac{1}{\left(
+k+x-1\right) ^{2}}\leq \frac{1}{\left( k-\delta \right) ^{2}},$
+
+By Weistrass' M-Test, $\overset{\infty }{\underset{k=1}{\sum }}\frac{1}{%
+\left( k+x-1\right) ^{2}}$ converges unifromly in a neighborhood of 1.
+
+As a result, the order of differential and series summation are changable.
+
+we can take the derivative on both sides of $\left( 2\right) $
+
+and change the order of limiting process on the right side:
+
+$\frac{\Gamma ^{\prime \prime }\left( x\right) \Gamma \left( x\right)
+-\Gamma ^{\prime 2}\left( x\right) }{\Gamma ^{2}\left( x\right) }=$ $\overset%
+{\infty }{\underset{k=1}{\sum }}\frac{1}{\left( k+x-1\right) ^{2}}$ holds in 
+$\delta -$neighborhood of 1.
+
+Let $x=1$, we get $\Gamma ^{\prime \prime }\left( 1\right) =\delta _{0}^{2}-%
+\frac{\pi ^{2}}{6}.$
+
+$\int_{-\infty }^{\infty }z^{2}e^{-e\symbol{94}z}e^{z}dz=\delta _{0}^{2}-%
+\frac{\pi ^{2}}{6}\qquad \left( 4\right) $
+
+Using $\left( 1\right) ,\left( 3\right) ,\left( 4\right) $ $D\left( y\right)
+=\frac{\gamma ^{2}\pi ^{2}}{6}.$
+
+\bigskip
+
+Problem3.25
+
+Proof: $h_{T}\left( t\right) =\underset{\delta ->0}{\lim }\frac{P\left(
+t\leq T<t+\delta |T\geq t\right) }{\delta }=\underset{\delta ->0}{\lim }%
+\frac{P\left( t\leq T<t+\delta \right) }{\delta P\left( T\geq t\right) }$
+
+$=\frac{\underset{\delta ->0}{\lim }\frac{P\left( t\leq T<t+\delta \right) }{%
+\delta }}{1-P\left( T<t\right) }=\frac{\underset{\delta ->0}{\lim }\frac{%
+\int_{t}^{t+\delta }f_{T}\left( u\right) du}{\delta }}{1-F_{T}\left(
+t\right) }=\frac{f_{T}\left( t\right) }{1-F_{T}\left( t\right) }$
+
+=$\frac{\left( 1-F_{T}\left( t\right) \right) ^{\prime }}{1-F_{T}\left(
+t\right) }=-\frac{d}{dt}\log \left( 1-F_{T}\left( t\right) \right) .$
+
+Problem3.26
+
+$\left( a\right) f_{T}\left( t\right) =\frac{1}{\beta }e^{-\frac{1}{\beta }%
+t},F_{T}\left( t\right) =1-e^{-\frac{1}{\beta }t};h_{T}\left( t\right) =%
+\frac{1}{\beta }.$
+
+$\left( b\right) f_{T}\left( t\right) =\frac{\gamma }{\beta }t^{\gamma
+-1}e^{-t^{\gamma }/\beta },F_{T}\left( t\right) =1-e^{-\frac{t^{\gamma }}{%
+\beta }};h_{T}\left( t\right) =\frac{\gamma }{\beta }t^{\gamma -1}.$
+
+$\left( c\right) f_{T}\left( t\right) =\frac{d}{dt}\frac{1}{1+e^{-\left(
+t-\mu \right) /\beta }}=\allowbreak \frac{e^{\frac{1}{\beta }\left( \mu
+-t\right) }}{\beta \left( 1+e^{-\left( t-\mu \right) /\beta }\right) ^{2}}%
+;h_{T}\left( t\right) =\frac{f_{T}\left( t\right) }{1-F_{T}\left( t\right) }=%
+\frac{1}{\beta }\frac{1}{1+e^{-\left( t-\mu \right) /\beta }}=\frac{1}{\beta 
+}F_{T}\left( t\right) .$
+
+Problem 3.41
+
+$\left( a\right) F\symbol{126}n\left( \mu ,\sigma ^{2}\right) ,$then $%
+F\left( x\right) =\int_{-\infty }^{x}\frac{1}{\sqrt{2\pi }\sigma }e^{-\frac{%
+\left( t-\mu \right) ^{2}}{2\sigma ^{2}}}dt.\qquad $
+
+If $\mu _{1}>\mu _{2},F_{\mu 1}(x)<F_{\mu 2}\left( x\right) $holds for any $%
+x\leq \mu _{2},$but for
+
+$\mu _{2}<x\leq \mu _{1},F_{\mu 2}\left( x\right) \geq \frac{1}{2}\geq
+F_{\mu 1}\left( x\right) .$
+
+And for $x>\mu _{1},$since $\int_{x}^{+\infty }\frac{1}{\sqrt{2\pi }\sigma }%
+e^{-\frac{\left( t-\mu 2\right) ^{2}}{2\sigma ^{2}}}dt<\int_{x}^{+\infty }%
+\frac{1}{\sqrt{2\pi }\sigma }e^{-\frac{\left( t-\mu 1\right) ^{2}}{2\sigma
+^{2}}}dt,$
+
+that is $1-F_{\mu 2}\left( x\right) <1-F_{\mu 1}\left( x\right) ,$
+equivalent to $F_{\mu 1}(x)<F_{\mu 2}\left( x\right) .$
+
+Therefore, the $n\left( \mu ,\sigma ^{2}\right) $ family is stochastically
+increasing in $\mu $ for fixed $\sigma ^{2}.$
+
+$\left( b\right) p(x)=\frac{x^{\alpha -1}}{\Gamma \left( \alpha \right)
+\beta ^{\alpha }}e^{-\frac{x}{\beta }},F\left( x\right) =\int_{0}^{x}\frac{%
+x^{\alpha -1}}{\Gamma \left( \alpha \right) \beta ^{\alpha }}e^{-\frac{x}{%
+\beta }}dy=\frac{\int_{0}^{\frac{x}{\beta }}t^{\alpha -1}e^{-t}dt}{\Gamma
+\left( \alpha \right) }.$
+
+If $\beta _{1}>\beta _{2},$the upper limit bound$\frac{x}{\beta _{1}}<\frac{x%
+}{\beta 2},$
+
+as a result$\qquad F_{\beta 1}\left( x\right) <F_{\beta 2}\left( x\right) .$%
+In conclusion,
+
+the gamma$\left( \alpha ,\beta \right) $familty is stochastically increasing
+in $\beta $ for fixed $\alpha .$
+
+Problem3.42
+
+\bigskip (a) Let $f\left( x-u\right) $ be the pdf of a location family with
+parameter $u,$
+
+if $u_{1}>u_{2},$we show show that$\qquad \int_{-\infty
+}^{x}f(t-u_{1})dt\leq \int_{-\infty }^{x}f(t-u_{2})dt$ for any $x.$
+
+It can be easily done by changing of variables and we get$\qquad
+\int_{-\infty }^{x-u_{1}}f(t)dt\leq \int_{-\infty }^{x-u_{2}}f(t)dt,$
+
+which holds obviously since $f\left( t\right) $ is pdf.
+
+The equality can not hold always since$\qquad \int_{x-u_{1}}^{x-u_{2}}f(t)dt$
+never vanishes for every $x.$
+
+Thus $\int_{-\infty }^{x}f(t-u_{1})dt<\int_{-\infty }^{x}f(t-u_{2})dt$ holds
+for some $x,$
+
+and a location family is indeed stochastically increasing.
+
+$\left( b\right) $Let $\frac{1}{\sigma }f\left( \frac{x}{\sigma }\right)
+\left( x\geq 0\right) $ be the pdf of a scale family with parameter $\sigma
+. $
+
+For $\sigma _{1}>\sigma _{2},$ to show$\qquad \int_{0}^{x}\frac{1}{\sigma
+_{1}}f(\frac{t}{\sigma _{1}})dt\leq \int_{0}^{x}\frac{1}{\sigma _{2}}f(\frac{%
+t}{\sigma _{2}})dt$ for any $x,$
+
+change the variable we get:$\qquad \int_{0}^{\frac{x}{\sigma _{1}}%
+}f(t)dt\leq \int_{0}^{\frac{x}{\sigma _{2}}}f(t)dt,$ which holds since $x>0,%
+\frac{x}{\sigma _{1}}<\frac{x}{\sigma _{2}}.$
+
+Similarly to $\left( a\right) ,\int_{0}^{\frac{x}{\sigma _{1}}%
+}f(t)dt<\int_{0}^{\frac{x}{\sigma _{2}}}f(t)dt$ holds for some $x,$ and such
+scale family is stochastically increasing.
+
+Problem3.28
+
+$\left( a\right) $From Example3.4.4, a pdf 0f normal distribution has the
+form \FRAME{dpF}{3.1393in}{0.5388in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+3.1393in;height 0.5388in;depth 0pt;original-width 3.4791in;original-height
+0.6875in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NV14BZ00.wmf';tempfile-properties "XPR";}}
+
+.
+
+If either parameter $\mu $ or $\sigma $ is known, it still has the form of
+
+\FRAME{dpF}{3.9998in}{0.3658in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+3.9998in;height 0.3658in;depth 0pt;original-width 5.1768in;original-height
+0.448in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NV14CT01.wmf';tempfile-properties "XPR";}}
+
+As a result, such family is a sub-family of $\Theta =\{\left( \mu ,\sigma
+\right) ,\mu \in R,\sigma >0\}$
+
+and still an exponential family.
+
+$\left( b\right) $for gamma family $\Gamma \left( \alpha ,\beta \right)
+,p(x)=\frac{x^{\alpha -1}}{\Gamma \left( \alpha \right) \beta ^{\alpha }}e^{-%
+\frac{x}{\beta }}\chi _{(0,+\infty )}\left( x\right) =\chi _{(0,+\infty
+)}\left( x\right) \frac{e^{\left( \alpha -1\right) \ln x-x/\beta }}{\Gamma
+\left( \alpha \right) \beta ^{\alpha }},$
+
+let $h(x)=\chi _{(0,+\infty )}\left( x\right) ,c\left( \alpha ,\beta \right)
+=\frac{1}{\Gamma \left( \alpha \right) \beta ^{\alpha }},t_{1}\left(
+x\right) =\ln \left( x\right) ,$
+
+$t_{2}\left( x\right) =x,\omega _{1}\left( \alpha ,\beta \right) =\alpha
+-1,\omega _{2}\left( \alpha ,\beta \right) =\frac{-1}{\beta }.$
+
+then\qquad $p\left( x\right) =h\left( x\right) c\left( \alpha ,\beta \right)
+\exp \left[ \omega _{1}\left( \alpha ,\beta \right) t_{1}\left( x\right)
++\omega _{2}\left( \alpha ,\beta \right) t_{2}\left( x\right) \right] .$
+
+Similarly to $\left( a\right) ,$gamma family with its sub-family is
+exponential family.
+
+$\left( c\right) $For a Beta family $B\left( \alpha ,\beta \right) ,p\left(
+x\right) =\frac{\Gamma \left( \alpha +\beta \right) }{\Gamma \left( \alpha
+\right) \Gamma \left( \beta \right) }x^{\alpha -1}\left( 1-x\right) ^{\beta
+-1}\chi _{(0,1)}(x)$
+
+$=\chi _{(0,1)}(x)\frac{\Gamma \left( \alpha +\beta \right) }{\Gamma \left(
+\alpha \right) \Gamma \left( \beta \right) }\exp \left[ \left( \alpha
+-1\right) \ln \left( x\right) +\left( \beta -1\right) \ln \left( 1-x\right) %
+\right] .$
+
+Therefore, Beta family with its sub-family belongs to exponential family.
+
+$\left( d\right) $ For Poisson family $Pois\left( \lambda \right) ,$
+
+the pmf for this family, for $x=0,1,...$is $p\left( x|\lambda \right) =\frac{%
+\lambda ^{x}}{x!}e^{-\lambda }=\frac{e^{x\ln \left( \lambda \right) -\lambda
+}}{x!}.$
+
+Define $h\left( x\right) =\frac{1}{x!}\chi _{\left\{ x\in N\right\} },$then
+Poisson family belongs to exponential family.
+
+$\left( e\right) \qquad $For negative binomial family with $r$ known, pmf $%
+p\left( y|\lambda \right) =\binom{r+y-1}{y}p^{r}\left( 1-p\right) ^{y}$
+
+$=\binom{r+y-1}{y}p^{r}e^{y\ln \left( 1-p\right) }\chi _{\left\{ y\in
+N\right\} },$therefore negative binomial family belongs to exponential
+family.
+
+\bigskip
+
+\end{document}

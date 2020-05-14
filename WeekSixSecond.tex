@@ -1,0 +1,269 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, October 25, 2015 21:07:27}
+%TCIDATA{LastRevised=Thursday, November 12, 2015 23:50:48}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+1.Let X$_{1},...X_{n}\symbol{126}N\left( \mu ,1\right) $ i.i.d$,$show that X$%
+_{1}+..+X_{n}$ is complete.
+
+Proof: the pdf of $X_{1}$ can be written as $\frac{1}{\sqrt{2\pi }}e^{-\frac{%
+x^{2}}{2}}e^{-\frac{u^{2}}{2}}e^{ux},$then by Thm 6.2.25 on the textbook,
+
+the statistic T=X$_{1}+..+X_{n}$ is a complete since the parameter space $%
+\Theta =R$ has interior points.
+
+2. Let the pdf of P$_{\theta }$ be $f_{\theta }\left( \vec{x}\right)
+=h\left( \vec{x}\right) \exp \left( \vec{\theta}^{T}\eta \left( \vec{x}%
+\right) -\xi \left( \vec{\theta}\right) \right) ,$ the show that T$\left( 
+\vec{x}\right) =\eta \left( \vec{x}\right) $ is sufficient and complete.
+
+Proof: for any two sample points $\vec{x},\vec{y},$the ratio$\frac{f\left( 
+\vec{x}\right) }{f\left( \vec{y}\right) }=\exp \left( \vec{\theta}^{T}\left(
+\eta \left( \vec{x}\right) -\eta \left( \vec{y}\right) \right) \right) .$
+The ratio is irrelevant of $\vec{\theta}$ iff
+
+\bigskip\ $\eta \left( \vec{x}\right) =\eta \left( \vec{y}\right) \iff $T$%
+\left( \vec{x}\right) =T\left( \vec{y}\right) .\therefore T$ is a sufficient
+statistics.
+
+\bigskip The complete property can be shown using conclusion similar to Thm
+6.2.25, the strict proof relies on the uniqueness of Laplace transform,
+which is beyond the scope of this course.
+
+\bigskip
+
+Textbook 6.10 From Example 6.17 we know the joint pdf of $\left( X_{\left(
+1\right) },X_{\left( n\right) }\right) $ is
+
+$g\left( x_{\left( 1\right) },x_{\left( n\right) }|\theta \right) =\QATOPD\{
+. {n\left( n-1\right) \left( x_{\left( 1\right) }-x_{\left( n\right)
+}\right) ^{n-2},\theta <x_{\left( 1\right) }<x_{\left( n\right) }<\theta
++1}{0,\text{ \ \ \ \ \ \ \ \ \ \ otherwise}}$
+
+For convenience we denote $\left( X_{\left( 1\right) },X_{\left( n\right)
+}\right) $ as $\left( X,Y\right) $ below.
+
+for a function g$\left( X,Y\right) $ of $\left( X,Y\right) $, we can
+calculate its expectation
+
+E$_{\theta }g\left( X,Y\right) =n\left( n-1\right) \underset{\theta
+<x<y<\theta +1}{\int \int }g\left( y-x\right) \left( y-x\right) ^{n-2}dxdy.$
+
+Making the transformation u=x,v=y-x gives E$_{\theta }g\left( X,Y\right)
+=n\left( n-1\right) \underset{\underset{v>0}{\theta <u<\theta +1-v}}{\int
+\int }g\left( v\right) v^{n-2}dudv$
+
+=$n\left( n-1\right) \int_{0}^{1}v^{n-2}g\left( v\right) dv\int_{\theta
+}^{\theta +1-v}du=n\left( n-1\right) \int_{0}^{1}\left( 1-v\right)
+v^{n-2}g\left( v\right) dv.$
+
+As a result, we can find a non-zero function $g\left( v\right) $ which makes
+the above integral vanish.
+
+Such g$\left( Y-X\right) $ is not equal zero with probability one.
+
+Therefore, the minimal sufficient statistics for U$\left( \theta ,\theta
++1\right) ,$ is not complete.
+
+6 .15 $\left( a\right) $the parameter space is $\Theta =\left\{ \left(
+\theta ,a\theta ^{2}\right) |\theta >0\right\} $ is a parobola on the
+two-dimensional plane and
+
+does not contain any two-dimensional open set.
+
+$\left( b\right) $We know that $T=\left( \overline{X},S^{2}\right) $ is a
+sufficient statistic for N$\left( \theta ,\sigma ^{2}\right) $ and N$\left(
+\theta ,a\theta ^{2}\right) $ is a sub-family of N$\left( \theta ,\sigma
+^{2}\right) .$
+
+By definition of sufficient statistic, known the value of T, the
+distribution of normal distribution familly is irrelevant of the paremeter,
+as a result, it also holds for its sub-family$\implies T$ is a sufficient
+statistic for $\theta .$
+
+\bigskip We know that $E\left( \bar{X}\right) =\theta ,$and we can show that 
+$E\left( cS\right) =\frac{c\theta }{\sqrt{n-1}}\frac{\sqrt{2}\Gamma \left( 
+\frac{n}{2}\right) }{\Gamma \left( \frac{n-1}{2}\right) }$(see for example
+Ex 7.50 of the textbook)$,$then we can choose $c==\frac{\sqrt{n-1}\Gamma
+\left( \frac{n-1}{2}\right) }{\sqrt{2}\Gamma \left( \frac{n}{2}\right) }$
+thus making $E\left( cS\right) =\theta \implies $the expectation of $g\left( 
+\bar{X},S^{2}\right) =\bar{X}-c\sqrt{S^{2}}=\bar{X}-cS$ is zero but
+
+$P\left( \bar{X}-cS\neq 0\right) =1.$
+
+6.16 $\left( a\right) $the pmf of the multinomial distribution is
+
+p$\left( x_{1},x_{2},x_{3},x_{4}\right) =\frac{\left(
+x_{1}+x_{2}+x_{3}+x_{4}\right) !}{x_{1}!x_{2}!x_{3}!x_{4}!}\left( \frac{1}{2}%
++\frac{\theta }{4}\right) ^{x_{1}}\left( \frac{1}{4}\left( 1-\theta \right)
+\right) ^{x_{2}}\left( \frac{1}{4}\left( 1-\theta \right) \right)
+^{x_{3}}\left( \frac{\theta }{4}\right) ^{x_{4}}$
+
+=$\frac{\left( x_{1}+x_{2}+x_{3}+x_{4}\right) !}{x_{1}!x_{2}!x_{3}!x_{4}!}%
+e^{x_{1}\ln \left( \frac{1}{2}+\frac{\theta }{4}\right) +\left(
+x_{2}+x_{3}\right) \ln \left( \frac{1}{4}\left( 1-\theta \right) \right)
++x_{4}\ln \left( \frac{\theta }{4}\right) }\implies $the dimension of the
+natural parameter is 3 but the dimension of the parameter vector is 1$%
+\implies $this multinomial vector $\left( x_{1},x_{2},x_{3},x_{4}\right) $
+belongs to a curved family.
+
+$\left( b\right) $ A sufficient statistic can be taken as T$\left(
+x_{1},x_{2},x_{3},x_{4}\right) =\left( x_{1},x_{2}+x_{3},x_{4}\right) .$%
+Correspondingly, g$\left( T\left( \vec{x}\right) |\theta \right) =$
+
+$e^{x_{1}\ln \left( \frac{1}{2}+\frac{\theta }{4}\right) +\left(
+x_{2}+x_{3}\right) \ln \left( \frac{1}{4}\left( 1-\theta \right) \right)
++x_{4}\ln \left( \frac{\theta }{4}\right) }.$ The rightousness is guaranteed
+by Factorization Thm, since we have
+
+the decomposition of p$\left( \vec{x}\right) =$g$\left( T\left( \vec{x}%
+\right) |\theta \right) h\left( \vec{x}\right) .$
+
+$\left( c\right) \frac{p\left( x_{1},x_{2},x_{3},x_{4}\right) }{p\left(
+y_{1},y_{2},y_{3},y_{4}\right) }$ $=c\left( \vec{x},\vec{y}\right) e^{\left(
+x_{1}-y_{1}\right) \ln \left( \frac{1}{2}+\frac{\theta }{4}\right) +\left(
+x_{2}+x_{3}-y_{2}+y_{3}\right) \ln \left( \frac{1}{4}\left( 1-\theta \right)
+\right) +\left( x_{4}-y_{4}\right) \ln \left( \frac{\theta }{4}\right) }$%
+\qquad is irrelevant of $\theta \in \left( 0,1\right) $
+
+iff $x_{1}=y_{1},x_{2}+x_{3}=y_{2}+y_{3},x_{4}=y_{4}.$
+
+\QTP{Body Math}
+$\implies $ T$\left( x_{1},x_{2},x_{3},x_{4}\right) =\left(
+x_{1},x_{2}+x_{3},x_{4}\right) $ is a minimal sufficient statistics for $%
+\theta .$
+
+\QTP{Body Math}
+$6.23.$the joint distribution of $\left( X_{1},...X_{n}\right) $ are f$%
+\left( x_{1,..}x_{n}\right) =\QATOPD\{ . {\frac{1}{\theta ^{n}},\theta
+<x_{i}<2\theta ,i=1,..n}{0,\text{otherwise}}.$
+
+\QTP{Body Math}
+$\frac{f\left( x_{1},..x_{n}\right) }{f\left( y_{1},..y_{n}\right) }$is
+irelevant of $\theta $ iff $\min \left\{ x_{i}|i=1,..n\right\} =\min \left\{
+y_{i}|i=1,..n\right\} $ and $\max \left\{ x_{i}|i=1,..n\right\} =\max
+\left\{ x_{i}|i=1,..n\right\} .\implies T\left( X\right) =\left( X_{\left(
+1\right) },X_{\left( n\right) }\right) $ is a minimal sufficient statistic.
+
+\QTP{Body Math}
+the pdf of $T\left( X\right) $ is p$\left( x_{\left( 1\right) },x_{\left(
+n\right) }\right) =n\left( n-1\right) \left( \frac{x_{\left( n\right)
+}-x_{\left( 1\right) }}{\theta }\right) $ $^{n-2}\frac{1}{\theta ^{2}}%
+,\theta <x_{\left( 1\right) }\leq x_{\left( n\right) }<2\theta .$Similar to
+Problem 6.10,
+
+we denote $\left( X_{\left( 1\right) },X_{\left( n\right) }\right) $ as $%
+\left( X,Y\right) $ below.
+
+for a function g$\left( X,Y\right) $ of $\left( X,Y\right) $, we can
+calculate its expectation
+
+E$_{\theta }g\left( X,Y\right) =\frac{n\left( n-1\right) }{\theta ^{n}}%
+\underset{\theta <x\leq y<2\theta }{\int \int }g\left( y-x\right) \left(
+y-x\right) ^{n-2}dxdy.$
+
+Making the transformation u=x,v=y-x gives E$_{\theta }g\left( X,Y\right) =%
+\frac{n\left( n-1\right) }{\theta ^{n}}\underset{\underset{v>0}{\theta
+<u<2\theta -v}}{\int \int }g\left( v\right) v^{n-2}dudv$
+
+=$\frac{n\left( n-1\right) }{\theta ^{n}}\int_{0}^{\theta }v^{n-2}g\left(
+v\right) dv\int_{\theta }^{2\theta -v}du=\frac{n\left( n-1\right) }{\theta
+^{n}}\int_{0}^{\theta }\left( \theta -v\right) v^{n-2}g\left( v\right) dv.$
+
+E$_{\theta }g\left( X,Y\right) =0\implies \int_{0}^{\theta }\left( \theta
+-v\right) v^{n-2}g\left( v\right) dv=0,$taking the derivative gives
+
+$\int_{0}^{\theta }v^{n-2}g\left( v\right) dv=0,$taking the derivative again
+gives
+
+$\theta ^{n-2}g\left( \theta \right) =0,a.e.\theta >0\implies g\left(
+Y-X\right) =0$ with probability 1 and T is a complete statistic.
+
+Note: we inteprete $\int^{\theta }f\left( v\right) dv$ is integrable in
+Lebesgue's meaning, and the integral with variable is an
+
+absolute continuous function,which has derivative almost everywhere,by the
+theory of Lebesgue Integration we know that $\frac{d}{d\theta }\int^{\theta
+}f\left( v\right) dv$=$f\left( \theta \right) $ a.e., in the above
+deduction,g$\left( \theta \right) =0,a.e.\forall \theta >0,$P$\left( g\left(
+Y-X\right) \neq 0\right) $
+
+$\leq $P$\left( Y-X\in Z\left( g\right) \right) ,$because Y-X is a
+continuous r.v.,it has zero probability on any zero measurable set
+
+$\left( \text{for a continuous r.v., it has pdf and }\int_{Z}p\left(
+x\right) dx=0,\text{if m}\left( Z\right) =0\right) \implies $P$\left( Y-X\in
+Z\left( g\right) \right) =0,$since the Lebesugue measure of $Z\left(
+g\right) $ is zero.
+
+6.30$\left( a\right) $ the pdf of X$_{\left( 1\right) }$ is p$\left(
+x\right) =ne^{-n\left( x-\mu \right) },x>\mu \implies X_{\left( 1\right) }%
+\symbol{126}Exp\left( n\right) .$
+
+E$_{\theta }g\left( X_{\left( 1\right) }\right) =n\int_{\mu }^{\infty
+}g\left( x\right) e^{-n\left( x-\mu \right) }dx=0\implies $the derivative of
+E$_{\theta }g\left( X_{\left( 1\right) }\right) $ with respect of $\theta $
+vanishes$,g\left( \mu \right) e^{-n\mu }=0,a.e.\mu \in R\implies g\left(
+x\right) =0,a.e.x\in R$
+
+$g\left( X_{\left( 1\right) }\right) =0$ with probability 1 and T is a
+complete statistic.
+
+$\left( b\right) $ $\frac{f\left( x_{1},...,x_{n}\right) }{f\left(
+y_{1},...y_{n}\right) }$is irrelevant of $\mu \implies \min \left\{
+x_{i}|i=1,..n\right\} =\min \left\{ y_{i}|i=1,..n\right\} \implies X_{\left(
+1\right) }$ is a minimal sufficient statistic. $S^{2}=\frac{1}{n-1}\underset{%
+i=1}{\overset{n}{\Sigma }}\left( X_{i}-\bar{X}\right) ^{2}=\frac{1}{n-1}%
+\underset{i=1}{\overset{n}{\Sigma }}\left( \left( X_{i}-u\right) -\left( 
+\bar{X}-u\right) \right) ^{2}$
+
+$=\frac{1}{n-1}\left[ \underset{i=1}{\overset{n}{\Sigma }}\left(
+X_{i}-u\right) ^{2}-n\left( \bar{X}-u\right) ^{2}\right] ;$Let Y$%
+_{i}=X_{i}-u,$we know that Y$_{i}\symbol{126}Exp(1),i.i.d,$with E$\left(
+Y_{i}\right) =1,$irrelavent
+
+with $\mu ,$and \={Y}=\={X}-$\mu ,\implies S^{2}=\frac{1}{n-1}\left[ 
+\underset{i=1}{\overset{n}{\Sigma }}\left( Y_{i}\right) ^{2}-n\bar{Y}^{2}%
+\right] \implies S^{2}$ is an ancillary statistic.
+
+Then by Basu's Thm, X$_{\left( 1\right) }$ is independent of S$^{2}.$
+
+\end{document}

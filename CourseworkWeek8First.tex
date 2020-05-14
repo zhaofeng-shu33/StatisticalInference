@@ -1,0 +1,244 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Monday, November 02, 2015 15:30:53}
+%TCIDATA{LastRevised=Saturday, November 07, 2015 19:44:52}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$\bigskip 7.24\left( a\right) $ Let $X=X_{1}+..X_{n},$ we can check that $X$
+is a sufficient statistic of $\lambda $ by Factorization Thm.
+
+the pdf of $X$, the prior distribution\symbol{126}$Pois\left( n\lambda
+\right) ,$with pmf $P\left( X=k\right) =\frac{\left( n\lambda \right) ^{k}}{%
+k!}e^{-n\lambda }.$ The joint pdf of $X$ and $\lambda \symbol{126}\Gamma
+\left( \alpha ,\beta \right) $ is $\frac{\left( n\lambda \right) ^{k}}{k!}%
+e^{-n\lambda }\frac{1}{\Gamma \left( \alpha \right) \beta ^{\alpha }}\lambda
+^{\alpha -1}e^{-\lambda /\beta }\implies $the posterior distribution of $%
+\lambda $ $P^{\prime }\left( \lambda \right) =\frac{\frac{\left( n\lambda
+\right) ^{k}}{k!}e^{-n\lambda }\frac{1}{\Gamma \left( \alpha \right) \beta
+^{\alpha }}\lambda ^{\alpha -1}e^{-\lambda /\beta }}{\int_{0}^{\infty }\frac{%
+\left( n\lambda \right) ^{k}}{k!}e^{-n\lambda }\frac{1}{\Gamma \left( \alpha
+\right) \beta ^{\alpha }}\lambda ^{\alpha -1}e^{-\lambda /\beta }d\lambda }=%
+\frac{e^{-(n+\frac{1}{\beta })\lambda }\lambda ^{k+\alpha -1}}{%
+\int_{0}^{\infty }e^{-(n+\frac{1}{\beta })\lambda }\lambda ^{k+\alpha
+-1}d\lambda }=\frac{1}{\Gamma \left( \alpha +k\right) \left( \frac{\beta }{%
+n+\beta }\right) ^{\alpha +k}}\lambda ^{\alpha +k-1}e^{-\lambda /\frac{\beta 
+}{n+\beta }}$
+
+$\implies $the posterior distribution of $\lambda \symbol{126}\Gamma \left(
+\alpha +k,\frac{\beta }{n+\beta }\right) .$
+
+$\left( b\right) E\left( \lambda _{pos}\right) =\frac{\beta \left( \alpha
++k\right) }{n+\beta },Var\left( \lambda _{pos}\right) =\frac{\beta
+^{2}\left( \alpha +k\right) }{\left( n+\beta \right) ^{2}}.$
+
+7.25$\left( a\right) $ the marginal distribution pdf of $X_{i}$ is $%
+p_{i}\left( x\right) =\int_{-\infty }^{\infty }\frac{1}{\sqrt{2\pi }\sigma }%
+e^{-\frac{1}{2}\frac{\left( x-\theta _{i}\right) ^{2}}{\sigma ^{2}}}\frac{1}{%
+\sqrt{2\pi }\tau }e^{-\frac{1}{2}\frac{\left( x-\mu \right) ^{2}}{\tau ^{2}}%
+}d\theta _{i}=\frac{1}{2\pi \sigma \tau }\frac{\sqrt{2\pi }\sigma \tau e^{-%
+\frac{\left( x-\mu \right) ^{2}}{2\left( \sigma ^{2}+\tau ^{2}\right) }}}{%
+\sqrt{\sigma ^{2}+\tau ^{2}}}=\allowbreak \frac{1}{\sqrt{2\pi }\sqrt{\sigma
+^{2}+\tau ^{2}}}e^{-\frac{\left( x-\mu \right) ^{2}}{2\left( \sigma
+^{2}+\tau ^{2}\right) }}\implies $
+
+$X_{i}\symbol{126}N\left( \mu ,\sigma ^{2}+\tau ^{2}\right) .$the joint pdf
+of $\left( X_{1},..X_{n}\right) $ is $p\left( x_{1},..x_{n}\right) =p\left(
+x_{1}|\theta _{1},..x_{n}|\theta _{n}\right) p\left( \theta _{1},..\theta
+_{n}\right) =p\left( x_{1}|\theta _{1}\right) ..p\left( x_{n}|\theta
+_{n}\right) p\left( \theta _{1}\right) ..p\left( \theta _{n}\right) =p\left(
+x_{1}\right) ..p\left( x_{n}\right) \implies $
+
+$\left( X_{1},..X_{n}\right) $ are independent. Since their marginal
+distribution is the same, thery are independent identical distribution.
+
+$\left( b\right) $
+
+the marginal distribution pdf of $X_{i}$ is $p_{i}\left( x\right) =\int
+f\left( x|\theta _{i}\right) \pi \left( \theta _{i}|\tau \right) d\theta
+_{i}=\int f\left( x|t\right) \pi \left( t|\tau \right) dt$
+
+the joint pdf of $\left( X_{1},..X_{n}\right) $ is $p\left(
+x_{1},..x_{n}\right) =p\left( x_{1}|\theta _{1},..x_{n}|\theta _{n}\right)
+p\left( \theta _{1},..\theta _{n}\right) =f\left( x_{1}|\theta _{1}\right)
+..f\left( x_{n}|\theta _{n}\right) \pi \left( \theta _{1}|\tau \right) ..\pi
+\left( \theta _{n}|\tau \right) =p\left( x_{1}\right) ..p\left( x_{n}\right)
+\implies $
+
+$\left( X_{1},..X_{n}\right) $ are independent. Since their marginal
+distribution is the same, thery are independent identical distribution.
+
+7.26  
+
+Starting from $\bar{X}$, the sufficient statistic of $\left(
+X_{1},..X_{n}\right) .$ The posterior distribution pdf of $\theta $ is
+
+$p\left( \theta \right) =\frac{\frac{\sqrt{n}}{\sqrt{2\pi }\sigma }e^{-\frac{%
+1}{2}\frac{\left( x-\theta \right) ^{2}}{\sigma ^{2}/n}}\frac{e^{-\left\vert
+\theta \right\vert /a}}{2a}}{\int_{-\infty }^{\infty }\frac{\sqrt{n}}{\sqrt{%
+2\pi }\sigma }e^{-\frac{1}{2}\frac{\left( x-\theta \right) ^{2}}{\sigma
+^{2}/n}}\frac{e^{-\left\vert \theta \right\vert /a}}{2a}d\theta }\propto e^{-%
+\frac{1}{2}\frac{n\left( x-\theta \right) ^{2}}{\sigma ^{2}}}e^{-\left\vert
+\theta \right\vert /a}\propto e^{\frac{1}{2}\frac{2nx\theta -n\theta ^{2}}{%
+\sigma ^{2}}-\frac{\left\vert \theta \right\vert }{a}},$
+
+the normalization factor is C=$\int_{-\infty }^{\infty }e^{\frac{1}{2}\frac{%
+2nx\theta -n\theta ^{2}}{\sigma ^{2}}-\frac{\left\vert \theta \right\vert }{a%
+}}d\theta .$
+
+$E\left( \hat{\theta}\right) =\int \theta p\left( \theta \right) d\theta =%
+\frac{1}{C}\int \theta e^{\frac{1}{2}\frac{2nx\theta -n\theta ^{2}}{\sigma
+^{2}}-\frac{\left\vert \theta \right\vert }{a}}d\theta .$
+
+$\int \theta e^{\frac{1}{2}\frac{2nx\theta -n\theta ^{2}}{\sigma ^{2}}-\frac{%
+\left\vert \theta \right\vert }{a}}d\theta =\int_{0}^{\infty }\theta e^{%
+\frac{1}{2}\frac{2nx\theta -n\theta ^{2}}{\sigma ^{2}}-\frac{\theta }{a}%
+}d\theta +\int_{-\infty }^{0}\theta e^{\frac{1}{2}\frac{2nx\theta -n\theta
+^{2}}{\sigma ^{2}}+\frac{\theta }{a}}d\theta $
+
+$=\int_{0}^{\infty }\theta e^{\frac{2nx\theta a-na\theta ^{2}-2\sigma
+^{2}\theta }{2\sigma ^{2}a}}d\theta +\int_{-\infty }^{0}\theta e^{\frac{%
+2nxa\theta -na\theta ^{2}+2\sigma ^{2}\theta }{2\sigma ^{2}a}}d\theta $
+
+=$\int_{0}^{\infty }\theta e^{\frac{2\left( nxa-\sigma ^{2}\right) \theta
+-na\theta ^{2}}{2\sigma ^{2}a}}d\theta +\int_{-\infty }^{0}\theta e^{\frac{%
+2\left( nxa+\sigma ^{2}\right) \theta -na\theta ^{2}}{2\sigma ^{2}a}}d\theta 
+$
+
+$=e^{na\lambda _{1}^{2}}\int_{0}^{\infty }\theta e^{-na\left( \theta
+-\lambda _{1}\right) ^{2}}d\theta +e^{na\lambda _{2}^{2}}\int_{-\infty
+}^{0}\theta e^{-na\left( \theta -\lambda _{2}\right) ^{2}}d\theta ,$where $%
+\lambda _{1,2}=\frac{nax\mp \sigma ^{2}}{na}.$
+
+=$e^{na\lambda _{1}^{2}}\int_{-\lambda _{1}}^{\infty }\left( \theta +\lambda
+_{1}\right) e^{-na\theta ^{2}}d\theta +e^{na\lambda _{2}^{2}}\int_{-\infty
+}^{-\lambda _{2}}\left( \theta +\lambda _{2}\right) e^{-na\theta
+^{2}}d\theta $
+
+\bigskip The calculation of $C$ is the same as above, only missing $\theta ,$%
+therefore $C=e^{na\lambda _{1}^{2}}\int_{-\lambda _{1}}^{\infty
+}e^{-na\theta ^{2}}d\theta +e^{na\lambda _{2}^{2}}\int_{-\infty }^{-\lambda
+_{2}}e^{-na\theta ^{2}}d\theta $
+
+$E\left( \hat{\theta}\right) $=$\frac{1}{C}(e^{na\lambda
+_{1}^{2}}\int_{-\lambda _{1}}^{\infty }\theta e^{-na\theta ^{2}}d\theta
++e^{na\lambda _{2}^{2}}\int_{-\infty }^{-\lambda _{2}}\theta e^{-na\theta
+^{2}}d\theta $
+
+$+e^{na\lambda _{1}^{2}}\lambda _{1}\int_{-\lambda _{1}}^{\infty
+}e^{-na\theta ^{2}}d\theta +\lambda _{2}e^{na\lambda _{2}^{2}}\int_{-\infty
+}^{-\lambda _{2}}e^{-na\theta ^{2}}d\theta );$
+
+=$\frac{1}{C}(e^{na\lambda _{1}^{2}}\frac{1}{2na}e^{-na\lambda
+_{1}^{2}}+e^{na\lambda _{2}^{2}}\frac{-1}{2na}e^{-na\lambda
+_{2}^{2}}+\lambda _{1}C+\left( \lambda _{2}-\lambda _{1}\right) e^{na\lambda
+_{2}^{2}}\int_{-\infty }^{-\lambda _{2}}e^{-na\theta ^{2}}d\theta )$
+
+$=\lambda _{1}+\frac{2\sigma ^{2}}{naC}e^{na\lambda _{2}^{2}}\int_{-\infty
+}^{-\lambda _{2}}e^{-na\theta ^{2}}d\theta $
+
+=$\lambda _{1}+\frac{2\sigma ^{2}}{naC}e^{na\lambda _{2}^{2}}\int_{\lambda
+_{2}}^{\infty }e^{-na\theta ^{2}}d\theta ,$ which is the mean of the
+posterior distribution. 
+
+\bigskip $\left( ?\right) $Supplement:
+
+\FRAME{dtbpF}{4.4996in}{0.3952in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 0.3952in;depth 0pt;original-width 8.1353in;original-height
+0.4065in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NXFRMZ03.wmf';tempfile-properties "XPR";}}
+
+Starting from $\bar{X}$, the sufficient statistic of $\left(
+X_{1},..X_{n}\right) .$The posterior distribution pmf of $\mu $ is
+
+$P\left( \mu =1\right) =\frac{e^{-\frac{1}{2}\frac{\left( x-1\right) ^{2}}{%
+\sigma ^{2}/n}}}{e^{-\frac{1}{2}\frac{\left( x-1\right) ^{2}}{\sigma ^{2}/n}%
+}+e^{-\frac{1}{2}\frac{\left( x+1\right) ^{2}}{\sigma ^{2}/n}}},P\left( \mu
+=-1\right) =\frac{e^{-\frac{1}{2}\frac{\left( x+1\right) ^{2}}{\sigma ^{2}/n}%
+}}{e^{-\frac{1}{2}\frac{\left( x-1\right) ^{2}}{\sigma ^{2}/n}}+e^{-\frac{1}{%
+2}\frac{\left( x+1\right) ^{2}}{\sigma ^{2}/n}}}.$
+
+\bigskip $E_{pos}\left( \mu \right) =\frac{e^{-\frac{1}{2}\frac{\left(
+x-1\right) ^{2}}{\sigma ^{2}/n}}-e^{-\frac{1}{2}\frac{\left( x+1\right) ^{2}%
+}{\sigma ^{2}/n}}}{e^{-\frac{1}{2}\frac{\left( x-1\right) ^{2}}{\sigma ^{2}/n%
+}}+e^{-\frac{1}{2}\frac{\left( x+1\right) ^{2}}{\sigma ^{2}/n}}}.$ If $%
+n\rightarrow \infty ,$the distribution of $\mu _{n}\overset{d}{\rightarrow }%
+\left( 
+\begin{array}{c}
+\mu : \\ 
+P:%
+\end{array}%
+\begin{array}{cc}
+1 & -1 \\ 
+1 & 0%
+\end{array}%
+,x>0\right) ,$
+
+$\left( 
+\begin{array}{c}
+\mu : \\ 
+P:%
+\end{array}%
+\begin{array}{cc}
+1 & -1 \\ 
+0 & 1%
+\end{array}%
+,x<0\right) ,$
+
+$\left( 
+\begin{array}{c}
+\mu : \\ 
+P:%
+\end{array}%
+\begin{array}{cc}
+1 & -1 \\ 
+\frac{1}{2} & \frac{1}{2}%
+\end{array}%
+,x=0\right) $
+
+\bigskip
+
+\bigskip 
+
+\end{document}

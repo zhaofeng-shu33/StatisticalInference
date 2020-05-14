@@ -1,0 +1,188 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, September 19, 2015 08:17:34}
+%TCIDATA{LastRevised=Monday, September 21, 2015 22:32:42}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{ComputeDefs=
+%$f(a-\epsilon )=f(a$
+%}
+
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+$\bigskip $Problem2.14
+
+$\FRAME{itbpF}{4.5in}{0.9in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.5in;height 0.9in;depth 0in;original-width
+11.2106in;original-height 2.2373in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'NUWJ9101.wmf';tempfile-properties "XPR";}}$
+
+$\int_{0}^{\infty }p(t)\chi _{\lbrack u,+\infty )}(t)dt=1-F\left( u\right) ,$
+
+$\int_{0}^{\infty }[1-F(u)]du=\int_{0}^{\infty }\left[ \int_{0}^{\infty
+}p(t)\chi _{\lbrack u,+\infty )}(t)dt\right] du,$
+
+changing the order of integration,
+
+=$\int_{0}^{\infty }p(t)dt\int_{0}^{\infty }\chi _{\lbrack u,+\infty
+)}(t)du=\int_{0}^{\infty }p(t)dt\int_{0}^{t}du=\int_{0}^{\infty }tp(t)dt=EX$
+
+Probelm2.15 Let X and Y be two random variables and define $X\wedge Y=\min
+\left( X,Y\right) ,X\vee Y=\max \left( X,Y\right) .$
+
+Show that $E\left( X\vee Y\right) =E\left( X\right) +E\left( Y\right)
+-E\left( X\wedge Y\right) .$
+
+Proof: $X\vee Y=\frac{\left\vert X-Y\right\vert +\left( X+Y\right) }{2}%
+,X\wedge Y=\frac{\left( X+Y\right) -\left\vert X-Y\right\vert }{2},$%
+therefore $X\vee Y=X+Y-\left( X+Y\right) ,$
+
+By the linearity of $E\left( \cdot \right) ,E\left( X\vee Y\right) =E\left(
+X\right) +E\left( Y\right) -E\left( X\wedge Y\right) .$
+
+2.17(a) $\frac{1}{2^{\frac{1}{3}}}(b)0$
+
+2.18Let $F(a)=\int_{R}\left\vert x-a\right\vert p(x)dx=\int_{a}^{\infty
+}(x-a)p(x)dx+\int_{-\infty }^{a}(a-x)p(x)dx,$
+
+$F^{\prime }(a)=\int_{a}^{\infty }(-p(x))dx+\int_{-\infty }^{a}p(x)dx,$
+
+Let $F^{\prime }(a)=0,$combined with $\int_{a}^{\infty }p(x)dx+\int_{-\infty
+}^{a}p(x)dx=1,$
+
+we have $\int_{a}^{\infty }p(x)dx=\int_{-\infty }^{a}p(x)dx=\frac{1}{2},$
+
+that is $a=m\left( \text{median}\right) $
+
+Problem 2.19 Prove that $\frac{d}{da}E\left( X-a\right) ^{2}=0\iff E\left(
+X\right) =a.$
+
+Proof:$E\left( X-a\right) ^{2}=a^{2}-2E\left( X\right) a+E\left(
+X^{2}\right) ;$
+
+$\frac{d}{da}E\left( X-a\right) ^{2}=0\iff 2a-2E\left( X\right) =0\iff
+E\left( X\right) =a.$
+
+As a parabola with positive orientation, $a=E\left( X\right) $ is indeed a
+minimum.
+
+Assumptions:$x^{2}f_{X}\left( x\right) $ should be square integrable to make 
+$E\left( X^{2}\right) $ meaningful. 
+
+2.22 $EX=\frac{2\beta }{\sqrt{\pi }};DX=\frac{-8+3\pi }{2\pi }\beta ^{2}$
+
+2.26(1) symmetric pdf: normal distribution, beta distribution for parameter $%
+\alpha =\beta $ and uniform distribution.
+
+\qquad \qquad (5) median=0.69,mean=1, for exponential distribution
+
+2.27(1) normal distribution\qquad \qquad
+
+\qquad \qquad (2) uniform distribution
+
+\qquad \qquad (3) Suppose the mode lies at $a-\epsilon ,$since pdf decreases
+on the right side of this point, we have
+
+$f(a-\epsilon )\geq f(a)\geq f(a+\epsilon ),$ but $f(a-\epsilon
+)=f(a+\epsilon ),$ hence $f(x)=const$ in the invertal $\left[ a-\epsilon
+,a+\epsilon \right] .$
+
+By the definition it is easy to verify that the point of symmetry is a mode.
+
+\qquad \qquad (4) mode 0
+
+2.28 $\left( a\right) $Show that if a pdf is symmetric about a point $a$,
+then $\alpha _{3}=\frac{\mu _{3}}{\left( \mu _{2}\right) ^{3/2}}=0.$
+
+Proof: Let $p\left( x\right) $ be the pdf of a random variable $X,$which
+satisfies $p\left( x\right) =p\left( 2a-x\right) $ for any $x\in R.$
+
+$\mu _{3}=E\left[ X-E\left( X\right) \right] ^{3}.E\left( X\right)
+=\int_{-\infty }^{\infty }xp\left( x\right) dx=\int_{-\infty }^{\infty
+}\left( x-a\right) p\left( x\right) dx+\int_{-\infty }^{\infty }ap\left(
+x\right) dx$
+
+$=\int_{a}^{\infty }(x-a)p(x)dx+\int_{-\infty }^{a}(x-a)p(x)dx+a,$ let $%
+t=2a-x$ in the second integral,
+
+=$\int_{a}^{\infty }(x-a)p(x)dx+\int_{a}^{\infty }(a-t)p(t)dt+a$
+
+$=a,$
+
+Let $Y=X-E\left( X\right) =X-a,$then $p_{Y}\left( y\right) =p_{X}\left(
+y+a\right) .$Therefore $p_{Y}\left( y\right) $ satisfies $p\left( y\right)
+=p_{X}\left( y+a\right) =p_{X}\left( 2a-\left( y+a\right) \right)
+=p_{X}\left( a-y\right) =$ $p_{Y}\left( -y\right) .$ That is, $p_{Y}\left(
+y\right) $ is even.
+
+$E\left[ X-E\left( X\right) \right] ^{3}=E\left( Y^{3}\right) =0$ since
+integrating every even function on a symmetric interval about the origin
+gives 0.
+
+\qquad \qquad\ (b) 2
+
+\qquad \qquad\ (c) for $f(x)=\frac{1}{\sqrt{2\pi }}e^{-\frac{x^{2}}{2}%
+},\alpha _{4}=3;$
+
+\qquad \qquad \qquad \qquad for $f(x)=\frac{1}{2}\chi _{(-1,1)},\alpha _{4}=%
+\frac{3}{5};$
+
+\qquad \qquad \qquad \qquad for $f(x)=\frac{1}{2}e^{-\left\vert x\right\vert
+},\alpha _{4}=6.$
+
+peak degree:$\frac{1}{2}e^{-\left\vert x\right\vert }\geq \frac{1}{\sqrt{%
+2\pi }}e^{-\frac{x^{2}}{2}}\geq \frac{1}{2}\chi _{(-1,1)}.$
+
+Problem 2.36 Prove that a pdf of lognormal distribution does not have a
+moment generating function,
+
+that is 
+
+$M_{X}\left( t\right) =\int_{0}^{\infty }\frac{e^{tx}}{\sqrt{2\pi }x}%
+e^{-\left( \log x\right) ^{2}/2}dx.$
+
+For $t\neq 0,\frac{e^{tx}}{\sqrt{2\pi }x}e^{-\left( \log x\right) ^{2}/2}=%
+\frac{1}{\sqrt{2\pi }}e^{tx-\frac{\left( \log x\right) ^{2}}{2}-\log x}>M,$
+for sufficient large $x.$
+
+Hence the improper integral does not converge, which means $M_{X}\left(
+t\right) $ does not exist.
+
+\end{document}

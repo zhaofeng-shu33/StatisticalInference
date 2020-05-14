@@ -1,0 +1,99 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, November 18, 2015 23:07:27}
+%TCIDATA{LastRevised=Sunday, November 22, 2015 22:19:48}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Since $S^{2}\symbol{126}\sigma ^{2}\chi _{v}^{2}/v,$
+
+$\log L\left( \sigma ^{2}|s^{2}\right) =\log \frac{\left( \frac{v}{\sigma
+^{2}}\right) ^{\frac{v}{2}}\left( s^{2}\right) ^{\frac{v}{2}-1}e^{-\frac{%
+vs^{2}}{2\sigma ^{2}}}}{2^{v/2}\Gamma \left( \frac{v}{2}\right) }=-\frac{v}{2%
+}\frac{s^{2}}{\sigma ^{2}}+\frac{v}{2}\log \frac{s^{2}}{\sigma ^{2}}+\log
+\left( \frac{v^{v/2}}{2^{v/2}s^{2}\Gamma \left( \frac{v}{2}\right) }\right)
+. $
+
+\U{5bf9}\U{6b64}Log likelihood \U{53d6}\U{6781}\U{5927}\U{5373}\U{5f97}%
+\U{5230}MLE of $\sigma ^{2}$ \U{4e3a} $S^{2}.$\U{53d6}\U{6b64}Log likelihood%
+\U{7684}\U{76f8}\U{53cd}\U{6570}\U{4e3a}Loss Function,\U{5219}\U{5f53}%
+\U{5f62}\U{4e3a}bS$^{2}$\U{7684}v.r.\U{88ab}\U{8003}\U{8651}\U{65f6},b=1%
+\U{6070}\U{4f7f}loss\U{8fbe}\U{5230}\U{6700}\U{5c0f}.\U{540c}\U{6837}\U{53ef}%
+\U{4ee5}\U{8bc1}\U{660e},
+
+\U{5bf9}\U{4e8e}\U{5f62}\U{5982}bS$^{2}$\U{7684}estimator,E(Los(S$%
+^{2},\sigma ^{2}))=b-\log b-C,C$\U{662f}\U{4e0e}b\U{65e0}\U{5173}\U{7684}%
+\U{5e38}\U{6570}
+
+$\implies b=1$\U{4f7f}\U{5f97}\U{98ce}\U{9669}\U{6700}\U{5c0f},\U{4f18}%
+\U{4e8e}MSE\U{4e0b}\U{7684}b=$\frac{n-1}{n+1}$\U{548c}MLE\U{4e0b}\U{7684}b=$%
+\frac{n-1}{n}.$
+
+7.62$\left( a\right) $for $\delta \left( x\right) =a\bar{X}+b,$
+
+$R\left( \theta ,\delta \right) =Var\left( a\bar{X}+b\right) +E^{2}\left( a%
+\bar{X}+b-\theta \right) =a^{2}\frac{\sigma ^{2}}{n}+\left( \left(
+a-1\right) \theta +b\right) ^{2}$
+
+$=a^{2}\frac{\sigma ^{2}}{n}+\left( b-\left( 1-a\right) \theta \right) ^{2}$
+
+$\left( b\right) $The Bayes estimator with respect to Square Error Loss is
+
+:$\delta ^{\pi }\left( x\right) =E\left( \theta |\bar{x}\right) =\frac{\tau
+^{2}}{\tau ^{2}+\sigma ^{2}/n}\bar{x}+\frac{\sigma ^{2}/n}{\tau ^{2}+\sigma
+^{2}/n}\mu =\left( 1-\eta \right) \bar{x}+\eta \mu ,$which is like the form $%
+a\bar{X}+b,$
+
+The risk function is R$\left( \theta ,\delta ^{\pi }\right) =\left( 1-\eta
+\right) ^{2}\frac{\sigma ^{2}}{n}+\eta ^{2}\left( \theta -\mu \right) ^{2}.$
+
+$\left( c\right) $The Bayes risk: $\int $R$\left( \theta ,\delta ^{\pi
+}\right) \pi \left( \theta \right) d\theta =\left( 1-\eta \right) ^{2}\frac{%
+\sigma ^{2}}{n}+\eta ^{2}Var\left( \theta \right) $
+
+$=\left( 1-\eta \right) ^{2}\frac{\sigma ^{2}}{n}+\eta ^{2}\tau ^{2}=\left( 
+\frac{\tau ^{2}}{\tau ^{2}+\sigma ^{2}/n}\right) ^{2}\frac{\sigma ^{2}}{n}%
++\left( \frac{\sigma ^{2}/n}{\tau ^{2}+\sigma ^{2}/n}\right) ^{2}\tau
+^{2}=\tau ^{2}\eta .$
+
+\end{document}

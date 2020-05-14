@@ -1,0 +1,353 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, October 14, 2015 23:51:14}
+%TCIDATA{LastRevised=Thursday, October 15, 2015 22:56:24}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Statistical Inference Week Five
+
+\FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 4.4996in;height 0.9003in;depth
+0pt;original-width 11.7666in;original-height 1.4866in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'NW7WPL04.wmf';tempfile-properties "XPR";}}
+
+Problem 1.$\qquad $pdf of $Y:p^{\prime }\left( y\right) =p\left( \sqrt{y}%
+\right) \frac{1}{2\sqrt{y}}=\frac{1}{\sqrt{2\pi }\sigma }e^{-\frac{\left( 
+\sqrt{y}-\mu \right) ^{2}}{2\sigma ^{2}}}\frac{1}{\sqrt{2y}}.$
+
+$E\left( Y\right) =E\left( X^{2}\right) =D\left( X\right) +E^{2}\left(
+X\right) =\sigma ^{2}+\mu ^{2}.$
+
+$Var\left( Y\right) =Var\left( X^{2}\right) =E\left( X^{4}\right)
+-E^{2}\left( X^{2}\right) =E\left( \mu X_{1}+\sigma \right) ^{4}-\left(
+\sigma ^{2}+\mu ^{2}\right) ^{2},$where $X_{1}\symbol{126}N\left( 0,1\right) 
+$
+
+Known that $E\left( X_{1}^{2r}\right) =\left( 2r-1\right) !!\implies
+Var\left( Y\right) =3\mu ^{4}+6\mu ^{2}\sigma ^{2}+\sigma ^{4}$ $-\left(
+\sigma ^{2}+\mu ^{2}\right) ^{2}$
+
+$Var\left( Y\right) =2\mu ^{4}+4\mu ^{2}\sigma ^{2}.$
+
+Problem 2$\left( \text{the positive symmetric property of }A\text{ is not
+used?}\right) $.\FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 4.4996in;height 0.9003in;depth
+0pt;original-width 11.3775in;original-height 2.5149in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'NW7WWA05.wmf';tempfile-properties "XPR";}}
+
+\bigskip Let $f\left( \vec{x}\right) =A\vec{x},$which is a continuous
+function. Since $X_{n}\overset{D}{->}X\symbol{126}N\left( \mu ,\Sigma
+\right) .$By continuous mapping Thm,
+
+$f\left( X_{n}\right) \overset{D}{->}f\left( X\right) ,$that is $AX_{n}%
+\overset{D}{->}AX\symbol{126}N\left( A\mu ,A\Sigma A\right) .$
+
+$A_{n}X_{n}=\left( A_{n}-A\right) X_{n}+AX_{n},$if we can prove that $\left(
+A_{n}-A\right) X_{n}\overset{P}{->}0.$Then by Slutsky's Thm,
+
+$A_{n}X_{n}=:U_{n}\overset{D}{->}AX\symbol{126}N\left( A\mu ,A\Sigma
+A\right) .$
+
+By the conclusion proved in the added coursework of week 2
+
+\FRAME{dtbpF}{4.4996in}{0.3866in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 0.3866in;depth 0pt;original-width 4.3759in;original-height
+0.6391in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NW9C230C.wmf';tempfile-properties "XPR";}}
+
+Hence $X_{n}$ is bounded within probability. For any $\delta >0$,since $%
+\left\Vert A_{n}-A\right\Vert ->0,\frac{\delta }{\left\Vert
+A_{n}-A\right\Vert }->\infty ,$
+
+$P\left( \left\vert \left( A_{n}-A\right) X_{n}\right\vert >\delta \right)
+<P\left( \left\Vert A_{n}-A\right\Vert \left\vert X_{n}\right\vert >\delta
+\right) =P\left( \left\vert X_{n}\right\vert >\frac{\delta }{\left\Vert
+A_{n}-A\right\Vert }\right) =F_{X_{n}}\left( \frac{\delta }{\left\Vert
+A_{n}-A\right\Vert }\right) -F_{X_{n}}\left( -\frac{\delta }{\left\Vert
+A_{n}-A\right\Vert }\right) ->0$
+
+since $\left\{ \omega |\text{ }\left\vert \left( A_{n}-A\right) X_{n}\left(
+\omega \right) \right\vert >\delta \right\} \subset \left\{ \omega |\text{ }%
+\left\Vert A_{n}-A\right\Vert \left\vert X_{n}\left( \omega \right)
+\right\vert >\delta \right\} .$
+
+Similarly, acting the continuous function $\vec{x}^{T}A\vec{x}$ $\left( 
+\text{which is quadratic}\right) $ on $X_{n}\overset{D}{->}X\symbol{126}%
+N\left( \mu ,\Sigma \right) $ gives 
+
+$X_{n}^{T}AX_{n}\overset{D}{->}X^{T}AX.X_{n}^{T}A_{n}X_{n}=X_{n}^{T}\left(
+A_{n}-A\right) X_{n}+X_{n}^{T}AX_{n},$
+
+$\bigskip $By Cauthy's Inequality, $\left\vert X_{n}^{T}\left(
+A_{n}-A\right) X_{n}\right\vert <\left\vert X_{n}\right\vert \left\vert
+\left( A_{n}-A\right) X_{n}\right\vert \leq \left\vert X_{n}\right\vert
+^{2}\left\Vert A_{n}-A\right\Vert ,$then we can use the above method to
+prove $X_{n}^{T}\left( A_{n}-A\right) X_{n}\overset{P}{->}0.$Then by
+Slutsky's Thm,$X_{n}^{T}A_{n}X_{n}\overset{D}{->}X^{T}AX.$
+
+\bigskip In general, the exact distribution of $X^{T}AX$ is hard to get. On
+further assumption of both $X$ and $A$ can we get so-called non-central $%
+\chi _{2}$ distribution.
+
+Problem 3: If we can prove $\left( A_{n}-A\right) X_{n}\overset{P}{->}0$
+under the weaker condition that $A_{n}$ is random matrix  and that $A_{n}-A%
+\overset{P}{->}0,$then $A_{n}X_{n}=:U_{n}\overset{D}{->}AX\symbol{126}%
+N\left( A\mu ,A\Sigma A\right) $ also holds.
+
+\bigskip For any $\delta >0,$
+
+$P\left( \left\vert \left( A_{n}-A\right) X_{n}\right\vert \geq \delta
+\right) \leq P\left( \left\vert \left( A_{n}-A\right) X_{n}\right\vert \geq
+\delta ,\left\Vert A_{n}-A\right\Vert <\frac{\delta }{M}\right) +P\left(
+\left\Vert A_{n}-A\right\Vert \geq \frac{\delta }{M}\right) ,$where
+
+$M$ \TEXTsymbol{>}\TEXTsymbol{>}1. Further scaling gives $P\left( \left\vert
+\left( A_{n}-A\right) X_{n}\right\vert \geq \delta \right) \leq P\left(
+\left\vert X_{n}\right\vert \geq M\right) +P\left( \left\Vert
+A_{n}-A\right\Vert \geq \frac{\delta }{M}\right) $
+
+=$1$-$\left( F_{X_{n}}\left( M\right) -F_{X_{n}}\left( -M\right) \right)
++P\left( \left\Vert A_{n}-A\right\Vert \geq \frac{\delta }{M}\right) ,$We
+can take $\pm M\in C\left( F_{X}\right) .$first fix M,let n-\TEXTsymbol{>}$%
+\infty $
+
+$\underset{n->\infty }{\sup \lim }P\left( \left\vert \left( A_{n}-A\right)
+X_{n}\right\vert \geq \delta \right) \leq 1$-$\left( F_{X}\left( M\right)
+-F_{X}\left( -M\right) \right) ,$ then let M-\TEXTsymbol{>}$\infty $ and the
+right hand of the inequality
+
+gives zero, the conclusion follows:$\underset{n->\infty }{\lim }P\left(
+\left\vert \left( A_{n}-A\right) X_{n}\right\vert \geq \delta \right) =0,$
+and $A_{n}-A\overset{P}{->}0.$
+
+The same can be said about $X_{n}^{T}A_{n}X_{n},$which converges in
+distribution to $X^{T}AX.$
+
+Problem 4$\left( \text{the problem should be changed to require that }N\text{
+is given arbitrary integer}\right) $  \FRAME{dtbpF}{4.4996in}{0.9003in}{0pt}{%
+}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+4.4996in;height 0.9003in;depth 0pt;original-width 11.4328in;original-height
+2.9594in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NW7ZYC06.wmf';tempfile-properties "XPR";}}
+
+For the integral $\int_{0}^{\infty }\left[ 1-F\left( x\right) \right]
+dx=\int_{0}^{\infty }\int_{0}^{\infty }f(t)\chi _{\lbrack x,+\infty )}(t)dtdx
+$
+
+changing the order of integration gives
+
+=$\int_{0}^{\infty }f(t)dt\int_{0}^{\infty }\chi _{\lbrack x,+\infty
+)}(t)dx=\int_{0}^{\infty }f(t)dt\int_{0}^{t}dx=\int_{0}^{\infty }xf(x)dt\ $%
+converges$\left( \text{Since }E\left( X_{1}\right) <\infty \right) ,$that is
+$\int_{0}^{\infty }\left[ 1-F\left( x\right) \right] dx$ converges.
+
+$\int_{0}^{y}\left[ 1-F\left( x\right) \right] dx=\left[ 1-F\left( y\right) %
+\right] y+\int_{0}^{y}xf\left( x\right) dx,$let $y->\infty $ gives $\left[
+1-F\left( y\right) \right] y$ converges as $y->\infty \qquad \left( 1\right) 
+$.
+
+Similarly, we can show that $\int_{-\infty }^{0}F\left( x\right)
+dx=\int_{-\infty }^{0}\int_{-\infty }^{0}f(t)\chi _{\left( -\infty ,x\right)
+}(t)dtdx$=$\int_{-\infty }^{0}f(t)dt\int_{-\infty }^{0}\chi _{\left( -\infty
+,x\right) }(t)dx$
+
+=$\int_{-\infty }^{0}f(t)dt\int_{t}^{0}dx$=$\int_{-\infty }^{0}tf(t)dt$
+converges. Similar argument gives $F\left( y\right) y$ converges as $%
+y->-\infty \qquad \left( 2\right) .$
+
+the pdf of $X_{\left( n+1\right) }$ is $p_{n+1}\left( x\right) =\frac{\left(
+2n+1\right) !}{n!n!}F^{n}\left( x\right) \left[ 1-F\left( x\right) \right]
+^{n}f\left( x\right) ,$
+
+$E\left\vert X_{\left( n+1\right) }\right\vert ^{k}=\int_{-\infty }^{\infty
+}\left\vert x\right\vert ^{k}p_{\left( n+1\right) }\left( x\right) dx<\infty
+\implies \int_{-\infty }^{\infty }\left\vert x\right\vert ^{k}F^{n}\left(
+x\right) \left[ 1-F\left( x\right) \right] ^{n}f\left( x\right) dx$
+
+\bigskip With $\left( 1,2\right) \qquad \left\vert x\right\vert
+^{k}F^{n}\left( x\right) \left[ 1-F\left( x\right) \right] ^{n}f\left(
+x\right) \symbol{126}C\left\vert x\right\vert ^{k-n}f\left( x\right) \qquad $%
+as $x->\infty .$
+
+The condition for convergence is $k-n\leq 1.$
+
+$\left\vert x\right\vert ^{k}F^{n}\left( x\right) \left[ 1-F\left( x\right) %
+\right] ^{n}f\left( x\right) \symbol{126}C\left\vert x\right\vert
+^{k-n}f\left( x\right) \qquad $as $x->-\infty .$
+
+The condition for convergence is $k-n\leq 1.$
+
+Hence if we take $K=N+1,$then $k\leq K=N+1\leq n+1$ satisfying the above
+inequality.
+
+In conclusion, only  $k-n\leq 1$ is essential.
+
+\FRAME{dtbpF}{4.4996in}{1.2964in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 1.2964in;depth 0pt;original-width 12.3219in;original-height
+4.0283in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NW8VXT09.wmf';tempfile-properties "XPR";}}
+
+$\left( 1\right) $the pdf of $X_{\left( n\right) }$ is $p_{n}\left( x\right)
+=nF^{n-1}\left( x\right) p\left( x\right) ,$for Cauchy Distribution, p$%
+\left( x\right) =\frac{1}{\pi }\frac{1}{1+x^{2}},F\left( x\right) =\frac{1}{%
+\pi }\arctan x+\frac{1}{2},$
+
+$\implies E\left( \left\vert X_{\left( n\right) }\right\vert \right) =\frac{n%
+}{\pi }\int_{\NEG{R}}\frac{\left\vert x\right\vert \left( \frac{1}{\pi }%
+\arctan x+\frac{1}{2}\right) ^{n-1}}{1+x^{2}}dx.$Since $\frac{\left\vert
+x\right\vert \left( \arctan x+\frac{\pi }{2}\right) ^{n-1}}{1+x^{2}}>\frac{1%
+}{x}\frac{1}{2^{n-1}}$as x\TEXTsymbol{>}0, the improper integral deverges as
+x-\TEXTsymbol{>}+$\infty $ by Comparison Test.
+
+$\implies E\left( \left\vert X_{\left( n\right) }\right\vert \right) =\infty
+.$
+
+the pdf of $X_{\left( 1\right) }$ is $p_{1}\left( x\right) =n\left(
+1-F\left( x\right) \right) ^{n-1}p\left( x\right) $
+
+$E\left( \left\vert X_{\left( 1\right) }\right\vert \right) =\frac{n}{\pi }%
+\int_{\NEG{R}}\frac{\left\vert x\right\vert \left( \frac{1}{2}-\frac{1}{\pi }%
+\arctan x\right) ^{n-1}}{1+x^{2}}dx.$Since $\frac{\left\vert x\right\vert
+\left( \frac{1}{2}-\frac{1}{\pi }\arctan x\right) ^{n-1}}{1+x^{2}}<\frac{1}{%
+\left\vert x\right\vert }\frac{1}{2^{n-1}},$as x\TEXTsymbol{<}0, the
+improper integral deverges as x-\TEXTsymbol{>}-$\infty $ by Comparison Test.
+
+$\implies E\left( \left\vert X_{\left( 1\right) }\right\vert \right) =\infty
+.$
+
+$\left( 2\right) $the pdf of $X_{\left( n-1\right) }$ is $p_{n-1}\left(
+x\right) =\frac{n\left( n-1\right) }{2}F^{n-2}\left( x\right) \left(
+1-F\left( x\right) \right) p\left( x\right) .$
+
+$E\left( \left\vert X_{\left( n-1\right) }\right\vert \right) =\frac{n\left(
+n-1\right) }{2\pi }\int_{\NEG{R}}\frac{\left\vert x\right\vert \left( \frac{1%
+}{\pi }\arctan x+\frac{1}{2}\right) ^{n-2}\left( \frac{1}{2}-\frac{1}{\pi }%
+\arctan x\right) }{1+x^{2}}dx$
+
+\FRAME{dtbpF}{4.4996in}{1.3171in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 1.3171in;depth 0pt;original-width 6.4584in;original-height
+3.4895in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NW8X5I0A.wmf';tempfile-properties "XPR";}}
+
+From the above picture$\left( x>0\right) $ we know that $\frac{\frac{\pi }{2}%
+-\arctan x}{x}\symbol{126}\frac{1}{x^{2}}\implies $
+
+the integrand in $E\left( \left\vert X_{\left( n-1\right) }\right\vert
+\right) \symbol{126}\frac{c}{x^{2}}$ converges as x-\TEXTsymbol{>}+$\infty .$
+
+As x\TEXTsymbol{<}0, from $\arctan x+\arctan \left( \frac{1}{x}\right) =%
+\frac{-\pi }{2},$we can deduce that 
+
+$\arctan x=\frac{-\pi }{2}-\frac{1}{x}+o\left( \frac{1}{x}\right) ,$as x-%
+\TEXTsymbol{>}-$\infty \implies \arctan x+\frac{\pi }{2}\symbol{126}\frac{1}{%
+x}$
+
+$\left( \frac{1}{\pi }\arctan x+\frac{1}{2}\right) ^{n-2}=\frac{\left(
+\arctan x+\frac{\pi }{2}\right) ^{n-2}}{\left( 2\pi \right) ^{n-2}}\symbol{%
+126}\frac{1}{\left( 2\pi \right) ^{n-2}x^{n-2}}\left( n\geq 3\right) ,$
+
+$\implies $the integrand in $E\left( \left\vert X_{\left( n-1\right)
+}\right\vert \right) \symbol{126}\frac{c}{x^{n-1}}$converges as x-%
+\TEXTsymbol{>}-$\infty .$
+
+Combining the two cases together follows the convergence of $E\left(
+\left\vert X_{\left( n-1\right) }\right\vert \right) .$
+
+By symmetry the same can be said about $E\left( \left\vert X_{\left(
+2\right) }\right\vert \right) .$
+
+$\left( 3\right) $the pdf of $X_{\left( n-2\right) }$ is $p_{n-2}\left(
+x\right) =\frac{n!}{\left( n-3\right) !\times 2!}F^{n-3}\left( x\right)
+\left( 1-F\left( x\right) \right) ^{2}p\left( x\right) .$
+
+$E\left( \left\vert X_{\left( n-1\right) }\right\vert ^{2}\right) =\frac{%
+n\left( n-1\right) \left( n-2\right) }{2\pi }\int_{\NEG{R}}\frac{\left\vert
+x\right\vert ^{2}\left( \frac{1}{\pi }\arctan x+\frac{1}{2}\right)
+^{n-3}\left( \frac{1}{2}-\frac{1}{\pi }\arctan x\right) ^{2}}{1+x^{2}}dx.$
+
+Similar to above, using $\frac{1}{2}-\frac{1}{\pi }\arctan x\symbol{126}%
+\frac{c}{x}\left( x->+\infty \right) $ gives the convergence of the improper
+integral 
+
+for x\TEXTsymbol{>}0, while using $\frac{1}{2}+\frac{1}{\pi }\arctan x%
+\symbol{126}\frac{c}{\left\vert x\right\vert }\left( x->-\infty \right) $
+gives the convergence of the improper integral 
+
+for x\TEXTsymbol{<}0,provided n-3$\geq 2.$
+
+By symmetry the same can be said about $E\left( \left\vert X_{\left(
+3\right) }\right\vert ^{2}\right) .$
+
+\FRAME{dtbpF}{4.4996in}{0.4073in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+4.4996in;height 0.4073in;depth 0pt;original-width 11.6551in;original-height
+0.8198in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NW8XXG0B.wmf';tempfile-properties "XPR";}}
+
+$\left( 4\right) $ the pdf of $X_{\left( r\right) }$ is $p_{r}\left(
+x\right) =\frac{n!}{\left( r-1\right) !\times \left( n-r\right) !}%
+F^{r-1}\left( x\right) \left( 1-F\left( x\right) \right) ^{n-r}p\left(
+x\right) .$
+
+$E\left( \left\vert X_{\left( n-1\right) }\right\vert ^{k}\right) =\frac{n!}{%
+\pi \left( r-1\right) !\times \left( n-r\right) !}\int_{\NEG{R}}\frac{%
+\left\vert x\right\vert ^{k}\left( \frac{1}{\pi }\arctan x+\frac{1}{2}%
+\right) ^{n-r}\left( \frac{1}{2}-\frac{1}{\pi }\arctan x\right) ^{r-1}}{%
+1+x^{2}}dx$ converges iff 
+
+$\int_{1}^{+\infty }\frac{\left\vert x\right\vert ^{k}}{x^{2}}\left\vert 
+\frac{1}{x}\right\vert ^{r-1}dx$ and $\int_{-\infty }^{-1}\frac{\left\vert
+x\right\vert ^{k}}{x^{2}}\left\vert \frac{1}{x}\right\vert ^{n-r}dx$ both
+converge$\iff 2+r-1-k>1$ and $2+n-r-k>1$
+
+$\iff k<\min \left\{ r,n+1-r\right\} .$ 
+
+\end{document}

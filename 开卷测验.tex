@@ -1,0 +1,192 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{sw2unicode}
+\usepackage[UT1]{fontenc}
+\usepackage{nsimsun}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, October 30, 2015 23:29:25}
+%TCIDATA{LastRevised=Saturday, October 31, 2015 13:14:44}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=NSimChi.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\U{6211}\U{627f}\U{8bfa}\U{6211}\U{5c06}\U{72ec}\U{7acb}\U{5b8c}\U{6210}%
+\U{672c}\U{6b21}\U{5f00}\U{5377}\U{6d4b}\U{9a8c}
+
+\bigskip 1.$X_{1},...X_{n}\symbol{126}N\left( \mu ,\sigma ^{2}\right) ,\hat{%
+\mu}_{n}=\frac{1}{n}\underset{i=0}{\overset{n}{\sum }}X_{i},$ by CLT, $\sqrt{%
+n}\left( \hat{\mu}_{n}-\mu \right) \overset{d}{\rightarrow }N\left( 0,\sigma
+^{2}\right) .$
+
+If $\mu \neq 0,$by Delta's Method, choosing $g\left( x\right) =\frac{1}{x},$%
+which has derivative at $x=\mu \implies $
+
+$\sqrt{n}\left( \frac{1}{\hat{\mu}_{n}}-\frac{1}{\mu }\right) \overset{d}{%
+\rightarrow }N\left( 0,\frac{\sigma ^{2}}{\mu ^{4}}\right) .$
+
+If $\mu =0,$by law of large numbers $\hat{\mu}_{n}\overset{a.s.}{\rightarrow 
+}0,$ then $\frac{1}{\hat{\mu}_{n}}\overset{a.s.}{\rightarrow }\infty ,$ by
+the definition of almost surely convergence.
+
+2. the pdf pf $X_{\left( n+1\right) }$ is $p\left( x\right) =\frac{\left(
+2n+1\right) !}{n!n!}F\left( x\right) ^{n}\left( 1-F\left( x\right) \right)
+^{n}f\left( x\right) ,$where $f\left( x\right) =\frac{1}{\theta }\chi
+_{\lbrack 0,\theta ]},$ is the pdf of $U_{\left( 0,\theta \right) }$ and
+
+$F\left( x\right) =\QATOPD\{ . {0,x\leq 0}{\underset{1,x\geq \theta }{\frac{x%
+}{\theta },0<x\,<\theta }},$ is the cdf of $U_{\left( 0,\theta \right) }.$
+
+$\implies p\left( x\right) =\frac{\left( 2n+1\right) !}{n!n!\theta ^{2n+1}}%
+x^{n}\left( \theta -x\right) ^{n}\chi _{\lbrack 0,\theta ]}\implies E\left(
+X_{\left( n+1\right) }\right) =\int_{0}^{\theta }xp(x)dx=\frac{\left(
+2n+1\right) !}{n!n!\theta ^{2n+1}}\int_{0}^{\theta }x^{n+1}\left( \theta
+-x\right) ^{n}dx$
+
+=$\frac{\left( 2n+1\right) !\theta }{n!n!}\int_{0}^{1}x^{n+1}\left(
+1-x\right) ^{n}dx=\frac{\left( 2n+1\right) !\theta }{n!n!}B\left(
+n+2,n+1\right) =\frac{\left( 2n+1\right) !\theta }{n!n!}\frac{\Gamma \left(
+n+1\right) \Gamma \left( n+2\right) }{\Gamma \left( 2n+3\right) }=\frac{%
+\left( 2n+1\right) !\theta }{n!n!}\frac{n!\left( n+1\right) !}{\left(
+2n+2\right) !}=\frac{\theta }{2}.$
+
+the pdf pf $X_{\left( 2n\right) }$ is $p^{\prime }\left( x\right) =\frac{%
+\left( 2n+1\right) !}{\left( 2n-1\right) !}F\left( x\right) ^{2n-1}\left(
+1-F\left( x\right) \right) f\left( x\right) =\left( 2n+1\right) 2n\left( 
+\frac{x}{\theta }\right) ^{2n-1}\left( 1-\frac{x}{\theta }\right) \frac{1}{%
+\theta }\chi _{\lbrack 0,\theta ]}$
+
+=$\frac{2n\left( 2n+1\right) }{\theta ^{2n+1}}\left( \theta -x\right)
+x^{2n-1}\chi _{\lbrack 0,\theta ]}\implies E\left( X_{\left( 2n\right)
+}\right) =\int_{0}^{\theta }xp^{\prime }(x)dx=\frac{2n\left( 2n+1\right) }{%
+\theta ^{2n+1}}\int_{0}^{\theta }\left( \theta -x\right) x^{2n}dx=2n\left(
+2n+1\right) \theta \int_{0}^{1}x^{2n}\left( 1-x\right) dx$
+
+=$2n\left( 2n+1\right) \theta \left( \frac{1}{2n+1}-\frac{1}{2n+2}\right)
+=\theta \left( 2n-\frac{n\left( 2n+1\right) }{n+1}\right) =\allowbreak \frac{%
+n\theta }{n+1}.$
+
+$\therefore E\left( X_{\left( n+1\right) }+X_{\left( 2n\right) }\right)
+=E\left( X_{\left( n+1\right) }\right) +E\left( X_{\left( 2n\right) }\right)
+=\frac{\theta }{2}+\allowbreak \frac{n\theta }{n+1}=\frac{\left( 3n+1\right)
+\theta }{2\left( n+1\right) }.$
+
+3. $\sqrt{n}\left( \hat{p}_{n}-p\right) \overset{d}{\rightarrow }N\left(
+0,p\left( 1-p\right) \right) .$ By Delta's Method, for function $g\left(
+x\right) $ with $g^{\prime }\left( p\right) \neq 0,$we have
+
+$\sqrt{n}\left( g\left( \hat{p}_{n}\right) -g\left( p\right) \right) \overset%
+{d}{\rightarrow }N\left( 0,g^{\prime 2}\left( p\right) p\left( 1-p\right)
+\right) ,$let $g^{\prime 2}\left( p\right) p\left( 1-p\right) =1$ give $%
+g\left( p\right) =2\arcsin \sqrt{p}$
+
+$\implies \phi \left( x\right) =2\arcsin \sqrt{x}$ and $r_{n}=\sqrt{n}.$
+
+4. The joint pdf of $\left( X_{1},...X_{n}\right) $ is $p\left( \vec{x}%
+\right) =\QATOPD\{ . {\frac{1}{\theta ^{n}},0\leq x_{i}\leq \theta
+,i=1,..n}{0,otherwise}$ =$g\left( X_{\left( n\right) }\left( \vec{x}\right)
+|\theta \right) h\left( \vec{x}\right) ,$where $g\left( x\right) =\QATOPD\{
+. {\frac{1}{\theta ^{n}},x\leq \theta }{0,otherwise}$
+
+and $h\left( \vec{x}\right) =\QATOPD\{ . {1,x_{i}\geq
+0,i=1,..n}{0.otherwise}.$Then by Factorization Thm, $X_{n}$ is a sufficient
+statistic.
+
+the pdf of $X_{\left( n\right) }$ is $p\left( x\right) =n\frac{x^{n-1}}{%
+\theta ^{n}}\chi _{\lbrack 0,\theta ]}.$
+
+$\forall \theta \in \left( 0,\infty \right) ,$ and for every measurable
+function g and $E_{\theta }g\left( X_{\left( n\right) }\right) =0\implies
+P_{\theta }\left( g\left( X_{\left( n\right) }\right) =0\right) =1.$
+
+$E_{\theta }g\left( X_{\left( n\right) }\right) =0\iff \int_{0}^{\theta
+}g\left( x\right) x^{n-1}dx=0,$ taking the derivative gives $g\left( \theta
+\right) \theta ^{n-1}=0,a.e.\implies P_{\theta }\left( g\left( X_{\left(
+n\right) }\right) =0\right) =1.$
+
+That is $X_{\left( n\right) }$ is a complete statistic.
+
+$E\left( X_{\left( n\right) }\right) =\int_{0}^{\theta }n\frac{x^{n}}{\theta
+^{n}}dx=n\theta \int_{0}^{1}x^{n}dx=\frac{n\theta }{n+1}.\implies E\left[
+n\left( \theta -X_{\left( n\right) }\right) \right] \rightarrow \theta $
+
+$Var\left( X_{\left( n\right) }\right) =\int_{0}^{\theta }n\frac{x^{n+1}}{%
+\theta ^{n}}dx-E^{2}\left( X_{\left( n\right) }\right) =n\theta
+^{2}\int_{0}^{1}x^{n+1}dx-\left( \frac{n\theta }{n+1}\right) ^{2}=\frac{%
+n\theta ^{2}}{n+2}-n^{2}\frac{\theta ^{2}}{\left( n+1\right) ^{2}}=\frac{%
+n\theta ^{2}}{\left( n+1\right) ^{2}\left( n+2\right) }$
+
+$Var\left[ n\left( \theta -X_{\left( n\right) }\right) \right] \rightarrow
+\theta ^{2}.$ Recall that the variance exponential distribution is the
+square of its expectation.
+
+We postulate that $X\symbol{126}Exp\left( \frac{1}{\theta }\right) ,$ and
+prove it as follows:
+
+$\forall t>0,P\left( n\left( \theta -X_{\left( n\right) }\right) \leq
+t\right) =P\left( X_{\left( n\right) }\geq \theta -\frac{t}{n}\right)
+=1-P\left( X_{\left( n\right) }\leq \theta -\frac{t}{n}\right) $
+
+$=1-\left( 1-\frac{t}{\theta n}\right) ^{n}$ by the definition of $X_{\left(
+n\right) }.$
+
+Let n-\TEXTsymbol{>}$\infty \implies \underset{n\rightarrow \infty }{\lim }%
+P\left( n\left( \theta -X_{\left( n\right) }\right) \leq t\right) =1-e^{-%
+\frac{t}{\theta }}\implies n\left( \theta -X_{\left( n\right) }\right) 
+\overset{d}{\rightarrow }X\symbol{126}Exp\left( \frac{1}{\theta }\right) .$
+
+5. By CLT, $\sqrt{n}\left( \bar{X}_{n}-\mu \right) \overset{d}{\rightarrow }%
+N\left( 0,\sigma ^{2}\right) $
+
+Taking $g\left( x\right) =x^{2},$ if $\mu \neq 0,$by Delta's Method, $\sqrt{n%
+}\left( \left( \bar{X}_{n}\right) ^{2}-\mu ^{2}\right) \overset{d}{%
+\rightarrow }N\left( 0,4\mu ^{2}\sigma ^{2}\right) $
+
+Then $c_{n}=\sqrt{n},A=\mu ^{2};$
+
+if $\mu =0,$by Second Order Delta's Method, $\sqrt{n}\left( \left( \bar{X}%
+_{n}\right) ^{2}-\mu ^{2}\right) \overset{d}{\rightarrow }\sigma ^{2}\chi
+_{1}^{2},$ where $\chi _{1}^{2}$ is chi square-distribution with degree of
+freedom 2.
+
+\qquad
+
+\end{document}

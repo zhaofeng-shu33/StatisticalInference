@@ -1,0 +1,122 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Friday, December 04, 2015 00:33:47}
+%TCIDATA{LastRevised=Friday, December 04, 2015 13:05:11}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+8.11
+
+the posterior distribution of $\sigma \symbol{126}IG\left( \alpha +\frac{n-1%
+}{2},\left( \frac{n-1}{2}s^{2}+\frac{1}{\beta }\right) ^{-1}\right) $
+
+\bigskip $P\left( \sigma \leq 1|\qquad s^{2}\right) =P\left( \sigma ^{2}\leq
+1|\qquad s^{2}\right) =\frac{\int_{0}^{1}\frac{1}{\left( \sigma ^{2}\right)
+^{\alpha +\frac{n+1}{2}}}e^{-\frac{\left( \frac{1}{\beta }+\frac{\left(
+n-1\right) }{2}s^{2}\right) }{\sigma ^{2}}}d\sigma ^{2}}{\Gamma \left(
+\alpha +\frac{n-1}{2}\right) \left( \frac{1}{\beta }+\frac{\left( n-1\right) 
+}{2}s^{2}\right) ^{\alpha +\frac{n-1}{2}}}$
+
+$=\frac{\int_{\frac{1}{\beta }+\frac{\left( n-1\right) }{2}s^{2}}^{\infty
+}x^{\alpha +\frac{n-3}{2}}e^{-x}dx}{\Gamma \left( \alpha +\frac{n-1}{2}%
+\right) \left( \frac{1}{\beta }+\frac{\left( n-1\right) }{2}s^{2}\right)
+^{2\alpha +n-1}},$the exact solution is hard to get.
+
+The required region is $\left\{ \vec{x}|P\left( \sigma \leq 1|\qquad
+s^{2}\left( \vec{x}\right) \right) >\frac{1}{2}\right\} .$
+
+$\left( b\right) LRT:L\left( \sigma ^{2}|s^{2}\right) =\frac{n-1}{\sigma ^{2}%
+}\frac{1}{2^{\frac{n-1}{2}}\Gamma \left( \frac{n-1}{2}\right) }\left( \frac{%
+\left( n-1\right) s^{2}}{\sigma ^{2}}\right) ^{\frac{n-1}{2}-1}e^{-\frac{n-1%
+}{2\sigma ^{2}}s^{2}}$
+
+$\underset{\sigma \in R}{\sup }L\left( \sigma ^{2}|s^{2}\right) =L\left(
+\sigma ^{2}|s^{2}\right) _{\sigma ^{2}=s^{2}}=\frac{1}{s^{2}}\frac{1}{2^{%
+\frac{n-1}{2}}\Gamma \left( \frac{n-1}{2}\right) }\left( n-1\right) ^{\frac{%
+n-1}{2}}e^{-\frac{n-1}{2}}$
+
+$L\left( \sigma ^{2}|s^{2}\right) =\QATOPD\{ . {1,s^{2}\leq 1}{\frac{%
+Exp\left( -\left( n-1\right) \left( s^{2}-1\right) /2\right) }{\left(
+s^{2}\right) ^{\left( n-1\right) /2}},s^{2}>1}.$ It is hard to find $\alpha $
+and $\beta ,s.t.$the two inequalities $\frac{Exp\left( -\left( n-1\right)
+\left( s^{2}-1\right) /2\right) }{\left( s^{2}\right) ^{\left( n-1\right) /2}%
+}<\frac{1}{2}$and $\frac{\int_{\frac{1}{\beta }+\frac{\left( n-1\right) }{2}%
+s^{2}}^{\infty }x^{\alpha +\frac{n-3}{2}}e^{-x}dx}{\Gamma \left( \alpha +%
+\frac{n-1}{2}\right) \left( \frac{1}{\beta }+\frac{\left( n-1\right) }{2}%
+s^{2}\right) ^{2\alpha +n-1}}>\frac{1}{2}$ are equivalent. 
+
+\bigskip 
+
+8.12
+
+For all example we choose $\sigma =1$
+
+$\left( a\right) $ From example 8.3.3 the power function $\beta \left( \mu
+\right) =1-\Phi \left( \left( c-\mu \right) \sqrt{n}\right) ,$ $\Phi $ is
+the cdf of standard norm distribution and $c$ is determined by $\underset{%
+\mu \leq 0}{\sup }\beta \left( \mu \right) =\alpha =0.05,$for different $n,$
+we can calculate $c$ and plot the power function, see the graphs in word
+document.
+
+$\left( b\right) $ Similarly we can calculate the power function for this
+case is 
+
+$\beta \left( \mu \right) =P_{\mu }\left( X\in R\right) ,$where $R=\left\{ 
+\vec{x}|\left\vert \bar{x}\right\vert >c\right\} $
+
+$P_{\mu }\left( X\in R\right) =P_{\mu }\left( \left\vert \overline{X}%
+\right\vert >c\right) $
+
+$=P_{\mu }\left( \sqrt{n}\left( \overline{X}-\mu \right) >\sqrt{n}\left(
+c-\mu \right) \right) +P_{\mu }\left( \sqrt{n}\left( \overline{X}-\mu
+\right) <\sqrt{n}\left( -c-\mu \right) \right) $
+
+$\sqrt{n}\left( \overline{X}-\mu \right) \symbol{126}N\left( 0,1\right)
+\implies \beta \left( \mu \right) =1-\Phi \left( \sqrt{n}\left( c-\mu
+\right) \right) +\Phi \left( \sqrt{n}\left( -c-\mu \right) \right) $
+
+$\beta \left( 0\right) =\alpha =0.05,$
+
+$\implies 2\Phi \left( -\sqrt{n}c\right) =0.05,$for different $n,$ we can
+calculate $c$ and plot the power function, see the graphs in word document.
+
+\end{document}

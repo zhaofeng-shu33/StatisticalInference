@@ -1,0 +1,272 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, November 01, 2015 20:43:53}
+%TCIDATA{LastRevised=Tuesday, November 03, 2015 19:13:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+7.12
+
+$\left( a\right) $ Using the method of moments we should equal the
+population moment of first order $\theta $ to the sample moment of first
+order $\overline{X}.\implies \theta =\overline{X}.$
+
+With MLE, the likelihood function of $\left( X_{1},...X_{n}\right) $ is $%
+L\left( \theta |x_{1},..x_{n}\right) =\underset{i=1}{\overset{n}{\Pi }}%
+\theta ^{x_{i}}\left( 1-\theta \right) ^{1-x_{i}}=\theta ^{n\bar{x}}\left(
+1-\theta \right) ^{n\left( 1-\bar{x}\right) }$
+
+the log likelihood is $\log L=n\bar{x}\log \left( \theta \right) +n\left( 1-%
+\bar{x}\right) \log \left( 1-\theta \right) .$ Let $\frac{d}{d\theta }\log L$
+vanish$\implies $
+
+$\frac{n\bar{x}}{\theta }-\frac{n\left( 1-\bar{x}\right) }{1-\theta }%
+=0\implies \theta =\bar{x}$
+
+for 0$\leq \bar{x}\leq \frac{1}{2},$we can verify that $\bar{x}$ is a global
+maximum of $\log L$ by checking the sign of $\frac{d^{2}}{d\theta ^{2}}\log
+L $ at $\bar{x},$
+
+$\frac{d^{2}}{d\theta ^{2}}\log L=-\frac{n\bar{x}}{\theta ^{2}}+\frac{%
+n\left( 1-\bar{x}\right) }{\left( 1-\theta \right) ^{2}},$ $\frac{d^{2}}{%
+d\theta ^{2}}\log L_{|\theta =\bar{x}}=-\frac{n}{\theta }+\frac{n}{\left(
+1-\theta \right) }=\frac{n\left( 2\theta -1\right) }{\theta \left( 1-\theta
+\right) }\leq 0.$ As a result, $\bar{x}$ is a global maximum of $\log L.$
+
+\bigskip for $\bar{x}>\frac{1}{2},$we can check that for $\theta \in \left[
+0,\frac{1}{2}\right] ,$the function $\log L$ is increasing. Indeed,
+
+$\bigskip \frac{d}{d\theta }\log L=\frac{n\bar{x}}{\theta }-\frac{n\left( 1-%
+\bar{x}\right) }{1-\theta }=\frac{n\left( \bar{x}-\theta \right) }{\theta
+\left( 1-\theta \right) }>0\implies \theta =\frac{1}{2}$ is the maximum of $%
+\log L.$
+
+In conclusion the MLE of the parameter $\theta $ based on sample $\left(
+X_{1},..X_{n}\right) $ is $\hat{\theta}\left( X\right) =\QATOPD\{ . {\bar{X},%
+\text{ if 0}\leq \bar{X}\leq \frac{1}{2}}{\frac{1}{2},otherwise},$since $%
+\bar{X}\in \left[ 0,1\right] $ is already known.
+
+$\bigskip \left( b\right) $ Method of Moment $\hat{\theta}\left( X\right) =%
+\bar{X},$ the mean squared error, or variance of $\hat{\theta}$ is $%
+Var\left( \hat{\theta}\right) =Var\left( \bar{X}\right) =\frac{\theta \left(
+1-\theta \right) }{n}.$
+
+\ MLE: $n\bar{X}\symbol{126}B\left( n,\theta \right) \implies P\left( \bar{X}%
+=\frac{k}{n}\right) =P\left( n\bar{X}=k\right) =\binom{n}{k}\theta
+^{k}\left( 1-\theta \right) ^{n-k}.$We assume $n$ is very large and
+
+neglect the influence at $\bar{X}=\frac{1}{2}\implies $
+
+$\bigskip E\left( \hat{\theta}\right) =\underset{k=0}{\overset{n/2}{\sum }}%
+\frac{k}{n}\binom{n}{k}\theta ^{k}\left( 1-\theta \right) ^{n-k}+\frac{1}{2}%
+P\left( \frac{1}{2}\leq \bar{X}\leq 1\right) $
+
+$\leq \underset{k=0}{\overset{n/2}{\sum }}\frac{k}{n}\binom{n}{k}\theta
+^{k}\left( 1-\theta \right) ^{n-k}+\underset{k=n/2}{\overset{n}{\sum }}\frac{%
+k}{n}\binom{n}{k}\theta ^{k}\left( 1-\theta \right) ^{n-k}$=$\theta ;$
+
+$Var\left( \hat{\theta}\right) =E\left( \hat{\theta}^{2}\right) -E\left( 
+\hat{\theta}\right) ^{2}=\underset{k=0}{\overset{n/2}{\sum }}\left( \frac{k}{%
+n}\right) ^{2}\binom{n}{k}\theta ^{k}\left( 1-\theta \right) ^{n-k}+\underset%
+{k=n/2}{\overset{n}{\sum }}\frac{1}{4}\binom{n}{k}\theta ^{k}\left( 1-\theta
+\right) ^{n-k}-E\left( \hat{\theta}\right) ^{2},$
+
+the explicit form is hard to get.
+
+$\left( c\right) $ We can prove that the MSE of moment estimator is larger
+than that of MLE as follows:
+
+$\frac{\theta \left( 1-\theta \right) }{n}=\underset{k=1}{\overset{n/2}{\sum 
+}}\left( \frac{k}{n}\right) ^{2}\binom{n}{k}\theta ^{k}\left( 1-\theta
+\right) ^{n-k}+\underset{k=n/2}{\overset{n}{\sum }}\left( \frac{k}{n}\right)
+^{2}\binom{n}{k}\theta ^{k}\left( 1-\theta \right) ^{n-k}-\theta ^{2}$
+
+$\implies \frac{\theta \left( 1-\theta \right) }{n}-Var\left( \hat{\theta}%
+\right) =\underset{k=n/2}{\overset{n}{\sum }}\left[ \left( \frac{k}{n}%
+\right) ^{2}-\frac{1}{4}\right] \binom{n}{k}\theta ^{k}\left( 1-\theta
+\right) ^{n-k}-\left[ \theta ^{2}-E\left( \hat{\theta}\right) ^{2}\right] $
+
+Notice that $\theta +E\left( \hat{\theta}\right) \leq 2\theta \leq 1\implies
+\theta ^{2}-E\left( \hat{\theta}\right) ^{2}\leq \theta -E\left( \hat{\theta}%
+\right) =E\left( \bar{X}\right) -E\left( \hat{\theta}\right) $
+
+$=\underset{k=n/2}{\overset{n}{\sum }}\left( \frac{k}{n}-\frac{1}{2}\right) 
+\binom{n}{k}\theta ^{k}\left( 1-\theta \right) ^{n-k}\implies \frac{\theta
+\left( 1-\theta \right) }{n}-Var\left( \hat{\theta}\right) \geq \underset{%
+k=n/2}{\overset{n}{\sum }}\left[ \left( \frac{k}{n}\right) ^{2}-\frac{k}{n}+%
+\frac{1}{4}\right] \binom{n}{k}\theta ^{k}\left( 1-\theta \right) ^{n-k}$
+
+=$\underset{k=n/2}{\overset{n}{\sum }}\left( \frac{k}{n}-\frac{1}{2}\right)
+^{2}\binom{n}{k}\theta ^{k}\left( 1-\theta \right) ^{n-k}\geq 0.$ Therefore,
+the MSE of MLE estimator is smaller.
+
+$7-13$ the likelihood function of $\left( X_{1},...X_{n}\right) $ is $%
+L\left( \theta |x_{1},..x_{n}\right) =\underset{i=1}{\overset{n}{\Pi }}%
+f\left( x_{i}|\theta \right) =\frac{1}{2^{n}}e^{-\underset{k=1}{\overset{n}{%
+\sum }}\left\vert x_{k}-\theta \right\vert }.$
+
+To maximize $L\left( \theta |x_{1},..x_{n}\right) $ for given $\left(
+x_{1},..x_{n}\right) ,$ we choose $\theta =X_{\left( \frac{n+1}{2}\right) }$
+for odd n, but for even n the maximum is reached for $X_{\left( \frac{n}{2}%
+\right) }\leq \theta \leq X_{\left( \frac{n}{2}+1\right) }.$ Such direct
+solution follows from the geometric interpretation of the distance function $%
+\underset{k=1}{\overset{n}{\sum }}\left\vert x_{k}-\theta \right\vert .$
+
+7-18 $\left( a\right) $ Method of moment estimators: 
+
+the the population $\left( X,Y\right) $\symbol{126}$N\left( \binom{\tilde{\mu%
+}_{x}}{\tilde{\mu}_{y}},\left( 
+\begin{array}{cc}
+\tilde{\sigma}_{x}^{2} & \rho \tilde{\sigma}_{x}\tilde{\sigma}_{y} \\ 
+\rho \tilde{\sigma}_{x}\tilde{\sigma}_{y} & \tilde{\sigma}_{y}^{2}%
+\end{array}%
+\right) \right) $ .
+
+And the expecation of covariance matrix of the sample is given by
+
+$\binom{%
+\begin{array}{c}
+\bar{x} \\ 
+\end{array}%
+}{%
+\begin{array}{c}
+\bar{y} \\ 
+\end{array}%
+},\left( 
+\begin{array}{cc}
+\frac{1}{n}\underset{k=1}{\overset{n}{\sum }}\left( x_{k}-\bar{x}\right) ^{2}
+& \frac{1}{n}\underset{k=1}{\overset{n}{\sum }}\left( x_{k}-\bar{x}\right)
+\left( y_{k}-\bar{y}\right)  \\ 
+\frac{1}{n}\underset{k=1}{\overset{n}{\sum }}\left( x_{k}-\bar{x}\right)
+\left( y_{k}-\bar{y}\right)  & \frac{1}{n}\underset{k=1}{\overset{n}{\sum }}%
+\left( y_{k}-\bar{y}\right) ^{2}%
+\end{array}%
+\right) .$
+
+Equaling the above two gives
+
+$\tilde{\mu}_{x}=\bar{x},\tilde{\mu}_{y}=\bar{y},\tilde{\sigma}_{x}^{2}=%
+\frac{1}{n}\underset{k=1}{\overset{n}{\sum }}\left( x_{k}-\bar{x}\right)
+^{2},\tilde{\sigma}_{y}^{2}=\frac{1}{n}\underset{k=1}{\overset{n}{\sum }}%
+\left( y_{k}-\bar{y}\right) ^{2},\rho =\frac{1}{n\tilde{\sigma}_{x}\tilde{%
+\sigma}_{y}}\underset{k=1}{\overset{n}{\sum }}\left( x_{k}-\bar{x}\right)
+\left( y_{k}-\bar{y}\right) .$
+
+$\left( b\right) $ Following the hint, for each bivariate normal r.v. $%
+\left( X,Y\right) ,$ we can write the joint pdf as the product of
+
+a conditional and a marginal. After some symbolic computation the result is:
+
+$f\left( x,y|\mu _{x},\mu _{y},\sigma _{x},\sigma _{y},\rho \right) =\frac{1%
+}{\sqrt{2\pi }\sigma _{y}\sqrt{1-r^{2}}}e^{-\frac{\left( y-\mu _{y}-\frac{%
+\sigma _{y}}{\sigma _{x}}\left( x-\mu _{x}\right) \right) ^{2}}{\left(
+1-r^{2}\right) \sigma _{y}^{2}}}\frac{1}{\sqrt{2\pi }\sigma _{x}}e^{-\frac{%
+\left( x-\mu _{x}\right) ^{2}}{\sigma _{x}^{2}}},$where the first term is
+the conditional pdf of $\left( X=x,Y\right) $ and the last term is the pdf
+of $X.$
+
+\bigskip If we make transformation in the first term, such as $\gamma =\frac{%
+\sigma _{y}}{\sigma _{x}},\mu =\mu _{y}-\gamma \mu _{x},$ we do not change
+the number of total variable but we make the first term irrelevant of $\mu
+_{x}$ and $\sigma _{x}^{2},$ using the conclusion for normal distribution we
+conclude that to maximize the likelihood function, which is the product of $%
+f\left( x_{i},y_{i}\right) ,$
+
+we have $\hat{\mu}_{x}=\bar{x},\hat{\sigma}_{x}^{2}=\frac{1}{n}\underset{k=1}%
+{\overset{n}{\sum }}\left( x_{k}-x\right) ^{2}.$ By symmetry, we can also
+get $\hat{\mu}_{y}=\bar{y},\hat{\sigma}_{y}^{2}=\frac{1}{n}\underset{k=1}{%
+\overset{n}{\sum }}\left( y_{k}-y\right) ^{2}.$ Then we treat $\mu _{x},\mu
+_{y},\sigma _{x},\sigma _{y}$ as known and let $\frac{d\log L}{d\rho }$
+vanish to calculate
+
+$\rho .$ $L=\underset{i=1}{\overset{n}{\Pi }}p\left( x_{i},y_{i}\right) ,$%
+where $p\left( x_{i},y_{i}\right) $ is the joint pdf of $\left(
+X_{i},Y_{i}\right) ,$ given by the following formula :
+
+$p\left( x,y\right) =\frac{1}{2\pi \sigma _{x}\sigma _{y}\sqrt{1-\rho ^{2}}}%
+e^{-\frac{1}{2\left( 1-\rho ^{2}\right) }\left[ \frac{\left( x-\mu
+_{x}\right) ^{2}}{\sigma _{x}}-\frac{2\rho \left( x-\mu _{x}\right) \left(
+y-\mu _{y}\right) }{\sigma _{x}\sigma _{y}}+\frac{\left( y-\mu _{y}\right)
+^{2}}{\sigma _{y}}\right] }$
+
+$\implies L=\underset{i=1}{\overset{n}{\Pi }}\frac{1}{2\pi \sigma _{x}\sigma
+_{y}\sqrt{1-\rho ^{2}}}e^{-\frac{1}{2\left( 1-\rho ^{2}\right) }\left[ \frac{%
+\left( x_{i}-\mu _{x}\right) ^{2}}{\sigma _{x}}-\frac{2\rho \left( x_{i}-\mu
+_{x}\right) \left( y_{i}-\mu _{y}\right) }{\sigma _{x}\sigma _{y}}+\frac{%
+\left( y_{i}-\mu _{y}\right) ^{2}}{\sigma _{y}}\right] }=C_{1}\left( 1-\rho
+^{2}\right) ^{-\frac{n}{2}}e^{-\frac{1}{2\left( 1-\rho ^{2}\right) }\left[
+2n-2\rho C_{2}\right] }$
+
+where $C_{1}=\left( \frac{1}{2\pi \sigma _{x}\sigma _{y}}\right) ^{n},C_{2}=%
+\underset{i=1}{\overset{n}{\sum }}\frac{\left( x_{i}-\mu _{x}\right) \left(
+y_{i}-\mu _{y}\right) }{\sigma _{x}\sigma _{y}}$
+
+$\frac{d\log L}{d\rho }=0\implies \frac{2\left( \rho ^{2}+1\right) \left(
+C_{2}-n\rho \right) }{\left( \rho ^{2}-1\right) ^{2}}=0\implies \rho =\frac{%
+C_{2}}{n}=\frac{1}{n}\underset{i=1}{\overset{n}{\sum }}\frac{\left(
+x_{i}-\mu _{x}\right) \left( y_{i}-\mu _{y}\right) }{\sigma _{x}\sigma _{y}}$
+
+Therefore, all the results from MLE are identical with those calculated by
+method of moments.
+
+\bigskip 
+
+MLE supplement:
+
+Suppose $X_{1},..X_{n}\symbol{126}i.i.d$ $Exp\left( \mu ,\sigma \right) ,$%
+with pdf $\frac{1}{\sigma }e^{-\frac{x-\mu }{\sigma }}I_{\left( x\geq \mu
+\right) },\sigma >0,\mu \in R.$Show that $n\left( X_{\left( 1\right) }-\mu
+\right) \overset{d}{\rightarrow }Exp\left( \sigma \right) .$
+
+Proof: $\forall x>0,P\left( n\left( X_{\left( 1\right) }-\mu \right) \leq
+x\right) =1-P\left( n\left( X_{\left( 1\right) }-\mu \right) >x\right)
+=1-P\left( X_{\left( 1\right) }>\frac{x}{n}+\mu \right) $
+
+$=1-P\left( X_{1}>\frac{x}{n}+\mu \right) ^{n}=1-\left( \int_{\frac{x}{n}%
++\mu }^{\infty }\frac{1}{\sigma }e^{-\frac{t-\mu }{\sigma }}dt\right)
+^{n}=1-\left( \int_{\frac{x\sigma }{n}}^{\infty }e^{-v}dv\right) ^{n}$
+
+$=1-e^{-\sigma x}\implies $each $n\left( X_{\left( 1\right) }-\mu \right) 
+\symbol{126}Exp\left( \sigma \right) .$
+
+\end{document}

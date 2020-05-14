@@ -1,0 +1,197 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, December 09, 2015 18:26:45}
+%TCIDATA{LastRevised=Sunday, December 13, 2015 16:00:06}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Problem 8.21:
+
+Before proof, we revise the statement of Thm 8.3.12 slightly.
+
+$R=\{x|f\left( x|\theta _{1}\right) \geq kf\left( x|\theta _{0}\right) \}.$
+
+The testing $H_{0}:\theta =\theta _{0}$ versus $H_{1}:\theta =\theta _{1},$%
+where the pmf corresponding to
+
+$\theta _{i}$ is $f\left( x|\theta _{i}\right) ,X$ is a discrete random
+variable. Below we show Neyman Pearson lemma for such case.
+
+\bigskip Sufficiency: Suppose a test $\phi $ satisfies $\left( 8.3.1\right) $
+and $\left( 8.3.2\right) $
+
+$\underset{\theta \in \Theta }{\sup }P_{\theta }\left( X\in R\right)
+=P_{\theta _{0}}\left( X\in R\right) =\alpha ,\implies \phi $ is a level $%
+\alpha $ test. For any other test $\phi ^{\prime }$ satisfying $P_{\theta
+_{0}}(X\in R^{\prime })\leq \alpha ,$ we shall show that $P_{\theta
+_{1}}\left( X\in R\right) \geq P_{\theta _{1}}\left( X\in R^{\prime }\right)
+.$
+
+$P_{\theta _{1}}\left( X\in R\right) =P_{\theta _{1}}\left( X\in R\right)
+-k\left( P_{\theta _{0}}\left( X\in R\right) -\alpha \right) $
+
+$=P_{\theta _{1}}\left( X\in R\right) -kP_{\theta _{0}}\left( X\in R\right)
++k\alpha $
+
+Since $X$ is a discrete random variable, the sample space $\Omega $ has at
+most countable sample points$\implies P_{\theta _{1}}\left( X\in R\right) =%
+\underset{x_{i}\in R}{\sum }P_{\theta _{1}}\left( X=x_{i}\right) =\underset{%
+x_{i}\in R}{\sum }f\left( x_{i}|\theta _{1}\right) \implies $
+
+$P_{\theta _{1}}\left( X\in R\right) =\underset{x_{i}\in R}{\sum }\left(
+f\left( x_{i}|\theta _{1}\right) -kf\left( x_{i}|\theta _{0}\right) \right)
++k\alpha .$
+
+$\implies P_{\theta _{1}}\left( X\in R\right) \geq \underset{x_{i}\in R}{%
+\sum }\left( f\left( x_{i}|\theta _{1}\right) -kf\left( x_{i}|\theta
+_{0}\right) \right) +kP_{\theta _{0}}(X\in R^{\prime })$
+
+$=\underset{x_{i}\in R}{\sum }\left( f\left( x_{i}|\theta _{1}\right)
+-kf\left( x_{i}|\theta _{0}\right) \right) +k\underset{x_{i}\in R^{\prime }}{%
+\sum }f\left( x_{i}|\theta _{0}\right) $
+
+$=\underset{x_{i}\in R\cap R^{\prime c}}{\sum }\left( f\left( x_{i}|\theta
+_{1}\right) -kf\left( x_{i}|\theta _{0}\right) \right) +\underset{x_{i}\in
+R\cap R^{\prime }}{\sum }\left( f\left( x_{i}|\theta _{1}\right) -kf\left(
+x_{i}|\theta _{0}\right) \right) +k\underset{x_{i}\in R^{\prime }}{\sum }%
+f\left( x_{i}|\theta _{0}\right) $
+
+$=\underset{x_{i}\in R\cap R^{\prime c}}{\sum }\left( f\left( x_{i}|\theta
+_{1}\right) -kf\left( x_{i}|\theta _{0}\right) \right) +\underset{x_{i}\in
+R\cap R^{\prime }}{\sum }f\left( x_{i}|\theta _{1}\right) +k\left( \underset{%
+x_{i}\in R^{\prime }}{\sum }f\left( x_{i}|\theta _{0}\right) -\underset{%
+x_{i}\in R\cap R^{\prime }}{\sum }f\left( x_{i}|\theta _{0}\right) \right) $
+
+$\geq \underset{x_{i}\in R\cap R^{\prime }}{\sum }f\left( x_{i}|\theta
+_{1}\right) +k\underset{x_{i}\in R^{\prime }\cap R^{c}}{\sum }f\left(
+x_{i}|\theta _{0}\right) \left( \text{we drop the first term,which is
+positive}\right) $
+
+$P_{\theta _{1}}\left( X\in R^{\prime }\right) =\underset{x_{i}\in R^{\prime
+}}{\sum }f\left( x_{i}|\theta _{1}\right) =\underset{x_{i}\in R^{\prime
+}\cap R}{\sum }f\left( x_{i}|\theta _{1}\right) +\underset{x_{i}\in
+R^{\prime }\cap R^{c}}{\sum }f\left( x_{i}|\theta _{1}\right) $
+
+$\leq \underset{x_{i}\in R^{\prime }\cap R}{\sum }f\left( x_{i}|\theta
+_{1}\right) +\underset{x_{i}\in R^{\prime }\cap R^{c}}{\sum }kf\left(
+x_{i}|\theta _{0}\right) $
+
+Since $f\left( x_{i}|\theta _{1}\right) -kf\left( x_{i}|\theta _{0}\right)
+<0,$as $x_{i}\in R^{c}$
+
+$\implies P_{\theta _{1}}\left( X\in R\right) \geq P_{\theta _{1}}\left(
+X\in R^{\prime }\right) $
+
+$\implies \phi $ is a UMP level $\alpha $ test.
+
+Necessity: Suppose a test $\phi \left( R\right) $ satisfies $\left(
+8.3.1\right) $ and $\left( 8.3.2\right) $ with $k>0,$ then
+
+for each UMP level $\alpha $ test $\phi ^{\prime }\left( R^{\prime }\right)
+, $ we have $P_{\theta _{1}}\left( X\in R^{\prime }\right) \geq P_{\theta
+_{1}}\left( X\in R\right) ,$since
+
+$\phi ^{\prime }$ is UMP$.$
+
+By the proof of sufficiency, we know that $\phi $ is also a UMP level $%
+\alpha $ test
+
+$\implies P_{\theta _{1}}\left( X\in R^{\prime }\right) \leq P_{\theta
+_{1}}\left( X\in R\right) \implies P_{\theta _{1}}\left( X\in R^{\prime
+}\right) =P_{\theta _{1}}\left( X\in R\right) .$
+
+To show $P_{\theta _{0}}\left( X\in R^{\prime }\right) =\alpha ,$ we already
+know that $P_{\theta _{0}}\left( X\in R^{\prime }\right) \leq \alpha $
+
+Notice that in the proof of sufficiency, we already get a sequence of
+inequality:
+
+$\bigskip P_{\theta _{1}}\left( X\in R\right) =\underset{x_{i}\in R}{\sum }%
+\left( f\left( x_{i}|\theta _{1}\right) -kf\left( x_{i}|\theta _{0}\right)
+\right) +k\alpha $
+
+$\geq \underset{x_{i}\in R}{\sum }\left( f\left( x_{i}|\theta _{1}\right)
+-kf\left( x_{i}|\theta _{0}\right) \right) +kP_{\theta _{0}}(X\in R^{\prime
+})...\geq P_{\theta _{1}}\left( X\in R^{\prime }\right) $
+
+The equality must be reached$\implies \alpha =$ $\bigskip P_{\theta
+_{0}}(X\in R^{\prime }),$
+
+$\bigskip $Further from the condition of equality above we have:
+
+$f\left( x_{i}|\theta _{1}\right) =kf\left( x_{i}|\theta _{0}\right)
+,\forall x_{i}\in R\cap R^{\prime c},R^{\prime }\cap R^{c}.$
+
+$f\left( x_{i}|\theta _{1}\right) <kf\left( x_{i}|\theta _{0}\right)
+,\forall x_{i}\in R^{c},$ by the revised condition. 
+
+$\implies R^{\prime }\cap R^{c}=\emptyset ,R^{\prime }\subset R$
+
+But we also have $\alpha =$ $\bigskip P_{\theta _{0}}(X\in R^{\prime })=$ $%
+\bigskip P_{\theta _{0}}(X\in R)\implies \bigskip P_{\theta _{0}}(X\in
+R/R^{\prime })=0$
+
+$\bigskip P_{\theta _{1}}(X\in R^{\prime })=$ $\bigskip P_{\theta _{1}}(X\in
+R)\implies \bigskip P_{\theta _{1}}(X\in R/R^{\prime })=0.$ Thus we choose $%
+A=R/R^{\prime },$ and the proof is complete.
+
+8.22$\left( b\right) \alpha =\underset{0<p\leq \frac{1}{2}}{\sup }%
+P_{p}\left( \underset{i=1}{\overset{10}{\sum }}X_{i}>6\right) ,\underset{i=1}%
+{\overset{10}{\sum }}X_{i}\symbol{126}B\left( 10,p\right) $
+
+By plotting the figure of $P_{p}\left( \underset{i=1}{\overset{10}{\sum }}%
+X_{i}>6\right) $ w.r.t $p$ on the interval $[0,\frac{1}{2}]$ we can
+
+know that $\alpha =P_{\frac{1}{2}}\left( \underset{i=1}{\overset{10}{\sum }}%
+X_{i}>6\right) =\frac{11}{64}.$The graph of power function is as 
+
+follows:
+
+\FRAME{dtbpF}{2.3125in}{1.1191in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";display "USEDEF";valid_file "T";width
+2.3125in;height 1.1191in;depth 0pt;original-width 3.7395in;original-height
+2.2917in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'NZABDH00.wmf';tempfile-properties "XPR";}}
+
+$\left( c\right) \alpha $ can take discrete value:
+
+0,0.0009766, 0.01074, 0.05469, 0.1719, 0.3770, 0.6230, 0.8281, 0.9453, 
+
+0.9893, 0.9990,1.
+
+\end{document}

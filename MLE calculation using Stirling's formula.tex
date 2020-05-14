@@ -1,0 +1,82 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, November 03, 2015 19:08:41}
+%TCIDATA{LastRevised=Tuesday, November 03, 2015 19:10:08}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\bigskip Binomial Example with unknown number of trial.
+
+Estimating the number of trial with MLE.
+
+Textbook P318
+
+Here is another approach to derive the same equation, when $k>>n.$
+
+$\ln \left( L\right) =n\ln k!-\underset{i=1}{\overset{n}{\sum }}\left(
+k-x_{i}\right) !+\left( nk-\underset{i=1}{\overset{n}{\sum }}x_{i}\right)
+\ln \left( 1-p\right) +c,$with $c$ is irrelevant with $k.$
+
+Using Stirling's formula $\ln x!\approx x\ln \left( x\right) -x$
+
+$\implies \ln \left( L\right) =nk\ln \left( k\right) -nk-\underset{i=1}{%
+\overset{n}{\sum }}\left( k-x_{i}\right) \ln \left( k-x_{i}\right) +\underset%
+{i=1}{\overset{n}{\sum }}\left( k-x_{i}\right) +\left( nk-\underset{i=1}{%
+\overset{n}{\sum }}x_{i}\right) \ln \left( 1-p\right) +c$
+
+=$nk\ln \left( k\right) -\underset{i=1}{\overset{n}{\sum }}\left(
+k-x_{i}\right) \ln \left( k-x_{i}\right) +\left( nk-\underset{i=1}{\overset{n%
+}{\sum }}x_{i}\right) \ln \left( 1-p\right) +c^{\prime }$
+
+Taking the derivative of $\ln \left( L\right) $ about $k$ gives:
+
+$\frac{d\ln \left( L\right) }{dk}=n\ln k+n-n-\underset{i=1}{\overset{n}{\sum 
+}}\ln \left( k-x_{i}\right) +n\ln \left( 1-p\right) $
+
+=$n\ln k-\underset{i=1}{\overset{n}{\sum }}\ln \left( k-x_{i}\right) +n\ln
+\left( 1-p\right) $
+
+Let $\frac{d\ln \left( L\right) }{dk}=0$ follows $\left( 1-p\right) ^{n}=%
+\underset{i=1}{\overset{n}{\Pi }}\left( 1-\frac{x_{i}}{k}\right) ,$ which is
+the same with that solved in textbook.
+
+\end{document}
