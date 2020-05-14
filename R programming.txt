@@ -1,0 +1,99 @@
+ 针对不同的总体（例如，正态、指数、cauchy、二项、poisson、，，，）来通过R实验了解样本均值与样本方差之间的关系（是否相关或者独立），可以画图。针对特定的总体，要考虑到样本量的变化和参数的变化，例如，X～Binomial（1，p）， 可以考虑p=0.2，0.5, 0.8等变化。
+
+附件是关于随机模拟的一些要求，请同学在做（Rlab）作业的时候遵守。
+
+如果时间充裕，可以通过设计实验来考察Theorem 5.3.1 (p. 218).
+#code of R language
+ # xmean 与 S2 的关系
+ # for Poisson distribution
+ n=500; # sample size...
+ m=1000; # 重复次数或样本量
+ A=rep(0,m) #保存均值
+ B=rep(0,m) #保存S2
+ for(i in 1:m){ 
+        μ=i; 
+	x=rpois(n,μ);
+   A[i]=mean(x);
+   B[i]=(sd(x))*(sd(x));
+ }
+ plot(A,B);
+#使用截图将图形放到作业里
+#一行一行写可以不加标点符号
+
+ # for normal distribution
+ n=500; # sample size...
+ m=1000; # 重复次数
+ A=rep(0,m) #保存均值
+ B=rep(0,m) #保存S2
+ for(i in 1:50){
+     for(j in 1:20){
+        μ=i;σ=j/20; 
+	x=rnorm(n,μ,σ);
+      A[(i-1)*50+j]=mean(x);
+      B[(i-1)*50+j]=(sd(x))*(sd(x));
+     }
+ }
+ plot(A,B);
+
+ n=200; # sample size...
+ m=1000; # 重复次数或样本量
+ A=rep(0,m) #保存均值
+ B=rep(0,m) #保存S2
+ for(i in 1:m){ 
+        μ=i/m; 
+	x=rbinom(n,4,μ);
+   A[i]=mean(x);
+   B[i]=(sd(x))*(sd(x));
+ }
+ plot(A,B);
+ x=c();
+ for(i in 1:3000){
+    tem=-6;
+  for(j in 1:12){
+    tem=tem+runif(1,0,1);
+  }
+    x=c(x,tem);
+  }
+ n. courons v. courez ils courent
+nais naissons naissez ils naissent
+F1=function(x1){
+ if(x1<0) 0 else 
+ if(x1<=0.5) 2*x1/1.5 else
+ if(x1<=1) 2/1.5-2*x1/1.5 else
+ if(x1<=1.5) 4*(x1-1)/1.5 else
+ if(x1<=2) -4*x1/1.5+8/1.5 else
+ 0
+}
+
+y=c(0);
+ for(i in 1:200){
+  y=c(y,F1(i/100));
+}
+plot(seq(0,2,0.01),y)
+
+n=10000;
+while(length(x)<n){
+  u=runif(1,0,2);
+  v=runif(1,0,2);
+  if(F(u)>v) x=c(x,u);
+}
+hist(x,70,prob=T,add=T)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

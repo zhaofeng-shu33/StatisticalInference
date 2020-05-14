@@ -1,0 +1,104 @@
+#Problem 1
+u=0;sigma=1
+m=1000;
+n=1000
+A=c()
+for(i in 1:m){
+  A=cbind(A,rnorm(n,u,sigma));
+}
+estimator1= apply(A,2,mean)
+estimator2=apply(A,2,median)
+estimator4=A[1,]
+f3=function(x,k=2){
+   mean(x[(k+1):(length(x)-k)])
+}
+A=apply(A,2,sort)
+estimator3=apply(A,2,f3)
+f5=function(x){
+  (max(x)+min(x))/2
+}
+estimator5=apply(A,2,f5)
+estimator6=estimator4^2
+# calculating mean
+mean3=c(mean(estimator1)
+,mean(estimator2)
+,mean(estimator3)
+,mean(estimator4)
+,mean(estimator5)
+,mean(estimator6)
+)
+# calculating MSE
+MSE3=c(var(estimator1)+mean(estimator1)^2,
+var(estimator2)+mean(estimator2)^2,
+var(estimator3)+mean(estimator3)^2,
+var(estimator4)+mean(estimator4)^2,
+var(estimator5)+mean(estimator5)^2,
+var(estimator6)+mean(estimator6)^2)
+
+#Problem 2
+#m is the parameter lambda in the Poisssion distribution
+m=0.5
+s=c()
+n=30
+rpois(n,m)->x
+y=c();
+for(i in 1:n){
+    if(x[i]>=1) y=c(y,1) else y=c(y,0)
+}
+s=c(s,-log(1-mean(y)));
+n=100
+rpois(n,m)->x
+y=c();
+for(i in 1:n){
+    if(x[i]>=1) y=c(y,1) else y=c(y,0)
+}
+s=c(s,-log(1-mean(y)));
+n=1000
+rpois(n,m)->x
+y=c();
+for(i in 1:n){
+    if(x[i]>=1) y=c(y,1) else y=c(y,0)
+}
+s=c(s,-log(1-mean(y)))
+
+
+#Problem3
+rand=function(m){ 
+ list1=c();
+ i=0;
+ while(i<m){
+  c=floor(runif(1)*2);
+  r=(c*rnorm(1,1/4,1/6)+(1-c)*rnorm(1,3/4,1/12));
+  if(r>0&&r<1){
+    list1=c(list1,r);
+    i=i+1;
+  }
+ }
+ list1
+}
+data=rand(100000);
+data=sort(data);
+  j=1;
+  for(i in 1:100){
+   while(data[j]<(i/100)){
+     list1[i]=list1[i]+1;
+     j=j+1;
+  }
+  list1[i]=list1[i]/1000;
+  }
+E=2.718
+f=function(x){(6*E^(-72*(-(3/4)+x)^2)*sqrt(2/pi)+3*E^(-18*(-(1/4)+x)^2)*sqrt(2/pi))/1.93184}
+ plot(seq(length=100,from=0.01,to=1),list1)
+ curve(f(x),add=T)
+ s=0
+ for(i in 1:100){
+ s=s+(f(i/100)-list1[i])^2;
+}
+legendpars= c("kernel estimator","real distribution","hist")
+hist(data,breaks=100,freq=F,col=0,lwd=1)
+#利用特殊的方法可将object density(data)中的数据提取出来做成两个list:
+lines(list3,list4,type='l',col=2,lty=1,lwd=2,add=T)
+curve(f(x),col=3,lty=2,lwd=2,add=T)
+legend('topleft',legendpars,lty = 1:3, col =c(2,3,5),lwd=c(2,2,0))
+
+  

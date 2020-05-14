@@ -1,0 +1,147 @@
+先将数据copy到E盘R..文件夹下的“example2.txt”中，MLE作a的
+点估计代码如下：
+ example3<-read.table("E:/R-3.2.2/example3.txt",header=F)
+ list=c()
+ for(i in 1:5)
+ list=c(list,example2[,i])
+
+一维粒子速度分布
+m=10000
+energy_distribution=c(0.5)
+particle_quantum_number=seq(1,1,length=100)
+ i=1;
+ while(i<=10*m){ 
+    j=floor(100*runif(1))+1;
+
+  tmp=(2*runif(1)-1);
+  vtmp=particle_velocity[j]+tmp;
+  deltaE=0.5*(vtmp*vtmp-particle_velocity[j]*particle_velocity[j]);
+  if(energy_distribution[i]>deltaE&&energy_distribution[i]-deltaE<=4){
+     energy_distribution[i+1]=energy_distribution[i]-deltaE;
+     i=i+1;
+     particle_velocity[j]=vtmp
+  }
+
+  }
+ mean(energy_distribution[20000:100000])
+#应给energy_distribution[i]一个上限
+
+norm<-function(x){
+  (x%*%x)[1]
+}
+
+ m=60000;T=12
+ particle_velocity=array(c(0,0,0),dim=c(3,1));
+ i=1; 
+ while(i<=m){ 
+  tmp=runif(3);
+  vtmp=particle_velocity[,i]+8*(2*tmp-1);
+  deltaE=0.5*(norm(vtmp)-norm(particle_velocity[,i]));
+  if(deltaE<0||(runif(1)<exp(-deltaE/T)))
+    particle_velocity=cbind(particle_velocity,vtmp)
+  else  particle_velocity=cbind(particle_velocity,particle_velocity[,i])  
+  i=i+1
+  } 
+ mean(0.5*particle_velocity^2)
+ speed=c()
+ for(i in 1:m){
+ speed=c(speed,sqrt(norm(particle_velocity[,i])))
+ }
+ hist(speed,breaks=80,freq=F)
+ curve(x^2*exp(-x^2/24)/(2*sqrt(pi)*6^1.5),add=TRUE)
+
+
+hist(particle_velocity[1,],breaks=100,freq=F)
+  i=i+1; 
+}
+ while(energy_distribution[i]-deltaE>0){
+  }
+ myfun=function(x){
+ sum=0
+ for(i in 1:100)
+ sum=sum+(x-list[i])/(1+(x-list[i])^2)
+ return(sum)}
+
+用 median 函数可估计出a的大致范围3.65,或myfun作图确定函数零点范畴，确定零点可用搜索的方法：
+ for(i in 1:100){
+ if(myfun(x[i])>0&&myfun(x[i-1])<=0) y=x[i]}
+ y
+
+给出三位精度的数值解为3.63
+
+求解使用枚举法进
+
+
+particle=seq(15,15,length=100);
+energy_distribution=c(0);
+i=1;
+while(i<=m){
+   j=(floor(runif(1)*100))+1;
+   deltaE=(floor(runif(1)*2))*2-1;
+   if(deltaE==-1&&particle[j]>0){
+      energy_distribution[i+1]=energy_distribution[i]+1;
+      particle[j]=particle[j]-1;
+      i=i+1;
+   } else if(deltaE==1&&energy_distribution[i]>0){
+      energy_distribution[i+1]=energy_distribution[i]-1;
+      particle[j]=particle[j]+1;
+      i=i+1;
+   } 
+}
+mean(energy_distribution) 
+length(energy_distribution)
+hist(energy_distribution,breaks=100,freq=F)
+sum(particle)
+hist(particle,freq=F)
+At low temperatures, the Dulong–Petit law fails and the specific heat of solid is no longer constant. The Einstein quantum model for a solid correctly explains this phenomenon. We can make a simplified model of a solid with a 2D cell array (Black and Ogborn, 1976) with one oscillator in each cell with an energy of a multiple of ?ω, and thermal interaction reproduced through a transfer of a quantum of energy between a pair of these cells chosen randomly. The number of points assigned to each cell is the number of quanta possessed by the oscillator (occupancy). The initial state assigns one quantum to every cell. After about 1,000 steps, the distribution of a thermal equilibrium state and Boltzmann distribution is obtained; it is stable after more steps. Blue bars represent instantaneous values , purple bars represent the mean values given by the canonical distribution (equal to ), and the red curve represents the fit of the occupancies.
+particle=seq(15,15,length=100);
+energy_distribution=c(0);
+
+i=1;
+particle=seq(15,15,length=100);
+while(i<=m){
+   tmp1=floor(runif(1)*100)+1;
+   tmp2=floor(runif(1)*100)+1;
+   deltaE=(floor(runif(1)*2))*2-1;
+   if(deltaE==-1&&particle[tmp1]>0){
+      particle[tmp1]=particle[tmp1]-1;
+      particle[tmp2]=particle[tmp2]+1;
+   }else if(deltaE==1&&particle[tmp2]>0){
+      particle[tmp1]=particle[tmp1]+1;
+      particle[tmp2]=particle[tmp2]-1;
+   }else 
+    i=i+1;
+}
+
+mean(energy_distribution) 
+
+
+
+
+m=10000;T=12
+particle_velocity=c(0);
+i=1; 
+while(i<=m){ 
+tmp=runif(1);
+   vtmp=particle_velocity[i]+2*(2*tmp-1);
+   deltaE=0.5*(vtmp*vtmp-particle_velocity[i]*particle_velocity[i]);
+   if(deltaE<0||(runif(1)<exp(-deltaE/T))){
+     particle_velocity[i+1]=vtmp
+     i=i+1
+   }
+   } 
+  mean(0.5*particle_velocity^2)
+
+
+m=10000;T=6
+particle_velocity=c(0);
+i=1; 
+while(i<=m){ 
+tmp=runif(1);
+   vtmp=particle_velocity[i]+6*(2*tmp-1);
+   deltaE=0.5*(vtmp*vtmp-particle_velocity[i]*particle_velocity[i]);
+   if(deltaE<0||(runif(1)<exp(-deltaE/T))) particle_velocity[i+1]=vtmp
+   else particle_velocity[i+1]=particle_velocity[i]
+  i=i+1;   
+}
+ mean(0.5*particle_velocity^2)

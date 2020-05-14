@@ -1,0 +1,61 @@
+u=0;sigma=1
+m=1000;
+n=30
+A=c()
+for(i in 1:m){
+  A=cbind(A,rnorm(n,u,sigma));
+}
+estimator1= apply(A,2,mean)
+estimator2=apply(A,2,median)
+estimator4=A[1,]
+f3=function(x,k=2){
+   mean(x[(k+1):(length(x)-k)])
+}
+A=apply(A,2,sort)
+estimator3=apply(A,2,f3)
+f5=function(x){
+  (max(x)+min(x))/2
+}
+estimator5=apply(A,2,f5)
+estimator6=estimator4^2
+# calculating mean
+c(mean(estimator1)
+,mean(estimator2)
+,mean(estimator3)
+,mean(estimator4)
+,mean(estimator5)
+,mean(estimator6)
+)
+# calculating MSE
+c(var(estimator1)+mean(estimator1)^2,
+var(estimator2)+mean(estimator2)^2,
+var(estimator3)+mean(estimator3)^2,
+var(estimator4)+mean(estimator4)^2,
+var(estimator5)+mean(estimator5)^2,
+var(estimator6)+mean(estimator6)^2)
+#m is the parameter lambda in the Poisssion distribution
+m=0.5
+s=c()
+n=30
+rpois(n,m)->x
+y=c();
+for(i in 1:n){
+    if(x[i]>=1) y=c(y,1) else y=c(y,0)
+}
+s=c(s,-log(1-mean(y)));
+n=100
+rpois(n,m)->x
+y=c();
+for(i in 1:n){
+    if(x[i]>=1) y=c(y,1) else y=c(y,0)
+}
+s=c(s,-log(1-mean(y)));
+n=1000
+rpois(n,m)->x
+y=c();
+for(i in 1:n){
+    if(x[i]>=1) y=c(y,1) else y=c(y,0)
+}
+s=c(s,-log(1-mean(y)))
+
+c=(runif(1)*2)%2

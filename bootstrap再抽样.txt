@@ -1,0 +1,17 @@
+将数据导入R中自定义的list中，进行bootstrap
+等可能再抽样（非参数）：
+list2=c()
+for(i in 1:1000)
+list2=c(list2,var(sample(list,20,replace=T)))
+计算B=1000次抽样结果的平均值作为对方差的估计:
+var(list2)
+结果:2.495
+若已知总体是正态总体，可先根据MLE估计的mu和sigma给出总体密度曲线的估计：
+mean(list);var(list)
+利用正态总体的信息进行再抽样：
+list2=c()
+for(i in 1:1000)
+list2=c(list2,var(rnorm(20,0.787,sqrt(2.597))))
+计算B=1000次抽样结果的平均值作为对方差的估计:
+var(list2)
+结果 2.588
