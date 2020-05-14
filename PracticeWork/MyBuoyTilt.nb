@@ -1,0 +1,160 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5478,        150]
+NotebookOptionsPosition[      5234,        137]
+NotebookOutlinePosition[      5579,        152]
+CellTagsIndexPosition[      5536,        149]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ GraphicsBox[{
+   {GrayLevel[1], EdgeForm[Thickness[Large]], 
+    GeometricTransformationBox[
+     RectangleBox[{0, 0}, {2, 1}], {{{{
+       0.4999999999999998, -0.8660254037844382}, {0.8660254037844382, 
+       0.4999999999999998}}, {0.922183863662272, -0.6160254037844364}}}]}, 
+   {AbsoluteThickness[1.6], StrokeForm[{Hue[0., 0.6666666666666666, 1.], 
+    Opacity[1.]}], EdgeForm[GrayLevel[0]], EdgeForm[None], 
+    LineBox[{{0.12557131293179308`, 0.24559694196703852`}, {1.668680760699217,
+      0.20228158904725196`}}]}, InsetBox[
+    StyleBox[Cell["WaterLevel",
+      GeneratedCell->False,
+      CellAutoOverwrite->False,
+      CellBaseline->Baseline,
+      TextAlignment->Left],
+     FontFamily->"Times",
+     Magnification->1.5,
+     Background->GrayLevel[1.]], {0.48833739363501105`, 0.2834978757718553}, {
+    Left, Baseline},
+    Alignment->{Left, Top}], 
+   {AbsoluteThickness[3.548133892335754], Dashing[{0, Small}], StrokeForm[{
+    Hue[0., 0.6666666666666666, 1.], Opacity[1.]}], EdgeForm[GrayLevel[0]], 
+    EdgeForm[None], 
+    LineBox[{{0.9323197610628323, -0.6152956973137345}, {0.9431485992927789, 
+     0.21852484639217273`}}]}, InsetBox[
+    StyleBox[
+     TagBox["",
+      "RawBoxes"],
+     FontFamily->"Times",
+     Magnification->1.5,
+     Background->GrayLevel[
+      1.]], {1.0027072095574865`, -0.0034663373217380666`}, {Left, Baseline},
+    Alignment->{Left, Top}], 
+   StyleBox[InsetBox[
+     StyleBox[
+      TagBox["\[CapitalDelta]h",
+       "RawBoxes"],
+      FontFamily->"Times",
+      Magnification->1.5,
+      Background->GrayLevel[
+       1.]], {0.9593918566376987, -0.11175471962120648`}, {Left, Baseline},
+     Alignment->{Left, Top}],
+    FontSize->23], 
+   {AbsoluteThickness[3.198895109691398], StrokeForm[{Hue[
+    0., 0.6666666666666666, 1.], Opacity[1.]}], EdgeForm[GrayLevel[0]], 
+    EdgeForm[None], 
+    LineBox[{{1.4521039961002802`, 0.2726690375419061}, {1.4845905107901207`, 
+     0.2510113610820124}, {1.4791760916751473`, 0.21311042727719842`}}]}, 
+   StyleBox[InsetBox[
+     SubscriptBox["\[Theta]", 
+      "0"], {1.5062481872500135`, 0.25101136108201183`}, {
+     Left, Baseline}, {0.14077489698930884`, 0.18409024990909617`}, {{1., 
+     0.}, {0., 1.}},
+     Alignment->{Left, Top}],
+    FontSize->23], 
+   {AbsoluteThickness[2], StrokeForm[{Hue[0.3333333333333333, 1., 1.], 
+    Opacity[1.]}], EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[
+    GrayLevel[1]], 
+    ArrowBox[{{0.4991662318649589, -0.3391603224500903}, {
+     0.9918783713275398, -0.6261245355436807}}]}, 
+   {AbsoluteThickness[2], StrokeForm[{Hue[0.3333333333333333, 1., 1.], 
+    Opacity[1.]}], EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[
+    GrayLevel[1]], 
+    ArrowBox[{{0.5370671656697728, -0.3391603224500903}, {1.295085841766051, 
+     1.0090300371782912`}}]}, 
+   StyleBox[InsetBox[
+     StyleBox[
+      TagBox["x",
+       "RawBoxes"],
+      FontFamily->"Times",
+      Magnification->1.5,
+      Background->GrayLevel[
+       1.]], {1.0297793051323534`, -0.5719803443939451}, {Left, Baseline},
+     Alignment->{Left, Top}],
+    FontSize->18], 
+   StyleBox[
+    InsetBox["", {1.3302795660133782`, 0.9603002651435313}, {
+     Left, Baseline}, {0.07038744849465442, 0.17326141167914932`}, {{1., 
+     0.}, {0., -1.}},
+     Alignment->{Left, Top}],
+    FontSize->18], 
+   StyleBox[InsetBox[
+     StyleBox[
+      TagBox["z",
+       "RawBoxes"],
+      FontFamily->"Times",
+      Magnification->1.5,
+      Background->GrayLevel[1.]], {1.319450727783431, 0.9873723607183983}, {
+     Left, Baseline}, {0.06497302937968101, 0.1678469925641759}, {{1., 0.}, {
+     0., 1.}},
+     Alignment->{Left, Top}],
+    FontSize->18], 
+   {AbsoluteThickness[2], StrokeForm[{GrayLevel[0.], Opacity[1.]}], EdgeForm[
+    None], LineBox[{{0.4937518127499855, -0.2958449695303029}, {
+     0.4991662318649589, -0.2417007783805687}, {
+     0.591211356819507, -0.10092588139125969`}, {
+     0.591211356819507, -0.052196109356498877`}, {
+     0.6399411288542677, -0.03595285201157861}, {0.775301606728603, 
+     0.1860383317023313}, {0.8186169596483904, 0.19145275081730473`}}]}, 
+   InsetBox[
+    StyleBox[
+     RowBox[{"b", "\[IndentingNewLine]"}],
+     FontFamily->"Times",
+     FontSize->18,
+     FontSlant->"Italic",
+     Magnification->1.5,
+     Background->GrayLevel[
+      1.]], {0.4504364598301981, -0.019709594666657893`}, {
+    Left, Baseline}, {0.07580186760962784, 0.15701815433422908`}, {{1., 0.}, {
+    0., 1.}},
+    Alignment->{Left, Top}]},
+  ImagePadding->{{0., 1.}, {1., 0.}},
+  PlotRange->{{0.02811176886227157, 
+   1.9718882311377284`}, {-0.6533459118601274, 1.6533459118601275`}},
+  PlotRangePadding->Automatic]], "Input"]
+},
+WindowSize->{1031, 670},
+WindowMargins->{{Automatic, 49}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (32-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4672, 115, 442, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

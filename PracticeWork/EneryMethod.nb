@@ -1,0 +1,188 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5954,        179]
+NotebookOptionsPosition[      5584,        163]
+NotebookOutlinePosition[      5930,        178]
+CellTagsIndexPosition[      5887,        175]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"E1", "=", 
+   RowBox[{
+    RowBox[{"\[Rho]cable", "*", "g", "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Integrate", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"\[Lambda]2", "+", 
+            RowBox[{"y", "[", "x", "]"}]}], ")"}], "*", 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{"1", "+", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"y", "'"}], "[", "x", "]"}], "^", "2"}]}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "0", ",", "xe"}], "}"}]}], "]"}], "-", 
+       RowBox[{"\[Lambda]2", "*", "Lcable"}]}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"y", "[", "xe", "]"}], "*", "Gball"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"y", "[", "xe", "]"}], "+", 
+       RowBox[{
+        FractionBox["h3", "2"], "*", 
+        RowBox[{"Sin", "[", "\[Theta]5", "]"}]}]}], ")"}], "*", 
+     RowBox[{"(", 
+      RowBox[{"Gbuc", "-", "Fbuc"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Gp", "-", "Fp"}], ")"}], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"4", "*", 
+         RowBox[{"y", "[", "xe", "]"}]}], ")"}], "+", 
+       RowBox[{"4", "*", "h3", "*", 
+        RowBox[{"Sin", "[", "\[Theta]5", "]"}]}], "+", 
+       RowBox[{"h2", "*", 
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"7", " ", 
+            RowBox[{"Sin", "[", "\[Theta]4", "]"}]}], "2"], "+", 
+          FractionBox[
+           RowBox[{"5", " ", 
+            RowBox[{"Sin", "[", "\[Theta]3", "]"}]}], "2"], "+", 
+          FractionBox[
+           RowBox[{"3", " ", 
+            RowBox[{"Sin", "[", "\[Theta]2", "]"}]}], "2"], "+", 
+          FractionBox[
+           RowBox[{"Sin", "[", "\[Theta]1", "]"}], "2"]}], ")"}]}]}], ")"}]}],
+     "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"hw", "-", "\[CapitalDelta]h", "+", 
+       FractionBox["h1", "2"]}], ")"}], "*", 
+     RowBox[{"(", 
+      RowBox[{"Gbuoy", "-", 
+       RowBox[{"\[Pi]", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          FractionBox["d1", "2"], ")"}], "^", "2"}], "*", "\[CapitalDelta]h", 
+        "*", "\[Rho]w", "*", "g"}]}], ")"}]}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"xe", "+", 
+       RowBox[{"h3", "*", 
+        RowBox[{"Cos", "[", "\[Theta]5", "]"}]}], "+", 
+       RowBox[{"h2", "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cos", "[", "\[Theta]1", "]"}], "+", 
+          RowBox[{"Cos", "[", "\[Theta]2", "]"}], "+", 
+          RowBox[{"Cos", "[", "\[Theta]3", "]"}], "+", 
+          RowBox[{"Cos", "[", "\[Theta]4", "]"}]}], ")"}]}]}], ")"}], "*", 
+     "K1", "*", "d1", "*", 
+     RowBox[{"(", 
+      RowBox[{"h1", "-", "\[CapitalDelta]h"}], ")"}]}], "+", 
+    RowBox[{"\[Lambda]1", "*", 
+     RowBox[{"(", 
+      RowBox[{"hw", "-", "\[CapitalDelta]h", "-", 
+       RowBox[{"y", "[", "xe", "]"}], "-", 
+       RowBox[{"h2", "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Sin", "[", "\[Theta]1", "]"}], "+", 
+          RowBox[{"Sin", "[", "\[Theta]2", "]"}], "+", 
+          RowBox[{"Sin", "[", "\[Theta]3", "]"}], "+", 
+          RowBox[{"Sin", "[", "\[Theta]4", "]"}]}], ")"}]}], "-", 
+       RowBox[{"h3", "*", 
+        RowBox[{"Sin", "[", "\[Theta]5", "]"}]}]}], ")"}]}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6825114386552415`*^9, 3.6825114794152985`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Minimize", " ", "this", " ", "functional", " ", "with", " ", "y", " ", 
+     "unknown"}], ",", " ", "xe", ",", 
+    RowBox[{"\[Theta]1", " ", "to", " ", "\[Theta]5"}], ",", 
+    RowBox[{
+    "\[CapitalDelta]h", " ", "as", " ", "general", " ", "coordinates"}], 
+    ","}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"For", " ", "the", " ", "special", " ", "case", " ", "above"}], 
+    ",", " ", 
+    RowBox[{
+    "we", " ", "can", " ", "solve", " ", "out", " ", "the", " ", "general", 
+     " ", "form", " ", "of", " ", "the", " ", "cable", " ", "as", " ", 
+     RowBox[{"follows", ":"}]}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.6825109571545677`*^9, 3.6825110498246975`*^9}, {
+  3.6825784351080027`*^9, 3.682578461076488*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "=", 
+   RowBox[{"a", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cosh", "[", 
+       FractionBox[
+        RowBox[{"x", "+", "x0"}], "a"], "]"}], "-", 
+      RowBox[{"Cosh", "[", 
+       FractionBox["x0", "a"], "]"}]}], ")"}]}]}], ";", 
+  RowBox[{"xe", "=", 
+   RowBox[{"x1", "-", "x0"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6825110530247016`*^9, 3.6825110620247145`*^9}, {
+  3.6825111737248707`*^9, 3.6825111767148747`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6825668532759633`*^9, 3.6825668796660004`*^9}, {
+   3.6825669456160927`*^9, 3.682567061966255*^9}, {3.6825671976264453`*^9, 
+   3.6825672555679326`*^9}, {3.682567292698056*^9, 3.6825673271980295`*^9}, 
+   3.6825783931456027`*^9}]
+},
+WindowSize->{1031, 670},
+WindowMargins->{{Automatic, 74}, {Automatic, 47}},
+FrontEndVersion->"10.0 for Microsoft Windows (32-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3429, 97, 180, "Input"],
+Cell[3990, 119, 833, 20, 52, "Input"],
+Cell[4826, 141, 473, 14, 46, "Input"],
+Cell[5302, 157, 278, 4, 31, InheritFromParent]
+}
+]
+*)
+
+(* End of internal cache information *)
